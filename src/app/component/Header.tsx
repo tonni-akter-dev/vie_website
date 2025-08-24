@@ -102,16 +102,12 @@ const Header = () => {
 
     return (
         <nav className="bg-white px-6 md:px-5 lg:px-10 lg:ps-[60px] lg:pe-[72px] py-5 md:py-7 lg:py-9 border-b border-[#084F3D] flex items-center justify-between relative">
-            {/* Left Section */}
             <div className="flex items-center justify-between w-full lg:w-auto">
-                {/* Logo */}
                 <Image
                     src={logo}
                     alt="Logo"
                     className="w-[55px] h-[50px] md:w-[65px] md:h-[60px] lg:w-[75px] lg:h-[70px]"
                 />
-
-                {/* Hamburger for mobile */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="lg:hidden block md:mr-5 text-[#084F3D] focus:outline-none"
@@ -151,8 +147,6 @@ const Header = () => {
                     )}
                 </button>
             </div>
-
-            {/* Nav Links (Tablet + Desktop) */}
             <div className="hidden nav_items lg:flex items-center gap-6 lg:gap-[107px] md:ms-10 lg:ms-[165px]">
                 {[
                     "About Us",
@@ -170,10 +164,7 @@ const Header = () => {
                     </a>
                 ))}
             </div>
-
-            {/* Right Icons */}
             <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
-                {/* Search Button */}
                 <button className="group size-[34px] lg:size-[38px] p-[9px] lg:p-[11px] border border-[#16AA83] hover:bg-[#084F3D] rounded-full flex items-center justify-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -189,8 +180,6 @@ const Header = () => {
                         />
                     </svg>
                 </button>
-
-                {/* QR Button */}
                 <button className="group md:w-[64px] md:h-[36px] lg:size-[38px]  lg:p-[11px] border border-[#16AA83] hover:bg-[#084F3D] rounded-full flex items-center justify-center">
                     <Image
                         src={qr}
@@ -203,8 +192,6 @@ const Header = () => {
                         className="hidden group-hover:block size-[18px] transition-opacity duration-300"
                     />
                 </button>
-
-                {/* Search Icon Button */}
                 <button className="group size-[34px] lg:size-[38px] p-[9px] lg:p-[11px] border border-[#16AA83] hover:bg-[#084F3D] rounded-full flex items-center justify-center">
                     <Image
                         src={blackSearch}
@@ -217,16 +204,12 @@ const Header = () => {
                         className="hidden group-hover:block transition-opacity duration-300"
                     />
                 </button>
-
-                {/* Profile */}
                 <Image
                     src={profile}
                     alt="Profile"
                     className="w-[34px] h-[34px] lg:w-[38px] lg:h-[38px]"
                 />
             </div>
-
-            {/* Mobile Menu */}
             {isOpen && (
                 <div className="absolute top-full left-0 w-full bg-white shadow-md border-t border-[#084F3D] flex flex-col items-start px-6 py-4 space-y-4 lg:hidden z-50">
                     {[
