@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-} */
-
 body {
   background-color: #FBFBFB !important;
+  font-family: 'Creato Display', sans-serif;
 }
-.why_choose{
+
+.why_choose {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.search_btn {
+  fill: #FFF;
+  stroke-width: 1px;
+  stroke: #16AA83;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.08));
 }
