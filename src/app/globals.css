@@ -19,5 +19,12 @@ body {
 .study{
   background-image: url('/map-bg.png');
   background-repeat: no-repeat;
-  
+}
+@layer components {
+  .hover-swap > :first-child:hover {
+    @apply opacity-0 invisible;
+  }
+  .hover-swap > :first-child:hover + :nth-child(2) {
+    @apply opacity-100 visible;
+  }
 }

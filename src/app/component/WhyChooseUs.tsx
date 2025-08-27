@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <div className=' '>
+    <div>
       <h2 className='uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-6 mt-[130px]'>
         Considering Studying in Australia
       </h2>
@@ -106,6 +106,7 @@ const WhyChooseUs = () => {
           </motion.div>
         </div>
       </div>
+      
     </div>
   );
 };
