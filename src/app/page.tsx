@@ -1,5 +1,7 @@
 import AcademicJourney from "./component/AcademicJourney";
 import Banner from "./component/Banner";
+import ClientsSay from "./component/ClientsSay";
+import ContactForm from "./component/ContactForm";
 import EstimatedUniversity from "./component/EstimatedUniversity";
 import VieService from "./component/VieService";
 import VoyageService from "./component/VoyageService";
@@ -15,7 +17,9 @@ export default function Home() {
       <EstimatedUniversity />
       <VoyageService />
       <WhyChooseUs />
-      <WhyChooseCard/>
+      <WhyChooseCard />
+      <ContactForm />
+      <ClientsSay />
     </div>
   );
 }

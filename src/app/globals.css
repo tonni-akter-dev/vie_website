@@ -16,15 +16,67 @@ body {
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.08));
 }
 
-.study{
+.study {
   background-image: url('/map-bg.png');
   background-repeat: no-repeat;
 }
-@layer components {
-  .hover-swap > :first-child:hover {
-    @apply opacity-0 invisible;
-  }
-  .hover-swap > :first-child:hover + :nth-child(2) {
-    @apply opacity-100 visible;
-  }
+
+.client_say {
+  background-image: url('/clients-map.png');
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.contact_bg {
+  background-image: url('/contact-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.inner_contact {
+  background-image: url('/bg-blur.png');
+  background-repeat: no-repeat;
+
+}
+
+.inner_contact input {
+  box-shadow: 1px 0 1.6px 0 rgba(0, 0, 0, 0.25) inset;
+  width: 370px;
+  height: 57px;
+  flex-shrink: 0;
+}
+
+.inner_contact h2 {
+  color: #FBFBFB;
+  text-align: right;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.53);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Creato Display";
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.78px;
+  text-transform: uppercase;
+  margin-bottom: 55px;
+}
+
+.inner_contact p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Meta Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 3%;
+  /* 0.6px */
+  text-underline-offset: 5.5%;
+  /* 1.1px */
+  text-underline-position: from-font;
 }
