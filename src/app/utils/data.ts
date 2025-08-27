@@ -67,4 +67,16 @@ import flag32 from '../../../public/flag32.png';
   { id: 32, name: "Georgia", image: flag32 },
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
 export default flags

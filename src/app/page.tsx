@@ -1,5 +1,6 @@
 import AcademicJourney from "./component/AcademicJourney";
 import Banner from "./component/Banner";
+import Blogs from "./component/Blogs";
 import ClientsSay from "./component/ClientsSay";
 import ContactForm from "./component/ContactForm";
 import EstimatedUniversity from "./component/EstimatedUniversity";
@@ -22,6 +23,7 @@ export default function Home() {
       <ContactForm />
       <ClientsSay />
       <HowcanweHelp />
+      <Blogs />
     </div>
   );
 }
