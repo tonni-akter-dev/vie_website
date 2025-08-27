@@ -3,6 +3,7 @@ import Banner from "./component/Banner";
 import ClientsSay from "./component/ClientsSay";
 import ContactForm from "./component/ContactForm";
 import EstimatedUniversity from "./component/EstimatedUniversity";
+import HowcanweHelp from "./component/HowcanweHelp";
 import VieService from "./component/VieService";
 import VoyageService from "./component/VoyageService";
 import WhyChooseCard from "./component/WhyChooseCard";
@@ -20,6 +21,7 @@ export default function Home() {
       <WhyChooseCard />
       <ContactForm />
       <ClientsSay />
+      <HowcanweHelp />
     </div>
   );
 }

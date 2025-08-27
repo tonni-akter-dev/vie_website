@@ -3,7 +3,7 @@ import DotCompo from './DotCompo'
 
 const ClientsSay = () => {
   return (
-    <div className='my-[120px] lg:mx-[130px] '>
+    <div className='mt-[120px] mb-[300px] lg:mx-[130px] '>
       <div className=' px-[72px] rounded-[112px] h-[548px] pt-12 bg-[#FEFEFE] ' style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
         <h2 className='uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-3 '>What our clients say!</h2>
         <div className='flex justify-center'>  <svg xmlns="http://www.w3.org/2000/svg" width="421" height="3" viewBox="0 0 421 3" fill="none">

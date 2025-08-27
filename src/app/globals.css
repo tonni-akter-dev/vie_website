@@ -27,6 +27,13 @@ body {
   background-position: top;
 }
 
+.howtohelp_bg {
+  background-image: url('/howtohelp_bg.png');
+  background-repeat: no-repeat;
+  border-radius: 18px;
+  background-size: cover;
+}
+
 .contact_bg {
   background-image: url('/contact-bg.png');
   background-repeat: no-repeat;
