@@ -2,6 +2,7 @@ import AcademicJourney from "./component/AcademicJourney";
 import Banner from "./component/Banner";
 import Blogs from "./component/Blogs";
 import ClientsSay from "./component/ClientsSay";
+import ConsultationCalender from "./component/ConsultationCalender";
 import ContactForm from "./component/ContactForm";
 import EstimatedUniversity from "./component/EstimatedUniversity";
 import HowcanweHelp from "./component/HowcanweHelp";
@@ -23,6 +24,7 @@ export default function Home() {
       <ContactForm />
       <ClientsSay />
       <HowcanweHelp />
+      <ConsultationCalender />
       <Blogs />
     </div>
   );

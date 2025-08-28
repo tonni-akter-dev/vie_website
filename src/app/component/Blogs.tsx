@@ -3,6 +3,8 @@ import Image, { StaticImageData } from 'next/image';
 import blog1 from '../../../public/blog1.png'
 import blog2 from '../../../public/blog2.png'
 import blog3 from '../../../public/blog3.png'
+import blogIcon from '../../../public/blogIcon.png';
+
 const blogs = [
   {
     title: "Growth Mindset for Success",
@@ -30,8 +32,8 @@ const BlogCard = ({ title, description, image }: { title: string, description: s
 );
 const Blogs = () => {
   return (
-    <div className=" mx-auto ">
-      <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Latest Blogs</h2>
+    <div className=" mx-auto mb-[112px] ">
+      <h2 className="text-[64px] font-bold text-center text-[#533115] uppercase mb-6">Latest Blogs</h2>
       <div className='bg-[#F6F6F6] pt-[38px] pb-[58px]'
         style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
         <div className="lg:px-[270px] px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[70px]">
@@ -40,6 +42,10 @@ const Blogs = () => {
           ))}
         </div>
       </div>
+
+      <button className='cursor-pointer flex justify-center mx-auto mt-[-40px]'>
+        <Image src={blogIcon} alt="" />
+      </button>
     </div>
   )
 }

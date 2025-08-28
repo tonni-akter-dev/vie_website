@@ -1,7 +1,3 @@
-'use client'
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaLinkedinIn } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
-
 export default function Footer() {
   return (
     <footer className="bg-[#C2C4AC] py-6">
@@ -53,18 +49,13 @@ export default function Footer() {
               contact@vieservices.com.au</div>
           </div>
         </div>
-
-        {/* Acknowledgement */}
         <div className="mt-10  leading-relaxed text-2xl text-[#2C2C2C]">
           VIE Services acknowledges the traditional owners of country throughout Australia
           and recognize the continuing connections to lands, waters and communities. We pay our
           respect to Aboriginal and Torres Strait Islander communities and to elders past,
           present and emerging.
         </div>
-
-        {/* Bottom row */}
         <div className="mt-6 flex flex-col md:flex-row justify-between items-center text-sm">
-
           <div className="flex gap-4 mt-3 md:mt-0">
             <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
               <path d="M16.5602 8.28012C16.5602 3.7095 12.8508 0 8.28012 0C3.7095 0 0 3.7095 0 8.28012C0 12.2877 2.84836 15.6246 6.6241 16.3946V10.7642H4.96807V8.28012H6.6241V6.21009C6.6241 4.61203 7.92408 3.31205 9.52214 3.31205H11.5922V5.79609H9.93615C9.48074 5.79609 9.10814 6.16869 9.10814 6.6241V8.28012H11.5922V10.7642H9.10814V16.5188C13.2896 16.1048 16.5602 12.5775 16.5602 8.28012Z" fill="#1B1B1B" />

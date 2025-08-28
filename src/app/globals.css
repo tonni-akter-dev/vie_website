@@ -103,3 +103,93 @@ footer h3 {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
+
+/* calender */
+.rs-calendar-table-header-cell-content {
+  font-size: 32px !important;
+  color: #084F3D !important;
+  text-align: center;
+  font-family: "Meta Pro";
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: normal;
+}
+
+.rs-calendar {
+  width: 100% !important;
+}
+
+.rs-calendar-panel .rs-calendar-table-cell-day {
+  font-size: 32px !important;
+  color: #084F3D;
+  text-align: center;
+  font-family: "Merge One";
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.rs-calendar {
+  padding-top: 50px !important;
+}
+
+.rs-calendar-panel .rs-calendar-header .rs-calendar-btn-today {
+  display: none;
+}
+
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) {
+  display: flex;
+  justify-content: center;
+}
+
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-forward {
+  display: none;
+}
+
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-backward {
+  display: none;
+}
+
+.rs-calendar-header-title {
+  color: #084F3D;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #084F3D;
+  font-family: "Merge One";
+  font-size: 48px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline !important;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 5.5%;
+  /* 2.64px */
+  text-underline-offset: 12.5%;
+  /* 6px */
+  text-underline-position: from-font;
+  margin-bottom: 34px !important;
+}
+
+.rs-btn {
+  overflow: visible !important;
+}
+
+.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
+  background-color: #EAEAEA !important;
+  height: 45px !important;
+  width: 45px !important;
+  color: #084F3D !important;
+}
+
+.calender_bg {
+  background-image: url('/calender-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border-radius: 112px; */
+  /* box-shadow: 0 0 4.6px 0 rgba(0, 0, 0, 0.25); */
+}
+
+.rs-calendar-table-cell-content:hover {
+  background-color: transparent !important;
+}
