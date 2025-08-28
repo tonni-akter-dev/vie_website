@@ -1,20 +1,21 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import React, { useState, useEffect } from 'react'
 import 'rsuite/dist/rsuite-no-reset.min.css';
 import { Calendar, HStack } from 'rsuite';
 import calenderScan from '../../../public/calender_scan.svg';
 import Image from 'next/image';
+import DotCompo from './DotCompo';
 
 const ConsultationCalender = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date()); // default today
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentTime, setCurrentTime] = useState('');
 
-  const handleSelect = (date) => {
+  const handleSelect = (date: React.SetStateAction<Date>) => {
     setSelectedDate(date);
   };
 
-  // Format date (e.g., Wednesday, July 09)
-  const formatDate = (date) => {
+  const formatDate = (date: Date) => {
     if (!date) return '';
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -23,33 +24,31 @@ const ConsultationCalender = () => {
     });
   };
 
-  // Format time (e.g., 14:05)
-  const formatTime = (date) => {
+  const formatTime = (date: Date) => {
     if (!date) return '';
     return date.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
-      hour12: false, // 24-hour format
+      hour12: false,
     });
   };
 
-  // keep updating current time every minute
   useEffect(() => {
     const updateTime = () => setCurrentTime(formatTime(new Date()));
-    updateTime(); // run once immediately
-    const interval = setInterval(updateTime, 60000); // update every minute
+    updateTime();
+    const interval = setInterval(updateTime, 60000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className='mx-[128px] mb-[152px]'>
-      <div className='bg-[#FEFEFE] flex justify-between rounded-[112px] pt-12 pb-[56px] ps-[43px] pe-[86px]' style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}>
+      <div className='bg-[#FEFEFE] mb-[30px] flex justify-between rounded-[112px] pt-12 pb-[56px] ps-[43px] pe-[86px]' style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}>
         <div className='flex gap-[37px]  items-end'>
           <HStack spacing={10} style={{ height: 540 }} alignItems="flex-start" className='calender_bg w-[711px] rounded-[112px]' wrap>
             <Calendar
               compact
               onSelect={handleSelect}
-              renderTitle={(date) => (
+              renderTitle={(date: { getFullYear: () => string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }) => (
                 <div className="text-center w-full font-bold text-lg">
                   {date.getFullYear()}
                 </div>
@@ -87,8 +86,7 @@ const ConsultationCalender = () => {
           </div>
         </div>
       </div>
-
-      {/* Custom CSS to remove selected border */}
+      <DotCompo />
       <style jsx global>{`
         .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
           box-shadow: none !important;

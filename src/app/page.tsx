@@ -5,6 +5,7 @@ import ClientsSay from "./component/ClientsSay";
 import ConsultationCalender from "./component/ConsultationCalender";
 import ContactForm from "./component/ContactForm";
 import EstimatedUniversity from "./component/EstimatedUniversity";
+import FaqList from "./component/FaqList";
 import HowcanweHelp from "./component/HowcanweHelp";
 import VieService from "./component/VieService";
 import VoyageService from "./component/VoyageService";
@@ -24,6 +25,7 @@ export default function Home() {
       <ContactForm />
       <ClientsSay />
       <HowcanweHelp />
+      <FaqList />
       <ConsultationCalender />
       <Blogs />
     </div>
