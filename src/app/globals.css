@@ -87,3 +87,19 @@ body {
   /* 1.1px */
   text-underline-position: from-font;
 }
+
+footer h3 {
+  color: #1B1B1B;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: 6.5%;
+  text-underline-offset: 13%;
+  text-underline-position: from-font;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
