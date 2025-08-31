@@ -1,7 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
 
-const UniversityCard = ({ datas }) => {
+interface UniversityData {
+    id: number;
+    name: string;
+    country: string;
+    website: string;
+    image: string;
+}
+
+interface UniversityCardProps {
+    datas: UniversityData;
+}
+
+const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
     return (
         <div className="bg-white rounded-[60px] shadow-lg p-6 max-w-sm mx-auto">
             <div className="flex justify-center mb-4">
