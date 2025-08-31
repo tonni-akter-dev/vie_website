@@ -7,7 +7,7 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.1, 
+      delayChildren: 0.1,
     },
   },
 };
@@ -19,7 +19,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: easeOut, 
+      ease: easeOut,
     },
   },
 };
@@ -64,16 +64,16 @@ export default function AcademicJourney() {
             Expert Counselling
           </p>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-10 p-6 rounded-lg shadow-md z-10"
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
             variants={overlayVariants}
             initial="hidden"
             animate="hidden"
             whileHover="visible"
           >
-            <p className="text-black text-lg font-medium">
+            <p className="text-[#1A1A1A] text-2xl font-medium ">
               Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
             </p>
-            <ul className="list-disc list-inside mt-5 text-black font-bold">
+            <ul className="list-disc list-inside mt-5 text-[#1A1A1A] font-bold">
               <li>Career oriented counseling</li>
               <li>Emphasis on futuristic Courses</li>
               <li>Interactive Sessions with uni delegates</li>
@@ -93,19 +93,18 @@ export default function AcademicJourney() {
             & university
           </p>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-10 p-6 rounded-lg shadow-md z-10"
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
             variants={overlayVariants}
             initial="hidden"
             animate="hidden"
             whileHover="visible"
           >
-            <p className="text-black text-lg font-medium">
-              Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
-            </p>
-            <ul className="list-disc list-inside mt-5 text-black font-bold">
-              <li>Career oriented counseling</li>
-              <li>Emphasis on futuristic Courses</li>
-              <li>Interactive Sessions with uni delegates</li>
+            <p className="text-[#1A1A1A] text-2xl font-medium ">
+              Effortlessly reach your highest potential test scores with certified, adept and dedicated future efficiently ensuring preparation for your desired tests.            </p>
+            <ul className="list-disc list-inside mt-5 text-[#1A1A1A] font-bold">
+              <li>Interactive classrooms & free demo sessions </li>
+              <li>Highly effective study materials</li>
+              <li>Score oriented tuitions and work tests </li>
             </ul>
           </motion.div>
         </motion.div>
@@ -120,19 +119,18 @@ export default function AcademicJourney() {
             Application Enrollment
           </p>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-10 p-6 rounded-lg shadow-md z-10"
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
             variants={overlayVariants}
             initial="hidden"
             animate="hidden"
             whileHover="visible"
           >
-            <p className="text-black text-lg font-medium">
-              Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
-            </p>
-            <ul className="list-disc list-inside mt-5 text-black font-bold">
-              <li>Career oriented counseling</li>
-              <li>Emphasis on futuristic Courses</li>
-              <li>Interactive Sessions with uni delegates</li>
+            <p className="text-[#1A1A1A] text-2xl font-medium ">
+              Ensure your form, ways and docs are expertly prepared and submitted on time by simplifying the process.         </p>
+            <ul className="list-disc list-inside mt-5 text-[#1A1A1A] font-bold">
+              <li>Document preparation and review</li>
+              <li>Application filings and submission</li>
+              <li>Follow up and Communication</li>
             </ul>
           </motion.div>
         </motion.div>
@@ -156,19 +154,18 @@ export default function AcademicJourney() {
             Services
           </p>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-10 p-6 rounded-lg shadow-md z-10"
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
             variants={overlayVariants}
             initial="hidden"
             animate="hidden"
             whileHover="visible"
           >
-            <p className="text-black text-lg font-medium">
-              Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
-            </p>
-            <ul className="list-disc list-inside mt-5 text-black font-bold">
-              <li>Career oriented counseling</li>
-              <li>Emphasis on futuristic Courses</li>
-              <li>Interactive Sessions with uni delegates</li>
+            <p className="text-[#1A1A1A] text-2xl font-medium ">
+              We simplify complex process wth expert guidance, ensuring accuracy, compliance  </p>
+            <ul className="list-disc list-inside mt-5 text-[#1A1A1A] font-bold">
+              <li>Document preparation and Verification</li>
+              <li>Visa application & Submission</li>
+              <li>Interview guidance & mock sessions.</li>
             </ul>
           </motion.div>
         </motion.div>
@@ -184,22 +181,22 @@ export default function AcademicJourney() {
             Processing
           </p>
           <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-10 p-6 rounded-lg shadow-md z-10"
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
             variants={overlayVariants}
             initial="hidden"
             animate="hidden"
             whileHover="visible"
           >
-            <p className="text-black text-lg font-medium">
-              Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
-            </p>
-            <ul className="list-disc list-inside mt-5 text-black font-bold">
-              <li>Career oriented counseling</li>
-              <li>Emphasis on futuristic Courses</li>
-              <li>Interactive Sessions with uni delegates</li>
+            <p className="text-[#1A1A1A] text-2xl font-medium ">
+              Beyond admissions, we ensure a smooth transition, travel, accommodation and cultural readiness            </p>
+            <ul className="list-disc list-inside mt-5 text-[#1A1A1A] font-bold">
+              <li>Travel and Accommodation  support </li>
+              <li>Emphasis on futuristic Courses </li>
+              <li>Cultural Orientation and setting In</li>
             </ul>
           </motion.div>
         </motion.div>
+
       </motion.div>
     </div>
   );
