@@ -96,7 +96,6 @@ interface FlagData {
     image: string; // Path to the image
 }
 
-// Ensure flags matches the FlagData interface
 const VieService = () => {
     const swiperRef = useRef<SwiperClass | null>(null);
     const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -197,15 +196,15 @@ const VieService = () => {
                     </svg>
                 </div>
             </div>
-            <div className='flex justify-between items-center'>
+            <div className='flex lg:flex-row flex-col gap-6 justify-center lg:justify-between items-center lg:mx-0 mx-4'>
                 <div className='relative'>
-                    <h3 className='text-[37px] font-medium text-[#2C2C2C] lg:ps-[72px]'>
+                    <h3 className='text-xl lg:text-[37px] font-medium text-[#2C2C2C] lg:ps-[72px]'>
                         At <span className='font-[900]'>VIE Services</span> we are dedicated to delivering high
-                        quality <br /> quality education counselling services to students & parents.
+                        quality <br className='lg:block hidden' /> quality education counselling services to students & parents.
                     </h3>
                     <Image className='absolute right-[-53px] top-8' src={vie_bg} alt="Background" />
                 </div>
-                <Image src={vie_logo} alt="VIE Logo" />
+                <Image className='md:w-[464px] w-full' src={vie_logo} alt="VIE Logo" />
             </div>
         </div>
     );

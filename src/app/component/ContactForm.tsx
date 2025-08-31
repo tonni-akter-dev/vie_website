@@ -67,7 +67,7 @@ import dot from '/public/dot.png';
 
 const ContactForm = () => {
     return (
-        <div className="contact_bg lg:px-[90px] px-8 relative overflow-hidden">
+        <div className="contact_bg lg:mx-[90px] px-8 relative overflow-hidden pt-[100px]">
             {/* Blur Background */}
             <div
                 className="absolute inset-0 z-0 ms-[230px] mt-[50px]"      >

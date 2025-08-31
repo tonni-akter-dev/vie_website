@@ -24,12 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased`}
+        className={`${geistSans.variable} antialiased overflow-x-hidden`}
       >
         <div className="bg-[#FBFBFB]">
           <Header />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </body>
     </html>

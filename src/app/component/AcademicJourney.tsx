@@ -29,7 +29,7 @@ const overlayVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut' as Easing, // Explicitly type as Easing
+      ease: 'easeInOut' as Easing, 
     },
   },
 };

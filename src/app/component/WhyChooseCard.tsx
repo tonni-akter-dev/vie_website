@@ -39,16 +39,16 @@ const WhyChooseCard = () => {
     return (
         <div>
             <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-[185px]'>Why Choose Australia? </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[164px] gap-1.5 mb-50'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                 >
                     <motion.div
-                        className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center rounded-tl-[50px] rounded-bl-[50px]  cursor-pointer relative ps-[35px]"
+                        className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center lg:rounded-tl-[50px] lg:rounded-bl-[50px]  cursor-pointer relative ps-[35px]"
                         variants={cardVariants}
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
@@ -83,7 +83,7 @@ const WhyChooseCard = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -125,7 +125,7 @@ const WhyChooseCard = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -167,7 +167,7 @@ const WhyChooseCard = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -209,7 +209,7 @@ const WhyChooseCard = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -250,14 +250,14 @@ const WhyChooseCard = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    className="mt-[60px] w-full"
+                    className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
                 >
                     <motion.div
-                        className="bg-[#A5AC8A] group h-[418px] flex flex-col justify-center rounded-tr-[50px] rounded-br-[50px] cursor-pointer relative ps-[35px]"
+                        className="bg-[#A5AC8A] group h-[418px] flex flex-col justify-center lg:rounded-tr-[50px] lg:rounded-br-[50px] cursor-pointer relative ps-[35px]"
                         variants={cardVariants}
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
