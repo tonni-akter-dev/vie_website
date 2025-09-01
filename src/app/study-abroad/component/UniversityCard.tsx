@@ -7,6 +7,7 @@ interface UniversityData {
     country: string;
     website: string;
     image: string;
+    logo: string;
 }
 
 interface UniversityCardProps {
@@ -15,26 +16,58 @@ interface UniversityCardProps {
 
 const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
     return (
-        <div className="bg-white rounded-[60px] shadow-lg p-6 max-w-sm mx-auto">
-            <div className="flex justify-center mb-4">
-                <div className=" flex items-center justify-center">
-                    <Image className='h-[200px]' src={datas.image} alt="" />
+        <div className="bg-[#FFF2DE] rounded-[60px] flex flex-col h-full">
+            {/* Top Content */}
+            <div className="px-10 pt-12 flex-1 flex flex-col">
+                <div className="flex justify-center mb-4">
+                    <div
+                        className="flex items-center justify-center flex-col gap-2.5"
+                        style={{
+                            mixBlendMode: 'darken',
+                            aspectRatio: '107/68',
+                        }}
+                    >
+                        <Image
+                            className="h-[214px] w-full object-contain"
+                            src={datas.image}
+                            alt={datas.name}
+                            width={200}
+                            height={200}
+                        />
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="176"
+                            height="2"
+                            viewBox="0 0 176 2"
+                            fill="none"
+                        >
+                            <path d="M0 1H176" stroke="#2C2C2C" strokeWidth="0.4" />
+                        </svg>
+                    </div>
                 </div>
+
+                <h2 className="text-[25px] font-medium text-[#2C2C2C] text-start mb-5">{datas.name}</h2>
+                <div className="flex items-center text-start gap-3 mb-5">
+                    <Image className='w-[26px] h-5' src={datas.logo} alt="" />
+                    <span className="text-xl text-[#2C2C2C]">{datas.country}</span>
+                </div>
+                <p className=" text-[#2C2C2C] font-medium mb-[74px] hover:underline">
+                    <a href={datas.website} target="_blank" rel="noopener noreferrer">
+                        {datas.website}
+                    </a>
+                </p>
+
+                {/* Push buttons down */}
+                <div className="mt-auto" />
             </div>
-            <h2 className="text-xl font-semibold text-center mb-2">{datas.name}</h2>
-            <div className="flex items-center justify-center mb-2">
-                <span className="text-sm text-gray-600">{datas.country}</span>
-            </div>
-            <p className="text-center text-blue-600 mb-4 hover:underline">
-                <a href={datas.website} target="_blank" rel="noopener noreferrer">
-                    {datas.website}
-                </a>
-            </p>
-            <div className="flex justify-center space-x-4">
-                <button className="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-800">
+
+            {/* Bottom Buttons */}
+            <div className="flex justify-center items-center w-full">
+                <button className="bg-[#084F3D]   text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-[60px] py-[42px] w-full">
                     Know More
                 </button>
-                <button className="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-800">
+                <div className="w-1 h-full bg-[#F4F4F4]"></div>
+                <button className="bg-[#084F3D] text-[26px] font-medium text-[#FFF2DE]  px-[30px] hover:bg-white hover:text-[#084f3d] rounded-br-[60px] py-[42px] w-full">
                     Apply Now
                 </button>
             </div>

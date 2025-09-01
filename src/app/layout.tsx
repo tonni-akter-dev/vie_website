@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-
+import { clashDisplay } from "./utils/font";
 
 export const metadata: Metadata = {
   title: "VIE",
@@ -24,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased overflow-x-hidden`}
+        className={`${clashDisplay.variable} antialiased overflow-x-hidden`}
       >
         <div className="bg-[#FBFBFB]">
           <Header />

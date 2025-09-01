@@ -1,4 +1,4 @@
-  import flag1 from '../../../public/flag1.png';
+import flag1 from '../../../public/flag1.png';
 import flag2 from '../../../public/flag2.png';
 import flag3 from '../../../public/flag3.png';
 import flag4 from '../../../public/flag4.png';
@@ -30,8 +30,8 @@ import flag29 from '../../../public/flag29.png';
 import flag30 from '../../../public/flag30.png';
 import flag31 from '../../../public/flag31.png';
 import flag32 from '../../../public/flag32.png';
-import u1 from '../../../public/u1.jpg';
-import u2 from '../../../public/u2.jpg';
+import u1 from '../../../public/u1.png';
+import u2 from '../../../public/u2.png';
 import u3 from '../../../public/u3.png';
 import u4 from '../../../public/u4.png';
 import u5 from '../../../public/u5.png';
@@ -50,6 +50,11 @@ import u17 from '../../../public/u17.png';
 import u18 from '../../../public/u18.png';
 import u19 from '../../../public/u19.png';
 import u20 from '../../../public/u20.svg';
+import logo1 from '../../../public/logo1.png';
+import logo2 from '../../../public/logo2.png';
+import logo3 from '../../../public/logo3.png';
+import logo4 from '../../../public/logo4.png';
+import logo5 from '../../../public/logo5.png';
 
 export const flags = [
   { id: 1, name: "Australia", image: flag1 },
@@ -92,140 +97,160 @@ export const universityData = [
     "name": "The University of South Wales Sydney",
     "country": "Australia",
     "website": "www.unsw.edu.au",
-    "image": u1
+    "image": u1,
+    'logo': logo1
   },
   {
     "id": 2,
     "name": "Monash University",
     "country": "Australia",
     "website": "www.monash.edu",
-    "image": u2
+    "image": u2,
+    'logo': logo1
   },
   {
     "id": 3,
     "name": "Johns Hopkins University",
     "country": "USA",
     "website": "www.jhu.edu",
-    "image": u3
+    "image": u3,
+    'logo': logo2
   },
   {
     "id": 4,
     "name": "University of Arizona",
     "country": "USA",
     "website": "www.arizona.edu",
-    "image": u4
+    "image": u4,
+    'logo': logo2
   },
   {
     "id": 5,
     "name": "INTI International University & Colleges",
     "country": "Malaysia",
     "website": "www.newinti.edu",
-    "image": u5
+    "image": u5,
+    'logo': logo2
   },
   {
     "id": 6,
     "name": "UCSI University & Colleges",
     "country": "Malaysia",
     "website": "www.ucsiuniversity.edu.my",
-    "image": u6
+    "image": u6,
+    'logo': logo2
   },
   {
     "id": 7,
     "name": "University of Bristol",
     "country": "United Kingdom",
     "website": "www.bristol.ac.uk",
-    "image": u7
+    "image": u7,
+    'logo': logo3,
   },
   {
     "id": 8,
     "name": "Durham University",
     "country": "United Kingdom",
     "website": "www.durham.ac.uk",
-    "image": u8
+    "image": u8,
+    'logo': logo3
   },
   {
     "id": 9,
     "name": "The University of Auckland",
     "country": "New Zealand",
     "website": "www.auckland.ac.nz",
-    "image": u9
+    "image": u9,
+    'logo': logo1
   },
   {
     "id": 10,
     "name": "Lincoln University",
     "country": "New Zealand",
     "website": "www.lincoln.ac.nz",
-    "image": u10
+    "image": u10,
+    'logo': logo1
   },
   {
     "id": 11,
     "name": "TUM Asia",
     "country": "Singapore",
     "website": "www.tum-asia.edu.sg",
-    "image": u11
+    "image": u11,
+    'logo': logo4
   },
   {
     "id": 12,
     "name": "Embry-Riddle Aeronautical University",
     "country": "Singapore",
     "website": "www.erau.edu",
-    "image": u12
+    "image": u12,
+    'logo': logo4
   },
   {
     "id": 13,
     "name": "University of Melbourne",
     "country": "Australia",
     "website": "www.unimelb.edu.au",
-    "image": u13
+    "image": u13,
+    'logo': logo1
   },
   {
     "id": 14,
     "name": "The University of Queensland",
     "country": "Australia",
     "website": "www.uq.edu.au",
-    "image": u14
+    "image": u14,
+    'logo': logo1
   },
   {
     "id": 15,
     "name": "University of Vermont",
     "country": "USA",
     "website": "www.uvm.edu",
-    "image": u15
+    "image": u15,
+    'logo': logo2
   },
   {
     "id": 16,
     "name": "Drexel University",
     "country": "USA",
     "website": "www.drexel.edu",
-    "image": u16
+    "image": u16,
+    'logo': logo2
   },
   {
     "id": 17,
     "name": "Singapore Management University",
     "country": "Singapore",
     "website": "www.smu.edu.sg",
-    "image": u17
+    "image": u17,
+    'logo': logo4
   },
   {
     "id": 18,
     "name": "National University of Singapore",
     "country": "Singapore",
     "website": "www.nus.edu.sg",
-    "image": u18
+    "image": u18,
+    'logo': logo4
   },
   {
     "id": 19,
     "name": "McGill University",
     "country": "Canada",
     "website": "www.mcgill.ca",
-    "image": u19
+    "image": u19,
+    'logo': logo5
   },
   {
     "id": 20,
     "name": "York University",
     "country": "Canada",
     "website": "www.yorku.ca",
-    "image": u20
+    "image": u20,
+    'logo': logo5
   }
 ];
 
