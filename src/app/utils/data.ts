@@ -64,17 +64,17 @@ import udetails6 from '../../../public/udetails6.png';
 import udetails7 from '../../../public/udetails7.png';
 import udetails8 from '../../../public/udetails8.png';
 import udetails9 from '../../../public/udetails9.png';
-import udetails10 from '../../../public/uudetails10.png';
-import udetails11 from '../../../public/uudetails11.png';
-import udetails12 from '../../../public/uudetails12.png';
-import udetails13 from '../../../public/uudetails13.png';
-import udetails14 from '../../../public/uudetails14.svg';
-import udetails15 from '../../../public/uudetails15.png';
-import udetails16 from '../../../public/uudetails16.png';
-import udetails17 from '../../../public/uudetails17.png';
-import udetails18 from '../../../public/uudetails18.png';
-import udetails19 from '../../../public/uudetails19.png';
-import udetails20 from '../../../public/uudetails20.svg';
+import udetails10 from '../../../public/udetails10.png';
+import udetails11 from '../../../public/udetails11.png';
+import udetails12 from '../../../public/udetails12.png';
+import udetails13 from '../../../public/udetails13.png';
+import udetails14 from '../../../public/udetails14.png';
+import udetails15 from '../../../public/udetails15.png';
+import udetails16 from '../../../public/udetails16.png';
+import udetails17 from '../../../public/udetails17.png';
+import udetails18 from '../../../public/udetails18.png';
+import udetails19 from '../../../public/udetails19.png';
+import udetails20 from '../../../public/udetails20.png';
 export const flags = [
   { id: 1, name: "Australia", image: flag1 },
   { id: 2, name: "Canada", image: flag2 },

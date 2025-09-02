@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { StaticImageData } from "next/image";
+import Link from 'next/link';
 
 
 export interface UniversityData {
@@ -71,9 +72,11 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
 
             {/* Bottom Buttons */}
             <div className="flex justify-center items-center w-full">
-                <button className="bg-[#084F3D]   text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-[60px] py-[42px] w-full">
-                    Know More
-                </button>
+                <Link href={`/study-abroad/${datas.id}`} className='bg-[#084F3D]   text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-[60px] py-[42px] w-full'>
+
+                    <button className="">
+                        Know More
+                    </button></Link>
                 <div className="w-1 h-full bg-[#F4F4F4]"></div>
                 <button className="bg-[#084F3D] text-[26px] font-medium text-[#FFF2DE]  px-[30px] hover:bg-white hover:text-[#084f3d] rounded-br-[60px] py-[42px] w-full">
                     Apply Now
