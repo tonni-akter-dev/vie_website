@@ -41,7 +41,7 @@ const ConsultationCalender = () => {
   }, []);
 
   return (
-    <div className='px-5 lg:mx-[128px] mb-[152px]'>
+    <div className='px-5 lg:mx-[80px] 2xl:mx-[128px] mb-[152px]'>
       <div className='bg-[#FEFEFE] mb-[30px] flex lg:flex-row flex-col justify-between lg:rounded-[112px] pt-12 pb-[56px] lg:ps-[43px] lg:pe-[86px]' style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}>
         <div className='flex lg:flex-row flex-col gap-[37px]  items-end'>
           <HStack spacing={10} style={{ height: 540 }} alignItems="flex-start" className='calender_bg w-full lg:w-[711px] rounded-[112px]' wrap>

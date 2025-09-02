@@ -39,7 +39,7 @@ const WhyChooseCard = () => {
     return (
         <div>
             <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-[185px]'>Why Choose Australia? </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[50px] 2xl:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
                 <motion.div
                     className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
@@ -53,7 +53,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>World <br />
+                        <h1 className='text-[#533115] text-base 2xl:text-[25px] font-extrabold uppercase'>World <br />
                             Class <br />
                             Education</h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -95,7 +95,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Innovation <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Innovation <br />
                             Learning <br />
                             Environment</h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -137,7 +137,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Cultural <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Cultural <br />
                             Diversity
                         </h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -179,7 +179,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Work <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Work <br />
                             Opportunities
                         </h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -221,7 +221,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Quality of <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Quality of <br />
                             Life</h1>
                         <div className='flex mt-5 gap-1 items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
@@ -262,7 +262,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Pathway of <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Pathway of <br />
                             permanent <br />
                             residence</h1>
                         <div className='flex mt-5 gap-1 items-center'>
