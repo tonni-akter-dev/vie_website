@@ -172,13 +172,13 @@ const ContactForm = () => {
                 className="absolute inset-0 z-0 ms-[230px] mt-[50px]"      >
                 {/* <BlurBackground className="w-full h-full mx-auto" /> */}
             </div>
-            <div 
+            <div
                 className="inner_contact w-[1170px] h-[713px] flex-shrink-0 max-w-full mx-auto relative z-10 bg-[rgba(255,255,255,0.01)] backdrop-blur-[9px] p-4 rounded-[20px] mb-4 overflow-y-auto" // UPDATED: Added overflow-y-auto to make form scrollable
             >
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-center mb-6">
+                <h2 className="text-xl md:text-3xl font-semibold text-center mb-6">
                     LET our experts reach out to you
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-[62px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[62px]">
                     <input
                         type="text"
                         placeholder="First Name"
@@ -195,7 +195,7 @@ const ContactForm = () => {
                         className="text-[#077155] text-base sm:text-lg text-center bg-white rounded-[14px] p-2"
                     />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-[62px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-[62px] max-w-[750px] mx-auto">
                     <input
                         type="text"
                         placeholder="First Name"
@@ -221,7 +221,7 @@ const ContactForm = () => {
                         />
                     </svg>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 max-w-[750px] mx-auto">
                     <input
                         type="text"
                         placeholder="Preferred Country"
@@ -233,7 +233,7 @@ const ContactForm = () => {
                         className="text-[#077155] text-base sm:text-lg text-center bg-white rounded-[14px] p-2"
                     />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-[68px]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-[68px] max-w-[750px] mx-auto">
                     <input
                         type="text"
                         placeholder="Course"

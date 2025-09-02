@@ -202,7 +202,7 @@ const VieService = () => {
                         At <span className='font-[900]'>VIE Services</span> we are dedicated to delivering high
                         quality <br className='lg:block hidden' /> quality education counselling services to students & parents.
                     </h3>
-                    <Image className='absolute right-[-53px] top-8' src={vie_bg} alt="Background" />
+                    <Image className='absolute lg:right-[-53px] top-8' src={vie_bg} alt="Background" />
                 </div>
                 <Image className='md:w-[464px] w-full' src={vie_logo} alt="VIE Logo" />
             </div>
