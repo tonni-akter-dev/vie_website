@@ -163,6 +163,7 @@
 import Image from 'next/image';
 import React from 'react';
 import dot from '/public/dot.png';
+import DotIndicator from './DotIndicator';
 
 const ContactForm = () => {
     return (
@@ -175,8 +176,10 @@ const ContactForm = () => {
             <div
                 className="inner_contact w-[1170px] h-[713px] flex-shrink-0 max-w-full mx-auto relative z-10 bg-[rgba(255,255,255,0.01)] backdrop-blur-[9px] p-4 rounded-[20px] mb-4 overflow-y-auto" // UPDATED: Added overflow-y-auto to make form scrollable
             >
+                <div className='flex justify-end mb-2'> <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} direction='horizontal' /></div>
+               
                 <h2 className="text-xl md:text-3xl font-semibold text-center mb-6">
-                    LET our experts reach out to you
+                    LET our experts reach out to you 
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-[62px]">
                     <input
