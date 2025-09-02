@@ -197,3 +197,42 @@ footer h3 {
 .rs-calendar-table-cell-content:hover {
   background-color: transparent !important;
 }
+
+.text_active {
+  color: #2C2C2C;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-transform: capitalize;
+}
+
+.text_inactive {
+  color: #2C2C2C;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.prev_next {
+  color: #2C2C2C;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-transform: capitalize;
+}

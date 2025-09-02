@@ -1,15 +1,16 @@
 import Image from 'next/image'
 import React from 'react'
+import { StaticImageData } from "next/image";
 
-interface UniversityData {
+
+export interface UniversityData {
     id: number;
     name: string;
     country: string;
     website: string;
-    image: string;
-    logo: string;
+    image: StaticImageData;   // imported image
+    logo?: StaticImageData;   // optional
 }
-
 interface UniversityCardProps {
     datas: UniversityData;
 }
@@ -48,7 +49,14 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
 
                 <h2 className="text-[25px] font-medium text-[#2C2C2C] text-start mb-5">{datas.name}</h2>
                 <div className="flex items-center text-start gap-3 mb-5">
-                    <Image className='w-[26px] h-5' src={datas.logo} alt="" />
+                    {datas.logo && (
+                        <Image
+                            className="w-[26px] h-5"
+                            src={datas.logo}
+                            alt={`${datas.name} logo`}
+                        />
+                    )}
+
                     <span className="text-xl text-[#2C2C2C]">{datas.country}</span>
                 </div>
                 <p className=" text-[#2C2C2C] font-medium mb-[74px] hover:underline">
