@@ -6,6 +6,7 @@ import VoyageInternational from '../component/VoyageInternational';
 import YourGetWay from '../component/YourGetWay';
 import BeginJourney from '../component/BeginJourney';
 import WeOffer from '../component/WeOffer';
+import OurTeamOurPromise from '../component/OurTeamOurPromise';
 
 
 
@@ -33,6 +34,7 @@ const About = () => {
         <VoyageInternational />
         <DotIndicator/>
         <YourGetWay/>
+        <OurTeamOurPromise/>
         <DotIndicator />
         <WeOffer />
         <BeginJourney />
