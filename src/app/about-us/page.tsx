@@ -7,6 +7,7 @@ import YourGetWay from '../component/YourGetWay';
 import BeginJourney from '../component/BeginJourney';
 import WeOffer from '../component/WeOffer';
 import OurTeamOurPromise from '../component/OurTeamOurPromise';
+import OurCoreValues from '../component/OurCoreValues';
 
 
 
@@ -35,6 +36,7 @@ const About = () => {
         <DotIndicator/>
         <YourGetWay/>
         <OurTeamOurPromise/>
+        <OurCoreValues/>
         <DotIndicator />
         <WeOffer />
         <BeginJourney />
