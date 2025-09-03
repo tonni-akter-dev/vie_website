@@ -39,20 +39,53 @@ export default function OurCoreValues() {
   ];
 
   return (
-    <section className="  px-[96px] ">
-      <h2 className="text-[56px] font-extrabold mb-8 text-[#2C2C2C] uppercase">
+    <section className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[96px] py-8 md:py-12 lg:py-16">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold mb-4 md:mb-6 lg:mb-8 text-[#2C2C2C] uppercase text-center lg:text-left">
         Our Core Values
       </h2>
-      <p className="text-[32px] text-[#2C2C2C] mb-8">We are guided by principles that define our approach and commitment to students:</p>
-      <div className="">
-        <div className="l">
+      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] text-[#2C2C2C] mb-6 md:mb-8 text-center lg:text-left">We are guided by principles that define our approach and commitment to students:</p>
+      
+      {/* Mobile and Tablet View */}
+      <div className="block lg:hidden">
+        <div className="space-y-4">
+          {coreValues.map((value) => (
+            <div
+              key={value.id}
+              className={`
+                bg-[#FFF2DE] rounded-2xl p-4 sm:p-6 cursor-pointer transition-all duration-300 ease-in-out
+                ${hoveredValue === value.id ? 'bg-opacity-90 shadow-lg' : 'hover:bg-opacity-80'}
+              `}
+              onMouseEnter={() => setHoveredValue(value.id)}
+              onMouseLeave={() => setHoveredValue(null)}
+              onClick={() => setHoveredValue(hoveredValue === value.id ? null : value.id)}
+            >
+              <div className="flex items-center space-x-4">
+                <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-[#2C2C2C] text-white rounded-full flex items-center justify-center text-sm sm:text-base font-bold">
+                  {value.id}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#2C2C2C] mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop View */}
+      <div className="hidden lg:block">
+        <div className="relative">
           <svg
-            width="1500"
-            height="836"
-            // viewBox={hoveredValue ? "0 0 1400 836" : "0 0 1051 836"}
+            viewBox="0 0 1500 836"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="transition-all duration-500 ease-in-out"
+            className="w-full h-auto transition-all duration-500 ease-in-out"
+            preserveAspectRatio="xMidYMid meet"
           >
             <circle cx="45" cy="94" r="45" fill="#FFF2DE" />
             <circle cx="79" cy="224" r="45" fill="#EEDEC7" />
@@ -162,7 +195,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 6 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+                <p className={`${hoveredValue === 6 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 6 ? coreValues[5].description : coreValues[5].title}
                 </p>
               </div>
@@ -174,7 +207,7 @@ export default function OurCoreValues() {
               height="74"
               rx="17"
               fill="#FFF2DE"
-                  className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
+              className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
               onMouseEnter={() => setHoveredValue(5)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -185,8 +218,8 @@ export default function OurCoreValues() {
               height="54"
               className="pointer-events-none"
             >
-              <div className="h-full flex items-center ">
-               <p className={`${hoveredValue === 5 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+              <div className="h-full flex items-center">
+                <p className={`${hoveredValue === 5 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 5 ? coreValues[4].description : coreValues[4].title}
                 </p>
               </div>
@@ -209,8 +242,8 @@ export default function OurCoreValues() {
               height="54"
               className="pointer-events-none"
             >
-              <div className="h-full flex items-center ">
-                <p className={`${hoveredValue === 4 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+              <div className="h-full flex items-center">
+                <p className={`${hoveredValue === 4 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 4 ? coreValues[3].description : coreValues[3].title}
                 </p>
               </div>
@@ -233,8 +266,8 @@ export default function OurCoreValues() {
               height="54"
               className="pointer-events-none"
             >
-              <div className="h-full flex items-center ">
-                <p className={`${hoveredValue === 3 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+              <div className="h-full flex items-center">
+                <p className={`${hoveredValue === 3 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 3 ? coreValues[2].description : coreValues[2].title}
                 </p>
               </div>
@@ -257,8 +290,8 @@ export default function OurCoreValues() {
               height="54"
               className="pointer-events-none"
             >
-              <div className="h-full flex items-center ">
-             <p className={`${hoveredValue === 2 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+              <div className="h-full flex items-center">
+                <p className={`${hoveredValue === 2 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 2 ? coreValues[1].description : coreValues[1].title}
                 </p>
               </div>
@@ -281,8 +314,8 @@ export default function OurCoreValues() {
               height="54"
               className="pointer-events-none"
             >
-              <div className="h-full flex items-center ">
-                 <p className={`${hoveredValue === 1 ?"text-[25px]" :"text-[35px]"} px-5 `}>
+              <div className="h-full flex items-center">
+                <p className={`${hoveredValue === 1 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 1 ? coreValues[0].description : coreValues[0].title}
                 </p>
               </div>
