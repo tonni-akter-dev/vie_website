@@ -6,6 +6,7 @@ import { Calendar, HStack } from 'rsuite';
 import calenderScan from '../../../public/calender_scan.svg';
 import Image from 'next/image';
 import DotCompo from './DotCompo';
+import DotIndicator from './DotIndicator';
 
 const ConsultationCalender = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -41,7 +42,7 @@ const ConsultationCalender = () => {
   }, []);
 
   return (
-    <div className='lg:mx-[128px] mb-[152px]'>
+    <div className='px-5 lg:mx-[80px] 2xl:mx-[128px] mb-[152px]'>
       <div className='bg-[#FEFEFE] mb-[30px] flex lg:flex-row flex-col justify-between lg:rounded-[112px] pt-12 pb-[56px] lg:ps-[43px] lg:pe-[86px]' style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}>
         <div className='flex lg:flex-row flex-col gap-[37px]  items-end'>
           <HStack spacing={10} style={{ height: 540 }} alignItems="flex-start" className='calender_bg w-full lg:w-[711px] rounded-[112px]' wrap>
@@ -49,7 +50,7 @@ const ConsultationCalender = () => {
               compact
               onSelect={handleSelect}
               renderTitle={(date: { getFullYear: () => string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }) => (
-                <div className="text-center w-full font-bold text-lg">
+                <div className="text-center w-full font-bold text-sm lg:text-lg">
                   {date.getFullYear()}
                 </div>
               )}
@@ -86,7 +87,9 @@ const ConsultationCalender = () => {
           </div>
         </div>
       </div>
-      <DotCompo />
+
+        <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
+
       <style jsx global>{`
         .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
           box-shadow: none !important;

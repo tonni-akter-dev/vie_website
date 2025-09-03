@@ -88,6 +88,7 @@ import vie_logo from '../../../public/vie_logo.png';
 import vie_bg from '../../../public/vie_bg.png';
 import type { Swiper as SwiperClass } from 'swiper';
 import { flags } from '../utils/data';
+import DotIndicator from './DotIndicator';
 
 // Define the interface for the flags data
 interface FlagData {
@@ -106,34 +107,10 @@ const VieService = () => {
                 <h3 className="text-[#533115] text-3xl font-medium mb-5">
                     {flags[activeIndex]?.name}
                 </h3>
-                <div className='flex justify-center items-center gap-1 mb-3'>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="6"
-                        height="5"
-                        viewBox="0 0 6 5"
-                        fill="none"
-                    >
-                        <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="6"
-                        height="5"
-                        viewBox="0 0 6 5"
-                        fill="none"
-                    >
-                        <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                    </svg>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="6"
-                        height="5"
-                        viewBox="0 0 6 5"
-                        fill="none"
-                    >
-                        <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                    </svg>
+                <div className='mb-3'>
+                 
+                    <DotIndicator direction="horizontal" width={5} spacing={5} height={5} bounceDistance={6}/>
+              
                 </div>
                 <Swiper
                     spaceBetween={30}
@@ -202,7 +179,7 @@ const VieService = () => {
                         At <span className='font-[900]'>VIE Services</span> we are dedicated to delivering high
                         quality <br className='lg:block hidden' /> quality education counselling services to students & parents.
                     </h3>
-                    <Image className='absolute right-[-53px] top-8' src={vie_bg} alt="Background" />
+                    <Image className='absolute lg:right-[-53px] top-8' src={vie_bg} alt="Background" />
                 </div>
                 <Image className='md:w-[464px] w-full' src={vie_logo} alt="VIE Logo" />
             </div>

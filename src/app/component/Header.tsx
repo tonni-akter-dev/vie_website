@@ -96,21 +96,24 @@ import qrWhite from "../../../public/qr-white.svg";
 import blackSearch from "../../../public/black-search.png";
 import whiteSearch from "../../../public/white-search.png";
 import profile from "../../../public/profile.png";
+import Link from "next/link";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white px-6 md:px-5 lg:px-10 lg:ps-[60px] lg:pe-[72px] py-5 md:py-7 lg:py-9 border-b border-[#084F3D] flex items-center justify-between relative">
-            <div className="flex items-center justify-between w-full lg:w-auto">
-                <Image
-                    src={logo}
-                    alt="Logo"
-                    className="w-[55px] h-[50px] md:w-[65px] md:h-[60px] lg:w-[75px] lg:h-[70px]"
-                />
+        <nav className="bg-white px-6 md:px-5 lg:px-10  py-5 md:py-7 lg:py-9 border-b border-[#084F3D] flex gap-10 items-center justify-between relative">
+            <div className="flex items-center justify-between w-full xl:w-auto">
+                <Link href="/">
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        className="w-[55px] h-[50px] md:w-[65px] md:h-[60px] lg:w-[75px] lg:h-[70px]"
+                    />
+                </Link>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="lg:hidden block md:mr-5 text-[#084F3D] focus:outline-none"
+                    className="xl:hidden block md:mr-5 text-[#084F3D] focus:outline-none"
                 >
                     {isOpen ? (
                         // Close Icon
@@ -147,7 +150,7 @@ const Header = () => {
                     )}
                 </button>
             </div>
-            <div className="hidden nav_items lg:flex items-center gap-6 lg:gap-[107px] md:ms-10 lg:ms-[165px]">
+            <div className="hidden nav_items xl:flex items-center gap-6 2xl:gap-[107px] ">
                 {[
                     "About Us",
                     "Study Abroad",
@@ -158,13 +161,13 @@ const Header = () => {
                     <a
                         key={idx}
                         href="#"
-                        className=" text-[#533115]   text-[16px] md:text-[18px] lg:text-[26px]  font-extrabold hover:text-[#084F3D]  hover:underline 
+                        className=" text-[#533115]   text-[16px] md:text-[18px] 2xl:text-[26px]  font-extrabold hover:text-[#084F3D]  hover:underline 
     decoration-[#084F3D] decoration-[12%] underline-offset-[4px] transition">
                         {item}
                     </a>
                 ))}
             </div>
-            <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
+            <div className="hidden xl:flex items-center space-x-3 lg:space-x-4">
                 <button className="group size-[34px] lg:size-[38px] p-[9px] lg:p-[11px] border border-[#16AA83] hover:bg-[#084F3D] rounded-full flex items-center justify-center">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +214,7 @@ const Header = () => {
                 />
             </div>
             {isOpen && (
-                <div className="absolute top-full left-0 w-full bg-white shadow-md border-t border-[#084F3D] flex flex-col items-start px-6 py-4 space-y-4 lg:hidden z-50">
+                <div className="absolute top-full left-0 w-full bg-white shadow-md border-t border-[#084F3D] flex flex-col items-start px-6 py-4 space-y-4 xl:hidden z-50">
                     {[
                         "About Us",
                         "Study Abroad",

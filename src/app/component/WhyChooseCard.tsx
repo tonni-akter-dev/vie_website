@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion, easeOut, Easing } from 'framer-motion';
+import DotIndicator from './DotIndicator';
 
 const WhyChooseCard = () => {
     const containerVariants = {
@@ -39,7 +40,7 @@ const WhyChooseCard = () => {
     return (
         <div>
             <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-[185px]'>Why Choose Australia? </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[50px] 2xl:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
                 <motion.div
                     className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
@@ -53,7 +54,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>World <br />
+                        <h1 className='text-[#533115] text-base 2xl:text-[25px] font-extrabold uppercase'>World <br />
                             Class <br />
                             Education</h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -68,13 +69,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className=' mb-3'>
+                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Home to globally <br /> ranked universities <br /> offering a ….. range of …..</h1>
@@ -95,7 +91,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Innovation <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Innovation <br />
                             Learning <br />
                             Environment</h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -110,13 +106,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className='mb-3'>
+                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Access …. research, modern facilities and industry relevant courses.</h1>
@@ -137,7 +128,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Cultural <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Cultural <br />
                             Diversity
                         </h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -152,13 +143,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className=' mb-3'>
+                                 <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Access …. research, modern facilities and industry relevant courses.</h1>
@@ -179,7 +165,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Work <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Work <br />
                             Opportunities
                         </h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -194,13 +180,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className=' mb-3'>
+                                 <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Experience a vibrant,  <br />multicultural society <br /> that welcomes <br /> international <br /> students.</h1>
@@ -221,7 +202,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Quality of <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Quality of <br />
                             Life</h1>
                         <div className='flex mt-5 gap-1 items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
@@ -235,13 +216,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className=' mb-3'>
+                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Enjoy a safe, clean <br /> environment with <br /> excellent healthcare <br /> and lifestyle <br /> amenities.</h1>
@@ -262,7 +238,7 @@ const WhyChooseCard = () => {
                         whileHover={{ opacity: 0.9 }}
                         transition={{ duration: 0.5, ease: 'easeInOut' }}
                     >
-                        <h1 className='text-[#533115]  text-[25px] font-extrabold uppercase'>Pathway of <br />
+                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Pathway of <br />
                             permanent <br />
                             residence</h1>
                         <div className='flex mt-5 gap-1 items-center'>
@@ -277,13 +253,8 @@ const WhyChooseCard = () => {
                             animate="hidden"
                             whileHover="visible"
                         >
-                            <div className='flex flex-col gap-1 mb-3'>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" />
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="6" height="5" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" />
-                                </svg>
+                            <div className=' mb-3'>
+                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
                                 Explore options for <br /> long term settlement <br /> through education <br /> pathways.</h1>
