@@ -3,6 +3,7 @@ import PlayButton from "../../../public/assets/about-us/icons/seeMore.svg"
 import Image from 'next/image'
 import DotIndicator from '../component/DotIndicator';
 import VoyageInternational from '../component/VoyageInternational';
+import YourGetWay from '../component/YourGetWay';
 
 
 
@@ -29,6 +30,7 @@ const About = () => {
 
         <VoyageInternational />
         <DotIndicator/>
+        <YourGetWay/>
       </section>
 
       {/* Bottom PlayButton */}
