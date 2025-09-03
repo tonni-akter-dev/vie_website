@@ -6,6 +6,7 @@ import { Calendar, HStack } from 'rsuite';
 import calenderScan from '../../../public/calender_scan.svg';
 import Image from 'next/image';
 import DotCompo from './DotCompo';
+import DotIndicator from './DotIndicator';
 
 const ConsultationCalender = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -86,7 +87,9 @@ const ConsultationCalender = () => {
           </div>
         </div>
       </div>
-      <DotCompo />
+
+        <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
+
       <style jsx global>{`
         .rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
           box-shadow: none !important;

@@ -1,4 +1,5 @@
 import React from 'react';
+import DotIndicator from './DotIndicator';
 const faqData = [
   "What service does VIE offer ?",
   "Who can apply through VIE Service ?",
@@ -39,7 +40,10 @@ const FaqList = () => {
   return (
     <div className='px-5 lg:mx-[152px] mb-[156px]'>
       <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-10'>frequently asked questions</h2>
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-[58px]'>
+        <div className=" mb-4">
+        <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
+      </div>
+     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-[58px]'>
         {faqData.map((faq, index) => (
           <FaqItem key={index} question={faq} index={index} />
         ))}
