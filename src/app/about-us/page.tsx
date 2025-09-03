@@ -4,6 +4,7 @@ import Image from 'next/image'
 import DotIndicator from '../component/DotIndicator';
 import VoyageInternational from '../component/VoyageInternational';
 import BeginJourney from '../component/BeginJourney';
+import WeOffer from '../component/WeOffer';
 
 
 
@@ -30,6 +31,7 @@ const About = () => {
 
         <VoyageInternational />
         <DotIndicator />
+        <WeOffer />
         <BeginJourney />
       </section>
 
