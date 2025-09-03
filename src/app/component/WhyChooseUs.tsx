@@ -39,15 +39,15 @@ const WhyChooseUs = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" /> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11 " viewBox="0 0 6 5" fill="none"> <ellipse cx="2.59434" cy="2.5" rx="2.59434" ry="2.5" fill="#A5AC8A" /> </svg> <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 6 5" fill="none"> <ellipse cx="3.40586" cy="2.5" rx="2.59434" ry="2.5" fill="#533115" /> </svg>
       </div>
       <Image className='w-full object-cover' src={choosebg} alt="" />
-      <p className='text-[32px] text-[#2C2C2C] font-bold lg:w-[1462px] w-full text-center mx-auto mt-6'>If you’re exploring the exceptional academic and personal growth opportunities Australia  <br />offers, VIE services is here to support you every step of the way. Whether you’re finalizing  <br />your choice or still weighing options, we provide expert guidance on course selection, <br /> application procedure visa requirements and preparing for your journey to Australia.</p>
+      <p className='text-[32px] text-[#2C2C2C] font-bold lg:max-w-[1462px] w-full text-center mx-auto mt-6'>If you’re exploring the exceptional academic and personal growth opportunities Australia  <br />offers, VIE services is here to support you every step of the way. Whether you’re finalizing  <br />your choice or still weighing options, we provide expert guidance on course selection, <br /> application procedure visa requirements and preparing for your journey to Australia.</p>
 
-      <div className="mb-16 md:mb-[185px] max-w-[1440px] mx-auto">
+      <div className="mb-16 md:mb-[185px] max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
         <div className="bg-[#FFF2DE] rounded-[62px] why_choose mt-8 md:mt-[136px] p-4 md:pt-9 md:ps-12 md:pb-[30px] md:pe-[70px]">
           <h1 className="text-[#533115] text-4xl md:text-[64px] font-extrabold text-center leading-normal uppercase">
             Why Choose Us ?
           </h1>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 my-8 md:my-[101px]"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 my-8 md:my-[101px]"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
             </motion.div>
           </motion.div>
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-[175px] my-8 md:my-[101px]"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-20 2xl:gap-[175px] my-8 md:my-[101px]"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
           </motion.div>
         </div>
       </div>
-      
+
     </div>
   );
 };

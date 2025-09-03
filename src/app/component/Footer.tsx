@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#C2C4AC] py-6">
       <div className="px-5 lg:px-[100px] 2xl:px-[270px] ">
-        <div className="flex lg:flex-row flex-col gap-[120px]">
+        <div className="flex lg:flex-row flex-wrap flex-col gap-[120px]">
           <div className="max-w-[383px]">
             <h3 className="font-bold mb-3">VIE SERVICES</h3>
             <p className="text-xl text-[#1B1B1B] ">

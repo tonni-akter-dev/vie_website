@@ -36,7 +36,7 @@ const Blogs = () => {
       <h2 className="text-[64px] font-bold text-center text-[#533115] uppercase mb-6">Latest Blogs</h2>
       <div className='bg-[#F6F6F6] pt-[38px] pb-[58px]'
         style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
-        <div className="lg:px-[270px] px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[70px]">
+        <div className="2xl:px-[270px] px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[70px]">
           {blogs.map((blog, index) => (
             <BlogCard key={index} title={blog.title} description={blog.description} image={blog.image} />
           ))}

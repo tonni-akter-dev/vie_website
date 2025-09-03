@@ -10,7 +10,7 @@ const VoyageService = () => {
             </div>
             <p className='px-4 lg:px-[155px] text-[#2C2C2C] text-3xl lg:text-[42px] text-normal text-center'>If you’re looking to unlock the outstanding academic and personal growth opportunities <br className='lg:block hidden' /> that Australia offers, VIE Services is your trusted partner at every stage. Whether you’ve already chosen your path or are still exploring options, we provide expert guidance on course selection, application processes, visa requirements, and all the preparations <br /> needed  for your journey to Australia.
             </p>
-            {/* <StudyAbroad /> */}
+            <StudyAbroad />
         </div>
     )
 }
