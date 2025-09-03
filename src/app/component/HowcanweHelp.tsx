@@ -3,7 +3,7 @@ import React from 'react'
 const HowcanweHelp = () => {
   return (
     <div className='howtohelp_bg  lg:mx-[130px] mb-[130px]'>
-      <div className='py-5 text-center'>
+      <div className='p-10 text-center'>
         <h3 className='text-[48px] uppercase font-bold text-[#2C2C2C]'>HOW CAN WE HELP?</h3>
         <div className='mt-7 relative lg:max-w-[1190px]  mx-auto   rounded-[18px]
         bg-white ' style={{ boxShadow: '0 1px 2px 1px rgba(0, 0, 0, 0.29)', backdropFilter: 'blur(50px)' }}>

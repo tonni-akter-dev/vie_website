@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from 'next/image'
 import React from 'react'
+import Link from 'next/link';
 
-interface UniversityData {
+
+export interface UniversityData {
     id: number;
     name: string;
     country: string;
@@ -9,7 +11,6 @@ interface UniversityData {
     image: StaticImageData;
     logo: StaticImageData;
 }
-
 interface UniversityCardProps {
     datas: UniversityData;
 }
@@ -48,7 +49,14 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
 
                 <h2 className="text-[25px] font-medium text-[#2C2C2C] text-start mb-5">{datas.name}</h2>
                 <div className="flex items-center text-start gap-3 mb-5">
-                    <Image className='w-[26px] h-5' src={datas.logo} alt="" />
+                    {datas.logo && (
+                        <Image
+                            className="w-[26px] h-5"
+                            src={datas.logo}
+                            alt={`${datas.name} logo`}
+                        />
+                    )}
+
                     <span className="text-xl text-[#2C2C2C]">{datas.country}</span>
                 </div>
                 <p className=" text-[#2C2C2C] font-medium mb-[74px] hover:underline">
@@ -63,9 +71,11 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
 
             {/* Bottom Buttons */}
             <div className="flex justify-center items-center w-full">
-                <button className="bg-[#084F3D]   text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-[60px] py-[42px] w-full">
-                    Know More
-                </button>
+                <Link href={`/study-abroad/${datas.id}`} className='bg-[#084F3D]   text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-[60px] py-[42px] w-full'>
+
+                    <button className="">
+                        Know More
+                    </button></Link>
                 <div className="w-1 h-full bg-[#F4F4F4]"></div>
                 <button className="bg-[#084F3D] text-[26px] font-medium text-[#FFF2DE]  px-[30px] hover:bg-white hover:text-[#084f3d] rounded-br-[60px] py-[42px] w-full">
                     Apply Now

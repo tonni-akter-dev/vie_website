@@ -2,7 +2,10 @@ import React from 'react'
 
 const QrCode = () => {
   return (
-    <div>QrCode</div>
+    <div>
+
+      
+    </div>
   )
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import DotIndicator from './DotIndicator';
 const faqData = [
   "What service does VIE offer ?",
   "Who can apply through VIE Service ?",
@@ -22,7 +23,7 @@ const FaqItem = ({ question, index }: { question: string, index: number }) => {
   return (
     <div className='flex flex-col items-center justify-center mb-8'>
       <div className={`${isEven ? 'bg-[#FFF2DE] hover:bg-[#EEDEC7]' : 'bg-[#EEDEC7] hover:bg-[#FFF2DE]'
-        } cursor-pointer transition-all ease-in-out duration-300 rounded-[22px] h-[111px] flex justify-center items-center w-full text-center`} style={{ boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.25)' }}>
+        } cursor-pointer transition-all ease-in-out duration-300 rounded-[22px] lg:h-[111px] flex justify-center items-center w-full text-center`} style={{ boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.25)' }}>
         <p className='text-[#533115] text-[28px] font-medium'>{question}</p>
       </div>
       <div className='mt-[-10px]'>
@@ -37,8 +38,11 @@ const FaqItem = ({ question, index }: { question: string, index: number }) => {
 
 const FaqList = () => {
   return (
-    <div className='lg:mx-[152px] mb-[156px]'>
+    <div className='px-5 lg:mx-[152px] mb-[156px]'>
       <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-10'>frequently asked questions</h2>
+        <div className=" mb-4">
+        <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
+      </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[58px]'>
         {faqData.map((faq, index) => (
           <FaqItem key={index} question={faq} index={index} />
