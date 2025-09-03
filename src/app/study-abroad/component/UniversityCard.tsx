@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React from 'react'
 
 interface UniversityData {
@@ -6,8 +6,8 @@ interface UniversityData {
     name: string;
     country: string;
     website: string;
-    image: string;
-    logo: string;
+    image: StaticImageData;
+    logo: StaticImageData;
 }
 
 interface UniversityCardProps {
@@ -16,7 +16,7 @@ interface UniversityCardProps {
 
 const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
     return (
-        <div className="bg-[#FFF2DE] rounded-[60px] flex flex-col h-full">
+        <div className="lg:bg-[#FFF2DE] lg:rounded-[60px] flex flex-col h-full">
             {/* Top Content */}
             <div className="px-10 pt-12 flex-1 flex flex-col">
                 <div className="flex justify-center mb-4">

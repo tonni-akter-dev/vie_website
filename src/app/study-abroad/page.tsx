@@ -1,40 +1,3 @@
-// import React from 'react';
-// import playbtn from '../../../public/playbutton.svg';
-// import Image from 'next/image';
-// import DotCompo from '../component/DotCompo';
-// import UniversityCard from './component/UniversityCard';
-// import { universityData } from '../utils/data';
-
-
-// const StudyAbroad = () => {
-//   return (
-//     <div className='mx-[38px]  my-[120px]'>
-//       <div className='mx-auto flex justify-center  mb-[-20px]'>
-//         <button><Image src={playbtn} alt="" /></button>
-//       </div>
-//       <div className='pt-[153px] px-[64px] bg-[#FEFEFE]  rounded-[58px] ' style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
-//         <div>
-//           <h2 className='text-[#2C2C2C] text-[60px] text-center font-[900] mb-[26px]'>Best Universities Around the World for Overseas Education</h2>
-//           <p className='text-[32px] text-[#918F8F] mb-[62px] text-center'>Choose a university that fuels your passion & purpose and that quenches your academic & career pursuits</p>
-//           <DotCompo />
-//         </div>
-//         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[50px]'>
-//           {
-//             universityData.map(uni => (
-//               <div key={uni.id}>
-//                 <UniversityCard
-//                   datas={uni}
-//                 />
-//               </div>
-//             ))
-//           }
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default StudyAbroad
 "use client";
 import React, { useState } from "react";
 import playbtn from "../../../public/playbutton.svg";
@@ -42,7 +5,7 @@ import Image from "next/image";
 import DotCompo from "../component/DotCompo";
 import UniversityCard from "./component/UniversityCard";
 import { universityData } from "../utils/data";
-import CountrySelect from "./CountrySelect";
+// import CountrySelect from "./CountrySelect";
 
 const StudyAbroad = () => {
   const itemsPerPage = 12;
@@ -53,8 +16,7 @@ const StudyAbroad = () => {
   const currentData = universityData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="mx-[38px] my-[120px]">
-      {/* Play Button */}
+    <div className="lg:mx-[38px] mx-4 my-[120px]">
       <div className="mx-auto flex justify-center mb-[-20px]">
         <button>
           <Image src={playbtn} alt="Play Button" />
@@ -63,7 +25,7 @@ const StudyAbroad = () => {
 
       {/* Main Section */}
       <div
-        className="pt-[153px] px-[64px] bg-[#FEFEFE] rounded-[58px]"
+        className="pt-[153px] lg:px-[64px] px-4bg-[#FEFEFE] rounded-[58px]"
         style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}
       >
         <div>
@@ -80,7 +42,7 @@ const StudyAbroad = () => {
 
         {/* select */}
 
-        <CountrySelect/>
+        {/* <CountrySelect/> */}
         {/* select */}
 
         {/* Cards Grid */}
