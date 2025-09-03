@@ -40,7 +40,7 @@ const WhyChooseCard = () => {
     return (
         <div>
             <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-[185px]'>Why Choose Australia? </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 lg:mx-[50px] 2xl:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 lg:mx-[50px] 2xl:mx-[164px] gap-1.5 lg:mb-50 mx-4'>
                 <motion.div
                     className=" mt-5 lg:mt-[60px] w-full"
                     variants={containerVariants}
