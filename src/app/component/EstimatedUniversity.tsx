@@ -40,14 +40,14 @@ const cardVariants: Variants = {
 
 const EstimatedUniversity = () => {
   return (
-    <div className="lg:mx-[110px] mt-[180px] ">
-      <h2 className="uppercase text-[#084F3D] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[70px]">
+    <div className="lg:mx-[110px] mt-20">
+      <h2 className="uppercase text-[#084F3D] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-10 lg:mb-[70px]">
         our esteemed university affiliates
       </h2>
 
       {/* Animated grid */}
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-[#FEFEFE] px-8 pt-[23px] pb-[50px] rounded-[58px]"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 bg-[#FEFEFE] px-8 pt-6 pb-[50px] rounded-[58px]"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"

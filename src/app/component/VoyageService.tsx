@@ -31,7 +31,7 @@ const VoyageService = () => {
 
       {/* Paragraph */}
       <motion.p
-        className="px-4 lg:px-[155px] text-[#2C2C2C] text-3xl lg:text-[42px] text-normal text-center"
+        className="px-4 lg:px-[155px] text-[#2C2C2C] text-2xl lg:text-[42px] text-normal text-center"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
@@ -42,7 +42,7 @@ const VoyageService = () => {
         Services is your trusted partner at every stage. Whether you’ve already
         chosen your path or are still exploring options, we provide expert guidance
         on course selection, application processes, visa requirements, and all the
-        preparations <br /> needed for your journey to Australia.
+        preparations <br className="lg:block hidden" /> needed for your journey to Australia.
       </motion.p>
         <StudyAbroad />
     </div>

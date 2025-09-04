@@ -69,11 +69,10 @@ const FaqList = () => {
     Record<number, number | null>
   >({});
 
-  // Define the number of items per row for each breakpoint
   const getItemsPerRow = () => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1280) return 3; // xl+
-      if (window.innerWidth >= 768) return 2; // md+
+      if (window.innerWidth >= 1280) return 3; 
+      if (window.innerWidth >= 768) return 2; 
     }
     return 1; // mobile
   };
