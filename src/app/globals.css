@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 body {
-  background-color: #FBFBFB !important;
-  font-family: 'Creato Display', sans-serif !important;
+  background-color: #fbfbfb !important;
+  font-family: "Creato Display", sans-serif !important;
 }
 
 .why_choose {
@@ -14,41 +14,40 @@ button {
 }
 
 .search_btn {
-  fill: #FFF;
+  fill: #fff;
   stroke-width: 1px;
-  stroke: #16AA83;
+  stroke: #16aa83;
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.08));
 }
 
 .study {
-  background-image: url('/map-bg.png');
+  background-image: url("/map-bg.png");
   background-repeat: no-repeat;
 }
 
 .client_say {
-  background-image: url('/clients-map.png');
+  background-image: url("/clients-map.png");
   background-repeat: no-repeat;
   background-position: top;
 }
 
 .howtohelp_bg {
-  background-image: url('/howtohelp_bg.png');
+  background-image: url("/howtohelp_bg.png");
   background-repeat: no-repeat;
   border-radius: 18px;
   background-size: cover;
 }
 
 .contact_bg {
-  background-image: url('/contact-bg.png');
+  background-image: url("/contact-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
 }
 
 .inner_contact {
-  background-image: url('/bg-blur.png');
+  background-image: url("/bg-blur.png");
   background-repeat: no-repeat;
-
 }
 
 .inner_contact input {
@@ -59,11 +58,11 @@ button {
 }
 
 .inner_contact h2 {
-  color: #FBFBFB;
+  color: #fbfbfb;
   text-align: right;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.53);
   -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: #FFF;
+  -webkit-text-stroke-color: #fff;
   font-family: "Creato Display";
   font-size: 42px;
   font-style: normal;
@@ -75,7 +74,7 @@ button {
 }
 
 .inner_contact p {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: "Meta Pro";
   font-size: 20px;
@@ -93,7 +92,7 @@ button {
 }
 
 footer h3 {
-  color: #1B1B1B;
+  color: #1b1b1b;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -111,7 +110,7 @@ footer h3 {
 /* calender */
 .rs-calendar-table-header-cell-content {
   font-size: 32px !important;
-  color: #084F3D !important;
+  color: #084f3d !important;
   text-align: center;
   font-family: "Meta Pro";
   font-style: normal;
@@ -125,7 +124,7 @@ footer h3 {
 
 .rs-calendar-panel .rs-calendar-table-cell-day {
   font-size: 32px !important;
-  color: #084F3D;
+  color: #084f3d;
   text-align: center;
   font-family: "Merge One";
   font-style: normal;
@@ -146,19 +145,21 @@ footer h3 {
   justify-content: center;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-forward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
+  .rs-calendar-header-forward {
   display: none;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-backward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
+  .rs-calendar-header-backward {
   display: none;
 }
 
 .rs-calendar-header-title {
-  color: #084F3D;
+  color: #084f3d;
   text-align: center;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #084F3D;
+  -webkit-text-stroke-color: #084f3d;
   font-family: "Merge One";
   font-size: 48px !important;
   font-style: normal;
@@ -179,15 +180,17 @@ footer h3 {
   overflow: visible !important;
 }
 
-.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
-  background-color: #EAEAEA !important;
+.rs-calendar-panel
+  .rs-calendar-table-cell-is-today
+  .rs-calendar-table-cell-day {
+  background-color: #eaeaea !important;
   height: 45px !important;
   width: 45px !important;
-  color: #084F3D !important;
+  color: #084f3d !important;
 }
 
 .calender_bg {
-  background-image: url('/calender-bg.png');
+  background-image: url("/calender-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   /* border-radius: 112px; */
@@ -199,7 +202,7 @@ footer h3 {
 }
 
 .text_active {
-  color: #2C2C2C;
+  color: #2c2c2c;
   font-size: 20px;
   font-style: normal;
   font-weight: 900;
@@ -214,7 +217,7 @@ footer h3 {
 }
 
 .text_inactive {
-  color: #2C2C2C;
+  color: #2c2c2c;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -223,7 +226,7 @@ footer h3 {
 }
 
 .prev_next {
-  color: #2C2C2C;
+  color: #2c2c2c;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -237,7 +240,6 @@ footer h3 {
   text-transform: capitalize;
 }
 
-/* bottom-only shadow for elements with rounded bottom corners */
 .bottom-shadow-only {
   position: relative;
   overflow: visible; /* ensure pseudo-element isn't clipped */
@@ -260,3 +262,18 @@ footer h3 {
   box-shadow: 0 12px 24px -8px rgba(0,0,0,0.12);
   z-index: 10; /* place shadow above parent backgrounds */
 }
+
+/* Red scrollbar for dropdown */
+.dropdown-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-thumb {
+  background-color: #084F3D;
+  border-radius: 8px;
+}
+
+.dropdown-scroll::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
