@@ -1,5 +1,4 @@
 import React from "react";
-import DotCompo from "./DotCompo";
 import DotIndicator from "./DotIndicator";
 
 const ClientsSay = () => {

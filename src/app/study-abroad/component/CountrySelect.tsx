@@ -52,9 +52,9 @@ export default function CountrySelect() {
   }, []);
 
   // Filter
-  const filteredCountries = countries.filter((c) =>
-    c.name.toLowerCase().includes(search.toLowerCase())
-  );
+  // const filteredCountries = countries.filter((c) =>
+  //   c.name.toLowerCase().includes(search.toLowerCase())
+  // );
 
   return (
     <div ref={dropdownRef} className="relative w-full lg:w-max mx-auto mt-4 ">
@@ -97,7 +97,7 @@ export default function CountrySelect() {
       {open && (
         <ul className="dropdown-scroll absolute shadow-lg bg-white py-2 px-2 z-[1000] min-w-full w-max rounded max-h-96 overflow-auto">
           {/* List */}
-          {filteredCountries.map((country) => (
+          {countries.map((country) => (
             <li
               key={country.alpha3Code}
               onClick={() => {

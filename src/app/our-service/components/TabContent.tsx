@@ -25,7 +25,7 @@ const TabContent: React.FC<TabContentProps> = ({
 
       {/* Right Box */}
       <div
-        className="py-[52px] not-first-of-type:lg:px-0 px-4 rounded-lg relative w-full lg:w-[487px] mb-[88px]"
+        className="py-[52px] not-first-of-type  px-8 rounded-lg relative w-full lg:w-[487px] mb-[88px]"
         style={{ backgroundColor: bgColor }}
       >
         <div className="absolute top-0 right-10">

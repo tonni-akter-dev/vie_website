@@ -15,7 +15,7 @@ const UniBanner: React.FC<IProps> = ({ data }) => {
         style={{ boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.25)" }}
       >
         <Image
-          className="w-[310px] h-[197px] mb-[34px] mx-auto"
+          className="lg:w-[310px] object-contain h-[197px] mb-[34px] mx-auto"
           style={{
             mixBlendMode: "darken",
             aspectRatio: "107/68",

@@ -5,7 +5,6 @@ import 'rsuite/dist/rsuite-no-reset.min.css';
 import { Calendar, HStack } from 'rsuite';
 import calenderScan from '../../../public/calender_scan.svg';
 import Image from 'next/image';
-import DotCompo from './DotCompo';
 import DotIndicator from './DotIndicator';
 
 const ConsultationCalender = () => {

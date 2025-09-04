@@ -61,7 +61,7 @@ const Header = () => {
       </div>
       <div className="hidden nav_items xl:flex items-center gap-6 2xl:gap-[107px] ">
         {[
-          { label: "About Us", href: "/about" },
+          { label: "About Us", href: "/about-us" },
           { label: "Study Abroad", href: "/study-abroad" },
           { label: "Our Services", href: "/our-service" },
           { label: "Book Consultation", href: "/consultation" },
