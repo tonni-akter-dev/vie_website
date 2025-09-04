@@ -45,19 +45,21 @@ button {
   background-repeat: no-repeat;
   border-radius: 18px;
   background-size: cover;
+  background-position: center center;
 }
 
 .contact_bg {
-  background-image: url("/contact-bg.png");
+  background-image: url("/form-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 800px;
+  /* height: 800px; */
+  border-radius: 50px;
 }
 
-.inner_contact {
+/* .inner_contact {
   background-image: url("/bg-blur.png");
   background-repeat: no-repeat;
-}
+} */
 
 .inner_contact input {
   box-shadow: 1px 0 1.6px 0 rgba(0, 0, 0, 0.25) inset;
