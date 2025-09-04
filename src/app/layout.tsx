@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 import { clashDisplay } from "./utils/font";
+import Layout from "./component/Layout";
 
 export const metadata: Metadata = {
   title: "VIE",
@@ -19,11 +20,7 @@ export default function RootLayout({
       <body
         className={`${clashDisplay.variable} antialiased overflow-x-hidden`}
       >
-        <div className="bg-[#FBFBFB]">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

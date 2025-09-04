@@ -259,7 +259,7 @@ footer h3 {
   border-top-right-radius: 0;
   border-bottom-left-radius: 76px;
   border-bottom-right-radius: 76px;
-  box-shadow: 0 12px 24px -8px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
   z-index: 10; /* place shadow above parent backgrounds */
 }
 
@@ -269,7 +269,7 @@ footer h3 {
 }
 
 .dropdown-scroll::-webkit-scrollbar-thumb {
-  background-color: #084F3D;
+  background-color: #084f3d;
   border-radius: 8px;
 }
 
@@ -277,3 +277,26 @@ footer h3 {
   background-color: #f1f1f1;
 }
 
+/* searchpage */
+.search_bg {
+  background: radial-gradient(605.9% 416.69% at 50% 50%, #fff 0%, #084f3d 100%);
+  backdrop-filter: blur(15.5px);
+  height: 100vh;
+  width: 100%;
+}
+.open_form_link{
+  color: #800000;
+font-family: "Meta Pro";
+font-size: 16px;
+font-style: normal;
+font-weight: 350;
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: none;
+text-decoration-thickness: auto;
+text-underline-offset: auto;
+text-underline-position: from-font;
+text-transform: uppercase;
+}
+/* searchpage */

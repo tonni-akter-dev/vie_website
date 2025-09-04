@@ -124,12 +124,12 @@ export const flags = [
 
 export interface University {
   id: number;
-  uniBanner: StaticImageData; // or StaticImageData if using next/image imports
+  uniBanner: StaticImageData; 
   name: string;
   country: string;
   website: string;
-  image: StaticImageData; // or StaticImageData
-  logo: StaticImageData; // or StaticImageData
+  image: StaticImageData; 
+  logo: StaticImageData; 
   acceptanceRate: string;
   totalInternationalStudents: string;
   placementRate: string;
@@ -138,8 +138,10 @@ export interface University {
   employability: string;
   rankings: string;
   intakes: string;
+  numericRanking:number;  established:number;
 }
-  export const coreValues = [
+
+export const coreValues = [
     {
       id: 1,
       title: "Student-Centered",
@@ -170,10 +172,12 @@ export interface University {
       title: "Driven to Deliver",
       description: "We are proactive, solution-focused, and committed to achieving the best results for you."
     }
-  ];
+];
 export const universityData:University[] = [
   {
     "id": 1,
+     numericRanking:1 ,
+     established: 1949,
     "uniBanner": udetails1,
     "name": "The University of New South Wales",
     "country": "Australia",
@@ -182,17 +186,19 @@ export const universityData:University[] = [
     "logo": logo1,
     "acceptanceRate": "30%",
     "totalInternationalStudents": "7700",
-    "placementRate": "93%93%",
+    "placementRate": "93%",
     "studentTeacherRatio": "16:116:1",
     "overview": "The University of New South Wales (UNSW) stands as one of the world’s leading institutions, acclaimed for its excellence in both teaching and research. Located across vibrant campuses in Kensington and Paddington in Sydney, as well as in Canberra, </br> </br> UNSW is a preferred destination for over 16,000 international students. UNSW offers a wealth of interdisciplinary study options, with programs led by globally recognized scholars and seasoned industry professionals. This ensures a practical, career-focused education that equips students with the skills needed for real-world success. </br> </br> Employable University for five consecutive years. Its strong ties with industry and commitment to student development further enhance career readiness.</br> </br> UNSW graduates consistently earn some of the highest median salaries among the prestigious Group of Eight universities in Australia. The University also champions innovation and entrepreneurship, boasting the highest number of startups launched through research and technology developed on campus.",
-    
-    
     "employability": "Employable University for five consecutive years. Its strong ties with industry and commitment to student development further enhance career readiness. UNSW graduates consistently earn some of the highest median salaries among the prestigious Group of Eight universities in Australia. The University also champions innovation and entrepreneurship, boasting the highest number of startups launched through research and technology developed on campus.",
     "rankings": "The University of New South Wales (UNSW) is recognized as one of the top-ranking universities both nationally and globally. Its strong performance is reflected in the QS World University Rankings, where it consistently achieves high positions across various categories. UNSW stands out particularly in subject-specific rankings and areas such as sustainability, highlighting its academic excellence and global impact.",
     "intakes": "September. These intakes provide students with flexibility to begin their studies, with major intakes through February, May, and September and preparations. Each term is a full academic session, allowing students to support services, regardless of when they start."
+    
   },
   {
     "id": 2,
+     numericRanking: 45,
+          established: 1985,
+
     "uniBanner": udetails2,
     "name": "Monash University",
     "country": "Australia",
@@ -210,6 +216,8 @@ export const universityData:University[] = [
   },
   {
     "id": 3,
+     numericRanking: 65,
+        established: 1975,
     "uniBanner": udetails3,
     "name": "Johns Hopkins University",
     "country": "USA",
@@ -227,6 +235,8 @@ export const universityData:University[] = [
   },
   {
     "id": 4,
+     numericRanking: 15,
+        established: 1914,
     "uniBanner": udetails4,
     "name": "University of Arizona",
     "country": "USA",
@@ -244,6 +254,8 @@ export const universityData:University[] = [
   },
   {
     "id": 5,
+     numericRanking: 17,
+        established: 1985,
     "uniBanner": udetails5,
     "name": "INTI International University & Colleges",
     "country": "Malaysia",
@@ -261,6 +273,8 @@ export const universityData:University[] = [
   },
   {
     "id": 6,
+     numericRanking: 56,
+        established: 1985,
     "uniBanner": udetails6,
     "name": "UCSI University & Colleges",
     "country": "Malaysia",
@@ -278,6 +292,8 @@ export const universityData:University[] = [
   },
   {
     "id": 7,
+     numericRanking: 45,   established: 2006,
+
     "uniBanner": udetails7,
     "name": "University of Bristol",
     "country": "United Kingdom",
@@ -295,6 +311,8 @@ export const universityData:University[] = [
   },
   {
     "id": 8,
+     numericRanking: 16,
+     established: 2012,
     "uniBanner": udetails8,
     "name": "Durham University",
     "country": "United Kingdom",
@@ -312,6 +330,8 @@ export const universityData:University[] = [
   },
   {
     "id": 9,
+     numericRanking: 200,
+     established: 2024,
     "uniBanner": udetails9,
     "name": "The University of Auckland",
     "country": "New Zealand",
@@ -329,6 +349,8 @@ export const universityData:University[] = [
   },
   {
     "id": 10,
+     numericRanking: 19,
+     established: 2016,
     "uniBanner": udetails10,
     "name": "Lincoln University",
     "country": "New Zealand",
@@ -346,6 +368,8 @@ export const universityData:University[] = [
   },
   {
     "id": 11,
+     numericRanking: 13,
+     established: 2006,
     "uniBanner": udetails11,
     "name": "TUM Asia",
     "country": "Singapore",
@@ -363,6 +387,8 @@ export const universityData:University[] = [
   },
   {
     "id": 12,
+     numericRanking: 15,
+     established: 2020,
     "uniBanner": udetails12,
     "name": "Embry-Riddle Aeronautical University",
     "country": "Singapore",
@@ -380,6 +406,8 @@ export const universityData:University[] = [
   },
   {
     "id": 13,
+     numericRanking: 36,
+       established: 2020,
     "uniBanner": udetails13,
     "name": "University of Melbourne",
     "country": "Australia",
@@ -397,6 +425,8 @@ export const universityData:University[] = [
   },
   {
     "id": 14,
+     numericRanking: 12,
+       established: 2025,
     "uniBanner": udetails14,
     "name": "The University of Queensland",
     "country": "Australia",
@@ -414,6 +444,8 @@ export const universityData:University[] = [
   },
   {
     "id": 15,
+     numericRanking: 7,
+       established:1935,
     "uniBanner": udetails15,
     "name": "University of Vermont",
     "country": "USA",
@@ -431,6 +463,8 @@ export const universityData:University[] = [
   },
   {
     "id": 16,
+     numericRanking: 3,
+       established: 1949,
     "uniBanner": udetails16,
     "name": "Drexel University",
     "country": "USA",
@@ -448,6 +482,8 @@ export const universityData:University[] = [
   },
   {
     "id": 17,
+     numericRanking: 5,
+       established: 1953,
     "uniBanner": udetails17,
     "name": "Singapore Management University",
     "country": "Singapore",
@@ -465,6 +501,8 @@ export const universityData:University[] = [
   },
   {
     "id": 18,
+     numericRanking: 10,
+       established: 1920,
     "uniBanner": udetails18,
     "name": "National University of Singapore",
     "country": "Singapore",
@@ -482,6 +520,8 @@ export const universityData:University[] = [
   },
   {
     "id": 19,
+      established: 1955,
+     numericRanking: 18,
     "uniBanner": udetails19,
     "name": "McGill University",
     "country": "Canada",
@@ -499,6 +539,8 @@ export const universityData:University[] = [
   },
   {
     "id": 20,
+     numericRanking: 15,
+       established: 2013,
     "uniBanner": udetails20,
     "name": "York University",
     "country": "Canada",
@@ -516,7 +558,7 @@ export const universityData:University[] = [
   }
 ];
 
-export     const offers = [
+export  const offers = [
         {
             pic: offer1,
             hoverPic: hover1,
