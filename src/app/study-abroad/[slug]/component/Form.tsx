@@ -1,10 +1,6 @@
 import { University } from "@/app/utils/data";
 import React from "react";
 import user from "../../../../../public/user.svg";
-import phone from "../../../../../public/phone.svg";
-import email from "../../../../../public/email.svg";
-import course from "../../../../../public/course.svg";
-import year from "../../../../../public/year.svg";
 import Image from "next/image";
 
 type IProps = {

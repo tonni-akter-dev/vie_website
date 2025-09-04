@@ -21,7 +21,6 @@ export default function CountrySelect() {
   const [countries, setCountries] = useState<Country[]>([]);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Fetch countries
   useEffect(() => {
     async function fetchCountries() {
       try {
@@ -29,11 +28,7 @@ export default function CountrySelect() {
           "https://raw.githubusercontent.com/iamspruce/search-filter-painate-reactjs/main/data/countries.json"
         );
         const data = await res.json();
-
-        // Convert object → array
         const values: Country[] = Object.values(data);
-
-        // Sort alphabetically
         const sorted = values.sort((a, b) => a.name.localeCompare(b.name));
         setCountries(sorted);
       } catch (error) {
@@ -43,7 +38,6 @@ export default function CountrySelect() {
     fetchCountries();
   }, []);
 
-  // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (
@@ -63,10 +57,7 @@ export default function CountrySelect() {
   );
 
   return (
-    <div
-      ref={dropdownRef}
-      className="relative w-full lg:w-max mx-auto mt-4 "
-    >
+    <div ref={dropdownRef} className="relative w-full lg:w-max mx-auto mt-4 ">
       {/* Button */}
       <button
         type="button"
@@ -113,7 +104,7 @@ export default function CountrySelect() {
                 setSelected({ name: country.name, flag: country.flag.small });
                 setOpen(false);
               }}
-              className="px-3 py-2 cursor-pointer text-xl flex items-center gap-4 mb-9"
+              className="px-3 py-2 cursor-pointer text-xl flex items-center gap-4 mb-2 hover:bg-gray-100"
             >
               <img
                 src={country.flag.small}
