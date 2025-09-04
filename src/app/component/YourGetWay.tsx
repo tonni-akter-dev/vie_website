@@ -17,7 +17,7 @@ export default function YourGetWay() {
             journey smooth, informed, and successful.
           </p>
           <p className="text-base sm:text-lg md:text-3xl text-gray-800 leading-10">
-            Whether you're seeking admission to a top-ranked institution,
+            Whether {`you're`} seeking admission to a top-ranked institution,
             exploring scholarship opportunities, or searching for the ideal
             course aligned with your career ambitions, VIE Services is here to
             turn your aspirations into reality.

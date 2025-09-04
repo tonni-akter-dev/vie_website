@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 interface Country {
@@ -68,7 +69,7 @@ export default function CountrySelect() {
       >
         {selected ? (
           <span className="flex items-center gap-2">
-            <img
+            <Image
               src={selected.flag}
               alt={selected.name}
               className="size-[36px] rounded-full"
@@ -91,7 +92,6 @@ export default function CountrySelect() {
           <path d="M0 0L12 11L24 0H0Z" fill={open ? "white" : "#2C2C2C"} />
         </svg>
       </button>
-      :"
       {/* Menu */}
       {open && (
         <ul className="dropdown-scroll absolute shadow-lg bg-white py-2 px-2 z-[1000] min-w-full w-max rounded max-h-96 overflow-auto">
@@ -105,7 +105,7 @@ export default function CountrySelect() {
               }}
               className="px-3 py-2 cursor-pointer text-xl flex items-center gap-4 mb-2 hover:bg-gray-100"
             >
-              <img
+              <Image
                 src={country.flag.small}
                 alt={country.name}
                 className="size-[36px] rounded-full object-contain"
