@@ -1,39 +1,65 @@
 import localFont from "next/font/local";
-// import '../../../public/fonts/CreatoDisplay-Thin.otf'
 
-export const clashDisplay = localFont({
+export const creatoDisplay = localFont({
     src: [
         {
-            path: '../../../public/fonts/CreatoDisplay-Black.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-Black.otf',
             weight: "200",
             style: "normal",
         },
         {
-            path: '../../../public/fonts/CreatoDisplay-Light.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-Light.otf',
             weight: "300",
             style: "normal",
         },
         {
-            path: '../../../public/fonts/CreatoDisplay-Regular.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-Regular.otf',
             weight: "400",
             style: "normal",
         },
         {
-            path: '../../../public/fonts/CreatoDisplay-Medium.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-Medium.otf',
             weight: "500",
             style: "normal",
         },
         {
-            path: '../../../public/fonts/CreatoDisplay-Bold.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-Bold.otf',
             weight: "700",
             style: "normal",
         },
         {
-            path: '../../../public/fonts/CreatoDisplay-ExtraBold.otf',
+            path: '../../../public/fonts/creato/CreatoDisplay-ExtraBold.otf',
             weight: "800",
             style: "normal",
         },
     ],
-    variable: "--font-clash-display",
+    variable: "--font-creato-display",
+    display: "swap",
+});
+
+export const metapro = localFont({
+    src: [
+        {
+            path: '../../../public/fonts/meta-pro/FFMetaProLight.ttf',
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: '../../../public/fonts/meta-pro/FFMetaProRegular.ttf',
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: '../../../public/fonts/meta-pro/FFMetaProMedium.ttf',
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: '../../../public/fonts/meta-pro/FFMetaProBold.ttf',
+            weight: "700",
+            style: "normal",
+        },
+    ],
+    variable: "--font-meta-pro",
     display: "swap",
 });

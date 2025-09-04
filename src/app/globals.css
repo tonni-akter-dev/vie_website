@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --font-creato-display: "Creato Display", sans-serif;
+  --font-meta-pro: "Meta Pro", sans-serif;
+}
+
 body {
   background-color: #fbfbfb !important;
-  font-family: "Creato Display", sans-serif !important;
+  font-family: var(--font-clash-display) !important;
+}
+
+.rs-calendar-body {
+  font-family: var(--font-meta-pro) !important;
 }
 
 .why_choose {
@@ -76,7 +85,7 @@ button {
 .inner_contact p {
   color: #fff;
   text-align: center;
-  font-family: "Meta Pro";
+  font-family: var(--font-meta-pro) !important;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -112,7 +121,6 @@ footer h3 {
   font-size: 32px !important;
   color: #084f3d !important;
   text-align: center;
-  font-family: "Meta Pro";
   font-style: normal;
   font-weight: 700 !important;
   line-height: normal;
@@ -284,19 +292,18 @@ footer h3 {
   height: 100vh;
   width: 100%;
 }
-.open_form_link{
+.open_form_link {
   color: #800000;
-font-family: "Meta Pro";
-font-size: 16px;
-font-style: normal;
-font-weight: 350;
-line-height: normal;
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-decoration-skip-ink: none;
-text-decoration-thickness: auto;
-text-underline-offset: auto;
-text-underline-position: from-font;
-text-transform: uppercase;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 350;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  text-transform: uppercase;
 }
 /* searchpage */

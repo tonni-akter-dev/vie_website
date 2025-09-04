@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./component/Header";
-import Footer from "./component/Footer";
-import { clashDisplay } from "./utils/font";
 import Layout from "./component/Layout";
+import { creatoDisplay, metapro } from "./utils/font";
 
 export const metadata: Metadata = {
   title: "VIE",
@@ -18,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${clashDisplay.variable} antialiased overflow-x-hidden`}
+        className={`${creatoDisplay.variable} ${metapro.variable}  antialiased overflow-x-hidden`}
       >
         <Layout>{children}</Layout>
       </body>

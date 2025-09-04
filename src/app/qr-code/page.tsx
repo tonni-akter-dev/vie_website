@@ -3,7 +3,7 @@ import React from "react";
 
 const QrCode = () => {
   return (
-    <div className="search_bg">
+    <div className="search_bg flex justify-center items-center h-full flex-col gap-1 lg:mx-0 mx-5">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="278"
@@ -16,7 +16,7 @@ const QrCode = () => {
           fill="#084F3D"
         />
       </svg>
-      <p>Register here as a student</p>
+      <p className="text-4xl font-[900] mt-6 mb-2 ">Register here as a student</p>
       <Link href="#" className="open_form_link">Open as a form</Link>
     </div>
   );
