@@ -240,7 +240,29 @@ footer h3 {
   text-transform: capitalize;
 }
 
-/* scroll */
+.bottom-shadow-only {
+  position: relative;
+  overflow: visible; /* ensure pseudo-element isn't clipped */
+  z-index: 0; /* base stacking context for the element */
+}
+.bottom-shadow-only::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px; /* move below the element so shadow doesn't affect top */
+  height: 36px; /* controls vertical spread */
+  pointer-events: none;
+  background: transparent;
+  /* keep only the bottom corner radii so shadow is confined there */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 76px;
+  border-bottom-right-radius: 76px;
+  box-shadow: 0 12px 24px -8px rgba(0,0,0,0.12);
+  z-index: 10; /* place shadow above parent backgrounds */
+}
+
 /* Red scrollbar for dropdown */
 .dropdown-scroll::-webkit-scrollbar {
   width: 8px;
@@ -255,4 +277,3 @@ footer h3 {
   background-color: #f1f1f1;
 }
 
-/* scroll */

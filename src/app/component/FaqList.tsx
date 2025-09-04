@@ -23,7 +23,7 @@ const FaqItem = ({ question, index }: { question: string, index: number }) => {
   return (
     <div className='flex flex-col items-center justify-center mb-8'>
       <div className={`${isEven ? 'bg-[#FFF2DE] hover:bg-[#EEDEC7]' : 'bg-[#EEDEC7] hover:bg-[#FFF2DE]'
-        } cursor-pointer transition-all ease-in-out duration-300 rounded-[22px] lg:h-[111px] flex justify-center items-center w-full text-center`} style={{ boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.25)' }}>
+        } cursor-pointer transition-all ease-in-out duration-300 rounded-[22px] xl:h-[111px] flex justify-center items-center w-full text-center`} style={{ boxShadow: '0 1px 4px 0 rgba(0, 0, 0, 0.25)' }}>
         <p className='text-[#533115] text-[28px] font-medium'>{question}</p>
       </div>
       <div className='mt-[-10px]'>
@@ -43,7 +43,7 @@ const FaqList = () => {
         <div className=" mb-4">
         <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-[58px]'>
+     <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 mt-[58px]'>
         {faqData.map((faq, index) => (
           <FaqItem key={index} question={faq} index={index} />
         ))}
