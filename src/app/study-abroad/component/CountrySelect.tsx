@@ -13,7 +13,6 @@ interface Country {
 
 export default function CountrySelect() {
   const [open, setOpen] = useState(false);
-  const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<{
     name: string;
     flag: string;

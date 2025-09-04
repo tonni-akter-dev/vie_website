@@ -15,7 +15,7 @@ const FormDetails: React.FC<IProps> = ({ data }) => {
           Want to Study {data?.country}?
         </h4>
         <p className="text-black text-xl font-normal uppercase">
-          Fill in your details and we'll call you back
+          Fill in your details and {`we'll`} call you back
         </p>
       </div>
       <div
