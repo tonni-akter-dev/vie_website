@@ -48,12 +48,12 @@ const Services = () => {
 
     ]
     return (
-        <div className='max-w-[1624px] mx-auto px-4 sm:px-6 md:px-8 mb-[60px] md:mb-[90px] lg:mb-[120px]'>
+        <div className='max-w-[1644px] mx-auto px-4 sm:px-6 md:px-8 mb-[60px] md:mb-[90px] lg:mb-[120px]'>
             <div>
                 <p className='text-center text-[#2C2C2C] text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-extrabold mb-3 md:mb-5'>Why VIE Services?</p>
                 <p className='text-[#2C2C2C] text-lg sm:text-xl md:text-2xl lg:text-[32px] text-center mb-8 md:mb-16 lg:mb-[100px]'>At VIE, we bring together deep industry expertise, a highly personalized approach, and long-term support to ensure student success. Here’s what sets us apart:</p>
             </div>
-            <div className='flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-[42px]'>
+            <div className='flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 lg:gap-10'>
                 {
                     services.map((service, index) => (
                         <div
