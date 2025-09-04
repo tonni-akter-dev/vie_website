@@ -1,9 +1,11 @@
-import React from 'react'
+import UniDetails from "./component/UniDetails";
 
 const UniversityDetails = () => {
   return (
-    <div>UniversityDetails</div>
-  )
-}
+    <div>
+      <UniDetails />
+    </div>
+  );
+};
 
-export default UniversityDetails
+export default UniversityDetails;

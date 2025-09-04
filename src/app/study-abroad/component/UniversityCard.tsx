@@ -67,8 +67,8 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
           )}
           <span className="text-xl text-[#2C2C2C]">{datas.country}</span>
         </div>
-        <p className="text-[#2C2C2C] font-medium mb-11 hover:underline">
-          <a
+        <p className="text-[#2C2C2C]  text-[20px] font-medium mb-11 hover:underline">
+          <Link
             href={
               datas.website.startsWith("http")
                 ? datas.website
@@ -78,7 +78,7 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
             rel="noopener noreferrer"
           >
             {datas.website}
-          </a>
+          </Link>
         </p>
       </div>
 
