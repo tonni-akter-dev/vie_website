@@ -153,13 +153,11 @@ footer h3 {
   justify-content: center;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
-  .rs-calendar-header-forward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-forward {
   display: none;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
-  .rs-calendar-header-backward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-backward {
   display: none;
 }
 
@@ -188,9 +186,7 @@ footer h3 {
   overflow: visible !important;
 }
 
-.rs-calendar-panel
-  .rs-calendar-table-cell-is-today
-  .rs-calendar-table-cell-day {
+.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
   background-color: #eaeaea !important;
   height: 45px !important;
   width: 45px !important;
@@ -250,16 +246,21 @@ footer h3 {
 
 .bottom-shadow-only {
   position: relative;
-  overflow: visible; /* ensure pseudo-element isn't clipped */
-  z-index: 0; /* base stacking context for the element */
+  overflow: visible;
+  /* ensure pseudo-element isn't clipped */
+  z-index: 0;
+  /* base stacking context for the element */
 }
+
 .bottom-shadow-only::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -18px; /* move below the element so shadow doesn't affect top */
-  height: 36px; /* controls vertical spread */
+  bottom: -18px;
+  /* move below the element so shadow doesn't affect top */
+  height: 36px;
+  /* controls vertical spread */
   pointer-events: none;
   background: transparent;
   /* keep only the bottom corner radii so shadow is confined there */
@@ -268,7 +269,8 @@ footer h3 {
   border-bottom-left-radius: 76px;
   border-bottom-right-radius: 76px;
   box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
-  z-index: 10; /* place shadow above parent backgrounds */
+  z-index: 10;
+  /* place shadow above parent backgrounds */
 }
 
 /* Red scrollbar for dropdown */
@@ -292,6 +294,7 @@ footer h3 {
   height: 100vh;
   width: 100%;
 }
+
 .open_form_link {
   color: #800000;
   font-size: 16px;
@@ -306,4 +309,30 @@ footer h3 {
   text-underline-position: from-font;
   text-transform: uppercase;
 }
+
 /* searchpage */
+
+
+.circle {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 500 / 477;
+  background: #EBD8BC;
+  clip-path: path("M500 251.5C500 375.764 388.071 476.5 250 476.5C111.929 476.5 0 375.764 0 251.5C0 127.236 111.929 0.5 250 0.5C388.071 0.5 500 127.236 500 251.5Z");
+  height: auto;
+}
+
+@media (max-width: 967px) {
+  .circle {
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    clip-path: none;
+    border-radius: 50%;
+  }
+}
+
+
+
+.circle:hover {
+  background: #FFF7ED;
+}
