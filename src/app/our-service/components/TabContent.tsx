@@ -16,7 +16,7 @@ const TabContent: React.FC<TabContentProps> = ({
   return (
     <div className="flex flex-col justify-between lg:flex-row gap-8 mt-[70px]">
       {/* Left Content */}
-      <div className=" max-w-[1044px]">
+      <div className=" lg:max-w-[1044px]">
         <h2 className="text-[45px] font-extrabold text-[#533115] mb-[37px]">
           {title}
         </h2>
@@ -25,7 +25,7 @@ const TabContent: React.FC<TabContentProps> = ({
 
       {/* Right Box */}
       <div
-        className="py-[52px] px-[43px] rounded-lg relative w-full lg:w-[487px] mb-[88px]"
+        className="py-[52px] not-first-of-type:lg:px-0 px-4 rounded-lg relative w-full lg:w-[487px] mb-[88px]"
         style={{ backgroundColor: bgColor }}
       >
         <div className="absolute top-0 right-10">

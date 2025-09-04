@@ -28,7 +28,6 @@ const Header = () => {
                     className="xl:hidden block md:mr-5 text-[#084F3D] focus:outline-none"
                 >
                     {isOpen ? (
-                        // Close Icon
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -44,7 +43,6 @@ const Header = () => {
                             />
                         </svg>
                     ) : (
-                        // Hamburger Icon
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"

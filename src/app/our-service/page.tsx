@@ -16,7 +16,7 @@ const OurService = () => {
       </div>
 
       <div
-        className="lg:pt-[153px] lg:pb-[116px] py-[60px] lg:px-[64px] px-4 bg-[#FEFEFE] rounded-2xl lg:rounded-[58px]"
+        className="lg:pt-[153px] lg:pb-[116px] py-[60px] lg:px-[32px] px-4 bg-[#FEFEFE] rounded-2xl lg:rounded-[58px]"
         style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}
       >
         <h2 className="lg:text-[64px] text-4xl text-center font-extrabold  uppercase leading-normal mb-[111px]">

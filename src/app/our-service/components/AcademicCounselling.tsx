@@ -122,7 +122,7 @@ const tabContent: Record<
 
 // SVG logic as you had before
 const getSvgByIndex = (index: number) => {
-  const firstType = [1, 3, 7];
+  const firstType = [1, 3, 8];
   const secondType = [2, 5, 7, 9];
   const thirdType = [4, 6];
 
@@ -134,6 +134,8 @@ const getSvgByIndex = (index: number) => {
         height="66"
         viewBox="0 0 66 66"
         fill="none"
+        className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
+
       >
         <circle cx="33" cy="33" r="33" fill="#A5AC8A" />
         <path
@@ -149,7 +151,8 @@ const getSvgByIndex = (index: number) => {
         width="66"
         height="66"
         viewBox="0 0 66 66"
-        fill="none"
+        fill="none"  className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
+
       >
         <circle cx="33" cy="33" r="33" fill="#FFF2DE" />
         <path
@@ -165,7 +168,8 @@ const getSvgByIndex = (index: number) => {
         width="66"
         height="66"
         viewBox="0 0 66 66"
-        fill="none"
+        fill="none"  className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
+
       >
         <circle cx="33" cy="33" r="33" fill="#F4FFE8" />
         <path
@@ -188,26 +192,27 @@ export default function AcademicCounselling() {
   }
 
   return (
-    <div className="p-[30px]">
+    <div className="">
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="mb-4">
           {/* Tab Buttons */}
-          <div className="flex flex-wrap gap-2 mb-2">
+          <div className="flex justify-between lg:flex-nowrap flex-wrap gap-2 mb-2">
             {row.map((tab, tabIndex) => {
               const globalIndex = rowIndex * 3 + tabIndex + 1;
               const isActive = activeTab === tab;
               return (
                 <div key={tab} className="flex gap-[15px] items-center">
                   <button
-                    onClick={() => setActiveTab(tab)}
-                    className={`px-7 whitespace-nowrap py-6 rounded-full flex-1 text-center text-[#533115] font-semibold shadow-[2px_2px_0_2px_rgba(0,0,0,0.13)] text-[40px] ${
+                    onClick={
+                      () => setActiveTab(isActive ? null : tab)
+                    }
+                    className={`px-7 lg:whitespace-nowrap  py-3 lg:py-6 rounded-full flex-1 text-[#533115] font-semibold shadow-[2px_2px_0_2px_rgba(0,0,0,0.13)] text-xl  md:text-3xl lg:text-[40px] ${
                       activeTab === tab ? "" : "bg-white"
-                    }`}
-                  >
+                    }`}>
                     {tab}
                   </button>
                   <div
-                    className={`transition-transform duration-300 ${
+                    className={`lg:size-[66px] size-[40px] transition-transform duration-300 ${
                       isActive ? "rotate-180" : "rotate-0"
                     }`}
                   >
