@@ -45,10 +45,9 @@ export default function OurCoreValues() {
               key={value.id}
               className={`
                 bg-[#FFF2DE] rounded-2xl p-4 sm:p-6 cursor-pointer transition-all duration-300 ease-in-out
-                ${
-                  hoveredValue === value.id
-                    ? "bg-opacity-90 shadow-lg"
-                    : "hover:bg-opacity-80"
+                ${hoveredValue === value.id
+                  ? "bg-opacity-90 shadow-lg"
+                  : "hover:bg-opacity-80"
                 }
               `}
               initial="hidden"
@@ -205,11 +204,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 6
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 6 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 6
                     ? coreValues[5].description
@@ -239,11 +234,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 5
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 5 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 5
                     ? coreValues[4].description
@@ -273,11 +264,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 4
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 4 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 4
                     ? coreValues[3].description
@@ -307,11 +294,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 3
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 3 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 3
                     ? coreValues[2].description
@@ -341,11 +324,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 2
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 2 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 2
                     ? coreValues[1].description
@@ -375,11 +354,7 @@ export default function OurCoreValues() {
             >
               <div className="h-full flex items-center">
                 <p
-                  className={`${
-                    hoveredValue === 1
-                      ? "text-lg xl:text-xl 2xl:text-[25px]"
-                      : "text-xl xl:text-2xl 2xl:text-[35px]"
-                  } px-5 font-medium`}
+                  className={`${hoveredValue === 1 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
                 >
                   {hoveredValue === 1
                     ? coreValues[0].description
