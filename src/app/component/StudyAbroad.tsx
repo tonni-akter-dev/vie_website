@@ -24,7 +24,7 @@ import arrowleftBig from '../../../public/arrowleftBig.svg';
 
 const StudyAbroad = () => {
     return (
-        <div className=' mx-[77px]'>
+        <div className='mx-5 lg:mx-[77px]'>
             <h2 className='uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-7 mt-[110px]'>
                 STEPS TO STUDY ABROAD WITH VIE
             </h2>
@@ -39,7 +39,7 @@ const StudyAbroad = () => {
                 <div className="flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center">
                     {/* Step 1 */}
                     <div className="group">
-                        <div className="flex items-center gap-10 2xl:gap-[94px] ">
+                        <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
                             <div className="w-[183px] h-[192px]">
                                 <Image
                                     className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
@@ -107,10 +107,10 @@ const StudyAbroad = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-[180px]">
+                <div className="flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
                     {/* Step 1 */}
                     <div className="group">
-                        <div className="flex items-center gap-10 2xl:gap-[94px] ">
+                        <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
                             <div className="w-[183px] h-[192px]">
                                 <Image
                                     className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
@@ -178,7 +178,7 @@ const StudyAbroad = () => {
                     </div>
 
                 </div>
-                <div className="flex flex-wrap  lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-[180px]">
+                <div className="flex flex-wrap  lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
                     {/* Step 1 */}
                     <div className="group">
                         <div className="flex items-center gap-10 2xl:gap-[94px] ">
