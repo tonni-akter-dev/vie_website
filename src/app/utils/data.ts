@@ -75,7 +75,18 @@ import udetails17 from '../../../public/udetails17.png';
 import udetails18 from '../../../public/udetails18.png';
 import udetails19 from '../../../public/udetails19.png';
 import udetails20 from '../../../public/udetails20.png';
+import offer1 from "../../../public/offer1.png"
+import offer2 from "../../../public/offer2.png"
+import offer3 from "../../../public/offer3.png"
+import offer4 from "../../../public/offer4.png"
+import offer5 from "../../../public/offer5.png"
+import hover1 from "../../../public/hover1.png"
+import hover2 from "../../../public/hover2.png"
+import hover3 from "../../../public/hover3.png"
+import hover4 from "../../../public/hover4.png"
+import hover5 from "../../../public/hover5.png"
 import { StaticImageData } from 'next/image';
+
 export const flags = [
   { id: 1, name: "Australia", image: flag1 },
   { id: 2, name: "Canada", image: flag2 },
@@ -128,7 +139,38 @@ export interface University {
   rankings: string;
   intakes: string;
 }
-
+  export const coreValues = [
+    {
+      id: 1,
+      title: "Student-Centered",
+      description: "Your goals are our priority. We provide individualized, attentive support throughout your journey."
+    },
+    {
+      id: 2,
+      title: "Accountability",
+      description: "We take ownership of your success and treat your future with utmost seriousness."
+    },
+    {
+      id: 3,
+      title: "Trustworthy",
+      description: "Our advice and actions are grounded in honesty, transparency, and reliability."
+    },
+    {
+      id: 4,
+      title: "Integrity",
+      description: "We uphold the highest ethical standards in everything we do."
+    },
+    {
+      id: 5,
+      title: "Collaboration",
+      description: "We work closely with students, families, and institutions for shared success."
+    },
+    {
+      id: 6,
+      title: "Driven to Deliver",
+      description: "We are proactive, solution-focused, and committed to achieving the best results for you."
+    }
+  ];
 export const universityData:University[] = [
   {
     "id": 1,
@@ -473,3 +515,36 @@ export const universityData:University[] = [
     "intakes": "York University offers multiple intakes for its undergraduate programs throughout the year. The main intake is in the fall semester, starting in September, with applications accepted until the program reaches capacity, though for guaranteed consideration, applicants are advised to apply by mid-January. There are also winter and summer intakes in January and May respectively, with application deadlines in November and April.Certain programs, such as Nursing and Social Work, have earlier specific deadlines that applicants must meet. For graduate programs, intake periods and deadlines vary by course, so prospective students should refer to individual program details to ensure timely application submission." // Add from image/data
   }
 ];
+
+export     const offers = [
+        {
+            pic: offer1,
+            hoverPic: hover1,
+            title: "University & Course Selection",
+            desc: "Tailored guidance based on your academic background, career goals, and interests."
+        },
+        {
+            pic: offer2,
+            hoverPic: hover2,
+            title: "Application Assistance",
+            desc: "Complete support in preparing and submitting applications to universities."
+        },
+        {
+            pic: offer3,
+            hoverPic: hover3,
+            title: "Visa Processing",
+            desc: "Expert help with student visa documentation, submissions, and follow-ups."
+        },
+        {
+            pic: offer4,
+            hoverPic: hover4,
+            title: "Scholarship Advice & Financial Planning",
+            desc: "Information on available scholarships and budgeting for study abroad."
+        },
+        {
+            pic: offer5,
+            hoverPic: hover5,
+            title: "Pre-Departure Support",
+            desc: "Guidance on travel, cultural adaptation, and settling into student life in Australia."
+        },
+    ]

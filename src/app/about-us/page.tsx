@@ -13,7 +13,7 @@ import OurCoreValues from '../component/OurCoreValues';
 
 const About = () => {
   return (
-    <div className="relative max-w-[1846px] mx-auto my-[121px] px-[38px]">
+    <div className="relative lg:max-w-[1846px] mx-auto my-[121px] lg:px-[38px]">
       {/* Top PlayButton */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 z-10">
         <Image
@@ -26,7 +26,7 @@ const About = () => {
       </div>
 
       <section
-        className="relative border border-[#FEFEFE]  bg-[#FEFEFE] rounded-[58px] shadow py-32"
+        className="relative border border-[#FEFEFE]  bg-[#FEFEFE] rounded-[58px] shadow py-16 lg:py-32"
         style={{
           filter: 'drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1))'
         }}
