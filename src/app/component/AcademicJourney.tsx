@@ -61,7 +61,7 @@ export default function AcademicJourney() {
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
-            Expert Counselling
+            Expert <br /> Counselling
           </p>
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"

@@ -107,7 +107,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-10  leading-relaxed text-2xl text-[#2C2C2C]">
+        <div className="mt-10 text-center leading-relaxed text-2xl text-[#2C2C2C]">
           VIE Services acknowledges the traditional owners of country throughout
           Australia and recognize the continuing connections to lands, waters
           and communities. We pay our respect to Aboriginal and Torres Strait

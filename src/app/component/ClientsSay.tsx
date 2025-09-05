@@ -1,17 +1,39 @@
+"use client";
 import React from "react";
 import DotIndicator from "./DotIndicator";
 import { testimonials } from "../utils/data";
+import { motion, easeOut } from "framer-motion";
 
 const ClientsSay = () => {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, // one by one
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+  };
+
   return (
-    <div className="mt-[120px] mb-10 md:mb-[100px] lg:mx-[130px] ">
+    <div className="mt-[120px] mb-10 md:mb-[100px] lg:mx-[130px]">
       <div
-        className="px-5 lg:px-[72px] rounded-4xl lg:rounded-[112px] xl:h-[548px] pt-12 pb-12 xl:pb-0 bg-[#FEFEFE] "
+        className="px-5 lg:px-[72px] rounded-4xl lg:rounded-[112px] xl:h-[548px] pt-12 pb-12 xl:pb-0 bg-[#FEFEFE]"
         style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}
       >
-        <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-3 ">
+        <motion.h2
+          className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-3"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: easeOut }}
+        >
           What our clients say!
-        </h2>
+        </motion.h2>
 
         {/* Divider Line */}
         <div className="flex justify-center">
@@ -25,16 +47,24 @@ const ClientsSay = () => {
             <path d="M0 1.5H421" stroke="#353E2B" strokeWidth="2" />
           </svg>
         </div>
+
         {/* Testimonials Grid */}
-        <div className="client_say grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6.5 pt-[103px]">
+        <motion.div
+          className="client_say grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6.5 pt-[103px]"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           {testimonials.map((item) => (
-            <div
+            <motion.div
               key={item.id}
               className="bg-white rounded-[55px] border border-[#084F3D] py-[42px] px-[47px]"
               style={{
                 boxShadow:
                   "0 -1px 4px 0 rgba(0, 0, 0, 0.25) inset, 0 3px 4px 0 rgba(0, 0, 0, 0.25)",
               }}
+              variants={cardVariants}
             >
               {/* Avatar */}
               <div className="flex justify-center mb-2 text-center">
@@ -68,7 +98,6 @@ const ClientsSay = () => {
               {/* Stars */}
               <div className="h-[176px] overflow-y-scroll">
                 <div className="flex justify-center mb-5">
-                  {/* You could replace with a reusable StarRating component */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="120"
@@ -102,9 +131,9 @@ const ClientsSay = () => {
                 {/* Review */}
                 <p className="text-sm font-medium text-black">{item.review}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

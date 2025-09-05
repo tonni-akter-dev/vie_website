@@ -1,8 +1,10 @@
-import React from 'react'
+"use client";
+import React from 'react';
 import Image, { StaticImageData } from 'next/image';
-import blog1 from '../../../public/blog1.png'
-import blog2 from '../../../public/blog2.png'
-import blog3 from '../../../public/blog3.png'
+import { motion } from "framer-motion";
+import blog1 from '../../../public/blog1.png';
+import blog2 from '../../../public/blog2.png';
+import blog3 from '../../../public/blog3.png';
 import blogIcon from '../../../public/blogIcon.png';
 
 const blogs = [
@@ -24,30 +26,56 @@ const blogs = [
 ];
 
 const BlogCard = ({ title, description, image }: { title: string, description: string, image: StaticImageData }) => (
-  <div className="p-4 text-center">
-    <Image src={image} alt={title} width={391} height={293} className=" mb-5.5" />
-    <h3 className="text-2xl  font-bold text-black">{title}</h3>
+  <motion.div 
+    className="p-4 text-center"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.6 }}
+  >
+    <Image src={image} alt={title} width={391} height={293} className="mb-5.5" />
+    <h3 className="text-2xl font-bold text-black">{title}</h3>
     <p className="text-black text-sm mt-1">{description}</p>
-  </div>
+  </motion.div>
 );
+
 const Blogs = () => {
   return (
-    <div className=" mx-auto mb-[112px] ">
+    <div className="mx-auto mb-[112px]">
       <h2 className="text-[64px] font-bold text-center text-[#533115] uppercase mb-6">Latest Blogs</h2>
-      <div className='bg-[#F6F6F6] pt-[38px] pb-[58px]'
-        style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
-        <div className="2xl:px-[270px] px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[70px]">
+      <div 
+        className='bg-[#F6F6F6] pt-[38px] pb-[58px]'
+        style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}
+      >
+        <motion.div 
+          className="2xl:px-[270px] px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-[70px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+        >
           {blogs.map((blog, index) => (
             <BlogCard key={index} title={blog.title} description={blog.description} image={blog.image} />
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <button className='cursor-pointer flex justify-center mx-auto mt-[-40px]'>
+      <motion.button 
+        className='cursor-pointer flex justify-center mx-auto mt-[-40px]'
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
         <Image src={blogIcon} alt="" />
-      </button>
+      </motion.button>
     </div>
   )
 }
 
-export default Blogs
+export default Blogs;

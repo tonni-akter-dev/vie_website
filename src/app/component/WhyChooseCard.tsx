@@ -1,270 +1,390 @@
-'use client'
-import React from 'react'
-import { motion, easeOut, Easing } from 'framer-motion';
-import DotIndicator from './DotIndicator';
+"use client";
+import React from "react";
+import { motion, easeOut, Easing } from "framer-motion";
+import DotIndicator from "./DotIndicator";
 
 const WhyChooseCard = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.1,
-            },
-        },
-    };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.5,
-                ease: easeOut,
-            },
-        },
-    };
-    const overlayVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: 'easeInOut' as Easing, // Explicitly type as Easing
-            },
-        },
-    };
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: easeOut,
+      },
+    },
+  };
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut" as Easing, // Explicitly type as Easing
+      },
+    },
+  };
 
-    return (
-        <div>
-            <h2 className='uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-10 lg:mt-[185px]'>Why Choose Australia? </h2>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 lg:mx-[50px] 2xl:mx-[150px] gap-7 lg:gap-1.5 lg:mb-50 mx-4 mb-10'>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center lg:rounded-tl-[50px] lg:rounded-bl-[50px]  cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115] text-base 2xl:text-[25px] font-extrabold uppercase'>World <br />
-                            Class <br />
-                            Education</h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10 rounded-tl-[50px] rounded-bl-[50px] z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className=' mb-3'>
-                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Home to globally <br /> ranked universities <br /> offering a ….. range of …..</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#A5AC8A] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Innovation <br />
-                            Learning <br />
-                            Environment</h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className='mb-3'>
-                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                               Access cutting-edge research, modern facilities and industry relevant courses.</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Cultural <br />
-                            Diversity
-                        </h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className=' mb-3'>
-                                 <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                               Experience a vibrant, multicultural society that welcomes international students.</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#A5AC8A] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Work <br />
-                            Opportunities
-                        </h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className=' mb-3'>
-                                 <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                               Benefit from flexible student work rights and post study work visa options.</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Quality of <br />
-                            Life</h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className=' mb-3'>
-                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Enjoy a safe, clean <br /> environment with <br /> excellent healthcare <br /> and lifestyle <br /> amenities.</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-                <motion.div
-                    className=" lg:mt-[60px] w-full"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                >
-                    <motion.div
-                        className="bg-[#A5AC8A] group h-[418px] flex flex-col justify-center lg:rounded-tr-[50px] lg:rounded-br-[50px] cursor-pointer relative ps-[35px]"
-                        variants={cardVariants}
-                        whileHover={{ opacity: 0.9 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut' }}
-                    >
-                        <h1 className='text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase'>Pathway of <br />
-                            permanent <br />
-                            residence</h1>
-                        <div className='flex mt-5 gap-1 items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="87" height="6" viewBox="0 0 87 6" fill="none">
-                                <path d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z" fill="white" />
-                            </svg>
-                            <span className='text-xs text-white'>See More</span>
-                        </div>
-                        <motion.div
-                            className="absolute top-0 ps-[22px]  rounded-tr-[50px] rounded-br-[50px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start" variants={overlayVariants}
-                            initial="hidden"
-                            animate="hidden"
-                            whileHover="visible"
-                        >
-                            <div className=' mb-3'>
-                                <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
-                            </div>
-                            <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Explore options for <br /> long term settlement <br /> through education <br /> pathways.</h1>
-
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
+  return (
+    <div>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: easeOut }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-[60px] mt-10 lg:mt-[185px]"
+      >
+        Why Choose Australia?
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 lg:mx-[50px] 2xl:mx-[150px] gap-7 lg:gap-1.5 lg:mb-50 mx-4 mb-10">
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center lg:rounded-tl-[50px] lg:rounded-bl-[50px]  cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115] text-base 2xl:text-[25px] font-extrabold uppercase">
+              World <br />
+              Class <br />
+              Education
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
             </div>
-        </div >
-    )
-}
+            <motion.div
+              className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10 rounded-tl-[50px] rounded-bl-[50px] z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className=" mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Home to globally <br /> ranked universities <br /> offering a
+                ….. range of …..
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#A5AC8A] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase">
+              Innovation <br />
+              Learning <br />
+              Environment
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
+            </div>
+            <motion.div
+              className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className="mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Access cutting-edge research, modern facilities and industry
+                relevant courses.
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase">
+              Cultural <br />
+              Diversity
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
+            </div>
+            <motion.div
+              className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className=" mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Experience a vibrant, multicultural society that welcomes
+                international students.
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#A5AC8A] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase">
+              Work <br />
+              Opportunities
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
+            </div>
+            <motion.div
+              className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className=" mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Benefit from flexible student work rights and post study work
+                visa options.
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#C2C4AC] group  h-[418px] flex flex-col justify-center   cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase">
+              Quality of <br />
+              Life
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
+            </div>
+            <motion.div
+              className="absolute top-0 ps-[22px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className=" mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Enjoy a safe, clean <br /> environment with <br /> excellent
+                healthcare <br /> and lifestyle <br /> amenities.
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          className=" lg:mt-[60px] w-full"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <motion.div
+            className="bg-[#A5AC8A] group h-[418px] flex flex-col justify-center lg:rounded-tr-[50px] lg:rounded-br-[50px] cursor-pointer relative ps-[35px]"
+            variants={cardVariants}
+            whileHover={{ opacity: 0.9 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+          >
+            <h1 className="text-[#533115]  text-base 2xl:text-[25px] font-extrabold uppercase">
+              Pathway of <br />
+              permanent <br />
+              residence
+            </h1>
+            <div className="flex mt-5 gap-1 items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="87"
+                height="6"
+                viewBox="0 0 87 6"
+                fill="none"
+              >
+                <path
+                  d="M87 3L82 0.113249V5.88675L87 3ZM0 3V3.5H82.5V3V2.5H0V3Z"
+                  fill="white"
+                />
+              </svg>
+              <span className="text-xs text-white">See More</span>
+            </div>
+            <motion.div
+              className="absolute top-0 ps-[22px]  rounded-tr-[50px] rounded-br-[50px] left-0 w-full h-full bg-white pt-10  z-10 flex flex-col justify-center items-start"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="hidden"
+              whileHover="visible"
+            >
+              <div className=" mb-3">
+                <DotIndicator
+                  width={5}
+                  spacing={5}
+                  height={5}
+                  bounceDistance={6}
+                  direction="vertical"
+                />
+              </div>
+              <h1 className="text-[#533115]  text-[22px] font-bold">
+                Explore options for <br /> long term settlement <br /> through
+                education <br /> pathways.
+              </h1>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
-export default WhyChooseCard
+export default WhyChooseCard;

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import DotIndicator from "./DotIndicator";
 import { faqData } from "../utils/data";
+import { motion, easeOut } from "framer-motion";
 
 const FaqItem = ({
   faq,
@@ -16,7 +17,13 @@ const FaqItem = ({
 }) => {
   const isEven = index % 2 === 0;
   return (
-    <div className="flex flex-col items-center justify-center mb-8">
+    <motion.div
+      className="flex flex-col items-center justify-center mb-8"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: easeOut }}
+    >
       <div
         onClick={onClick}
         className={`${
@@ -60,33 +67,29 @@ const FaqItem = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const FaqList = () => {
-  const [activeFaqIndexByRow, setActiveFaqIndexByRow] = useState<
-    Record<number, number | null>
-  >({});
+  const [activeFaqIndexByRow, setActiveFaqIndexByRow] = useState<Record<number, number | null>>({});
 
   const getItemsPerRow = () => {
     if (typeof window !== "undefined") {
-      if (window.innerWidth >= 1280) return 3; 
-      if (window.innerWidth >= 768) return 2; 
+      if (window.innerWidth >= 1280) return 3;
+      if (window.innerWidth >= 768) return 2;
     }
     return 1; // mobile
   };
 
   const [itemsPerRow, setItemsPerRow] = useState(getItemsPerRow());
 
-  // Update on resize
   React.useEffect(() => {
     const handleResize = () => setItemsPerRow(getItemsPerRow());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Split FAQ into rows dynamically
   const rows = [];
   for (let i = 0; i < faqData.length; i += itemsPerRow) {
     rows.push(faqData.slice(i, i + itemsPerRow));
@@ -94,18 +97,23 @@ const FaqList = () => {
 
   return (
     <div className="px-5 lg:mx-[149px] mb-[156px]">
-      <h2 className="uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-10">
+      <motion.h2
+        className="uppercase text-[#533115] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: easeOut }}
+      >
         frequently asked questions
-      </h2>
+      </motion.h2>
+
       <div className="mb-4">
         <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
       </div>
 
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="mb-4">
-          <div
-            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2`}
-          >
+          <div className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2`}>
             {row.map((faq, index) => {
               const globalIndex = rowIndex * itemsPerRow + index;
               const isActive = activeFaqIndexByRow[rowIndex] === globalIndex;
@@ -126,16 +134,20 @@ const FaqList = () => {
             })}
           </div>
 
-          {/* Show content for the active FAQ below the row */}
           {typeof activeFaqIndexByRow[rowIndex] === "number" && (
-            <div className="px-6 py-6 bg-[#EEDEC7] rounded-[29px] ps-[54px] text-[#533115] text-[20px] transition-all duration-500">
+            <motion.div
+              className="px-6 py-6 bg-[#EEDEC7] rounded-[29px] ps-[54px] text-[#533115] text-[20px] transition-all duration-500"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: easeOut }}
+            >
               <h4 className="text-[22px] font-[900] text-[#533115] mb-4">
                 Q: {faqData[activeFaqIndexByRow[rowIndex]!]?.question}
               </h4>
               <p className="text-[22px] font-bold text-[#533115] ">
                 {faqData[activeFaqIndexByRow[rowIndex]!]?.answer}
               </p>
-            </div>
+            </motion.div>
           )}
         </div>
       ))}

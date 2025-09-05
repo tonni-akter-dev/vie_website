@@ -33,14 +33,40 @@ const WhyChooseUs = () => {
 
   return (
     <div>
-      <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-6  mt-10 lg:mt-[130px]">
+      <motion.h2
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-6 mt-10 lg:mt-[130px]"
+      >
         Considering Studying in Australia
-      </h2>
+      </motion.h2>
+
       <div className=" mb-6">
         <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
       </div>
-      <Image className="w-full object-cover" src={choosebg} alt="" />
-      <p className="text-2xl lg:text-[32px] text-[#2C2C2C] font-normal lg:max-w-[1462px] w-full text-center mx-auto mt-6 lg:px-0 px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: easeOut }}
+        viewport={{ once: true, amount: 0.3 }}
+        className="w-full"
+      >
+        <Image
+          className="w-full object-cover"
+          src={choosebg}
+          alt="Background"
+        />
+      </motion.div>
+
+      <motion.p
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        className="text-2xl lg:text-[32px] text-[#2C2C2C] font-normal lg:max-w-[1462px] w-full text-center mx-auto mt-6 lg:px-0 px-4"
+      >
         If you’re exploring the exceptional academic and personal growth
         opportunities <strong>Australia</strong>
         <br className="lg:block hidden" />
@@ -50,13 +76,20 @@ const WhyChooseUs = () => {
         course selection, <br className="lg:block hidden" /> application
         procedure visa requirements and preparing for your journey to{" "}
         <strong>Australia</strong>.
-      </p>
+      </motion.p>
 
       <div className="mb-16 md:mb-[185px] max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
         <div className="bg-[#FFF2DE] rounded-[62px] why_choose mt-8 md:mt-[136px] p-4 md:pt-9 md:ps-12 md:pb-[30px] md:pe-[70px]">
-          <h1 className="text-[#533115]  text-2xl md:text-4xl lg:text-[64px] font-extrabold text-center leading-normal uppercase">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: easeOut }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-[#533115] text-2xl md:text-4xl lg:text-[64px] font-extrabold text-center leading-normal uppercase"
+          >
             Why Choose Us ?
-          </h1>
+          </motion.h1>
+
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 my-8 md:my-[101px]"
             variants={containerVariants}

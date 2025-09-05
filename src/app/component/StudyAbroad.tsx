@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion"; // 👈 Added
 import s1 from "../../../public/s1.svg";
 import s2 from "../../../public/s2.svg";
 import s3 from "../../../public/s3.svg";
@@ -24,16 +26,35 @@ import arrowleftBig from "../../../public/arrowleftBig.svg";
 import SmallStudyabroad from "./SmallStudyabroad";
 import MediumAbroad from "./MediumAbroad";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const StudyAbroad = () => {
   return (
     <div className="mx-5 lg:mx-[77px]">
-      <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-7 mt-10 lg:mt-[110px]">
+      <motion.h2
+        className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-7 mt-10 lg:mt-[110px]"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         STEPS TO STUDY ABROAD WITH VIE
-      </h2>
-      <div
+      </motion.h2>
+
+      <motion.div
         className="pt-10 lg:pt-[115px] pb-[70px] 2xl:px-[280px] bg-[#F5F5F5] rounded-2xl lg:rounded-[105px] lg:h-[1256px] relative "
         style={{ boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.14)" }}
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
       >
+        {/* Decorative Arrows */}
         <div>
           <Image
             className="hidden xl:block absolute right-[12%] top-[17%]"
@@ -48,233 +69,140 @@ const StudyAbroad = () => {
             alt=""
           />
         </div>
+
+        {/* Steps Row 1 */}
         <div className=" hidden lg:flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center">
-          {/* Step 1 */}
-          <div className="group">
-            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px]">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s1}
-                  alt="Step 1 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s11}
-                  alt="Step 1 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{ __html: "Make an </br> enquiry" }}
-                />
+          {[
+            {
+              defaultImg: s1,
+              hoverImg: s11,
+              text: "Make an </br> enquiry",
+            },
+            {
+              defaultImg: s2,
+              hoverImg: s12,
+              text: "Receive expert </br> Counselling",
+            },
+            {
+              defaultImg: s3,
+              hoverImg: s13,
+              text: "Submit your </br> application",
+            },
+          ].map((step, i) => (
+            <motion.div
+              key={i}
+              className="group"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="w-[183px] h-[192px] flex items-center flex-col">
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={step.defaultImg}
+                    alt="Step default"
+                  />
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={step.hoverImg}
+                    alt="Step hover"
+                  />
+                  <p
+                    className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2 whitespace-nowrap"
+                    dangerouslySetInnerHTML={{ __html: step.text }}
+                  />
+                </div>
+                {i < 2 && <Image src={arrowRight} alt="Arrow" />}
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s2}
-                  alt="Step 2 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s12}
-                  alt="Step 2 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Receive expert </br> Counselling",
-                  }}
-                />
-              </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s3}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s13}
-                  alt="Step 3 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Submit your </br> application",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
+
+        {/* Row 2 */}
         <div className=" hidden lg:flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
-          {/* Step 1 */}
-          <div className="group">
-            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px]">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s4}
-                  alt="Step 1 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s14}
-                  alt="Step 1 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Apply for </br> your Visa",
-                  }}
-                />
+          {[
+            { defaultImg: s4, hoverImg: s14, text: "Apply for </br> your Visa" },
+            { defaultImg: s5, hoverImg: s15, text: "Document </br> Finalization" },
+            { defaultImg: s6, hoverImg: s16, text: "Receive your </br> admission offer" },
+          ].map((step, i) => (
+            <motion.div
+              key={i}
+              className="group"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="w-[183px] h-[192px] flex items-center flex-col">
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={step.defaultImg}
+                    alt="Step default"
+                  />
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={step.hoverImg}
+                    alt="Step hover"
+                  />
+                  <p
+                    className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2 whitespace-nowrap"
+                    dangerouslySetInnerHTML={{ __html: step.text }}
+                  />
+                </div>
+                {i < 2 && <Image src={arrowRight} alt="Arrow" />}
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s5}
-                  alt="Step 2 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s15}
-                  alt="Step 2 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Document </br> Finalization",
-                  }}
-                />
-              </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s6}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s16}
-                  alt="Step 3 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Receive your  </br> admission offer",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className=" hidden lg:flex flex-wrap  lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
-          {/* Step 1 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s7}
-                  alt="Step 1 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s17}
-                  alt="Step 1 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Attend Pre-departure </br> briefing",
-                  }}
-                />
-              </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s8}
-                  alt="Step 2 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s18}
-                  alt="Step 2 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
-                  dangerouslySetInnerHTML={{ __html: "Plan your </br> travel" }}
-                />
-              </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10  2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s9}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="w-[183px] h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s19}
-                  alt="Step 3 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
-                  dangerouslySetInnerHTML={{
-                    __html: "Achieve your </br> dreams",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* sm device */}
-        <MediumAbroad></MediumAbroad>
+        {/* Row 3 */}
+        <div className=" hidden lg:flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
+          {[
+            { defaultImg: s7, hoverImg: s17, text: "Attend Pre-departure </br> briefing" },
+            { defaultImg: s8, hoverImg: s18, text: "Plan your </br> travel" },
+            { defaultImg: s9, hoverImg: s19, text: "Achieve your </br> dreams" },
+          ].map((step, i) => (
+            <motion.div
+              key={i}
+              className="group"
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInUp}
+              transition={{ duration: 0.6, delay: i * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="w-[183px] h-[192px] flex items-center flex-col">
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={step.defaultImg}
+                    alt="Step default"
+                  />
+                  <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={step.hoverImg}
+                    alt="Step hover"
+                  />
+                  <p
+                    className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2 whitespace-nowrap"
+                    dangerouslySetInnerHTML={{ __html: step.text }}
+                  />
+                </div>
+                {i < 2 && <Image src={arrowRight} alt="Arrow" />}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* sm + md devices */}
+        <MediumAbroad />
         <SmallStudyabroad />
-        {/* sm device */}
-      </div>
+      </motion.div>
     </div>
   );
 };
