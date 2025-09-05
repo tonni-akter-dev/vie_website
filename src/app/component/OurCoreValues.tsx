@@ -31,7 +31,7 @@ export default function OurCoreValues() {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#2C2C2C] mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] whitespace-nowrap">
+                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] ">
                     {value.description}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function OurCoreValues() {
             <rect
               x="384"
               y="717"
-              width={hoveredValue === 6 ? "1027" : "608"}
+              width={hoveredValue === 6 ? "1040" : "608"}
               height="74"
               rx="17"
               fill="#D4C2A8"
@@ -154,12 +154,12 @@ export default function OurCoreValues() {
             <foreignObject
               x="394"
               y="727"
-              width={hoveredValue === 6 ? "1027" : "608"}
+              width={hoveredValue === 6 ? "1040" : "608"}
               height="54"
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 6 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 6 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 6 ? coreValues[5].description : coreValues[5].title}
                 </p>
               </div>
@@ -183,7 +183,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 5 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 5 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 5 ? coreValues[4].description : coreValues[4].title}
                 </p>
               </div>
@@ -207,7 +207,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 4 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 4 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 4 ? coreValues[3].description : coreValues[3].title}
                 </p>
               </div>
@@ -215,7 +215,7 @@ export default function OurCoreValues() {
             <rect
               x="413"
               y="321"
-              width={hoveredValue === 3 ? "899" : "608"}
+              width={hoveredValue === 3 ? "910" : "608"}
               height="74"
               rx="17"
               fill="#A5AC8A"
@@ -231,7 +231,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 3 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 3 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 3 ? coreValues[2].description : coreValues[2].title}
                 </p>
               </div>
@@ -255,7 +255,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 2 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 2 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 2 ? coreValues[1].description : coreValues[1].title}
                 </p>
               </div>
@@ -263,7 +263,7 @@ export default function OurCoreValues() {
             <rect
               x="340"   
               y="55"
-              width={hoveredValue === 1 ? "1106" : "608"}
+              width={hoveredValue === 1 ? "1150" : "608"}
               height="74"
               rx="17"
               fill="#FFF2DE"
@@ -279,7 +279,7 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p className={`${hoveredValue === 1 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                <p className={`whitespace-nowrap ${hoveredValue === 1 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
                   {hoveredValue === 1 ? coreValues[0].description : coreValues[0].title}
                 </p>
               </div>
