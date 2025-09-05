@@ -17,7 +17,7 @@ const VieService = () => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     return (
-        <div className='mb-[160px]'>
+        <div className='mb-20 g:mb-[160px]'>
             <div className="text-center my-6 bg-[#FBFBFB]">
                 <h3 className="text-[#533115] text-3xl font-medium mb-5">
                     {flags[activeIndex]?.name}

@@ -19,40 +19,16 @@ import s17 from "../../../public/s77.png";
 import s18 from "../../../public/s88.png";
 import s19 from "../../../public/s99.png";
 import arrowRight from "../../../public/arrowright.svg";
-import arrRightBig from "../../../public/arrRightBig.png";
-import arrowleftBig from "../../../public/arrowleftBig.svg";
-import SmallStudyabroad from "./SmallStudyabroad";
-import MediumAbroad from "./MediumAbroad";
 
-const StudyAbroad = () => {
+
+const MediumAbroad = () => {
   return (
-    <div className="mx-5 lg:mx-[77px]">
-      <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-7 mt-10 lg:mt-[110px]">
-        STEPS TO STUDY ABROAD WITH VIE
-      </h2>
-      <div
-        className="pt-10 lg:pt-[115px] pb-[70px] 2xl:px-[280px] bg-[#F5F5F5] rounded-2xl lg:rounded-[105px] lg:h-[1256px] relative "
-        style={{ boxShadow: "0 0 4px 0 rgba(0, 0, 0, 0.14)" }}
-      >
-        <div>
-          <Image
-            className="hidden xl:block absolute right-[12%] top-[17%]"
-            src={arrRightBig}
-            alt=""
-          />
-        </div>
-        <div>
-          <Image
-            className="hidden xl:block absolute left-[12%] bottom-[28%]"
-            src={arrowleftBig}
-            alt=""
-          />
-        </div>
-        <div className=" hidden lg:flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center">
+    <div>
+           <div className=" lg:hidden md:flex hidden  gap-5 2xl:gap-[125px] justify-start items-center">
           {/* Step 1 */}
           <div className="group">
             <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px]">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s1}
@@ -68,64 +44,70 @@ const StudyAbroad = () => {
                   dangerouslySetInnerHTML={{ __html: "Make an </br> enquiry" }}
                 />
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
-
-          {/* Step 2 */}
           <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
+            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s2}
-                  alt="Step 2 default"
+                  alt="Step 1 default"
                 />
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
                   src={s12}
-                  alt="Step 2 hover"
+                  alt="Step 1 hover"
                 />
-                <p
+              <p
                   className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Receive expert </br> Counselling",
                   }}
                 />
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s3}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s13}
-                  alt="Step 3 hover"
-                />
-                <p
-                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
+            <div className="group">
+                <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={s3}
+                    alt="Step 3 default"
+                    />
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={s13}
+                    alt="Step 3 hover"
+                    />
+                 <p
+                  className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
                   dangerouslySetInnerHTML={{
-                    __html: "Submit your </br> application",
+                    __html: "Receive expert </br> Counselling",
                   }}
                 />
-              </div>
+                </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div className=" hidden lg:flex flex-wrap lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
+        <div className=" lg:hidden md:flex hidden  gap-5 2xl:gap-[125px] justify-start items-center">
           {/* Step 1 */}
           <div className="group">
             <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px]">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s4}
@@ -136,71 +118,77 @@ const StudyAbroad = () => {
                   src={s14}
                   alt="Step 1 hover"
                 />
-                <p
+               <p
                   className="text-base xl:text-[36px] text-[#2C2C2C] font-bold capitalize text-center mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Apply for </br> your Visa",
                   }}
                 />
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
-
-          {/* Step 2 */}
           <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
+            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s5}
-                  alt="Step 2 default"
+                  alt="Step 1 default"
                 />
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
                   src={s15}
-                  alt="Step 2 hover"
+                  alt="Step 1 hover"
                 />
-                <p
+                 <p
                   className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Document </br> Finalization",
                   }}
                 />
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
 
           {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s6}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s16}
-                  alt="Step 3 hover"
-                />
-                <p
+            <div className="group">
+                <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={s6}
+                    alt="Step 3 default"
+                    />
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={s16}
+                    alt="Step 3 hover"
+                    />
+                   <p
                   className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Receive your  </br> admission offer",
                   }}
                 />
-              </div>
+                </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div className=" hidden lg:flex flex-wrap  lg:gap-y-[90px] gap-10 2xl:gap-[125px] justify-center items-center mt-20 lg:mt-[180px]">
+         <div className=" lg:hidden md:flex hidden  gap-5 2xl:gap-[125px] justify-start items-center">
           {/* Step 1 */}
           <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px] ">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
+            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s7}
@@ -211,72 +199,76 @@ const StudyAbroad = () => {
                   src={s17}
                   alt="Step 1 hover"
                 />
-                <p
+             <p
                   className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Attend Pre-departure </br> briefing",
                   }}
                 />
               </div>
-              <Image src={arrowRight} alt="Arrow to Step 2" />
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
-
-          {/* Step 2 */}
           <div className="group">
-            <div className="flex items-center gap-10 2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
+            <div className="flex items-center gap-5 md:gap-10 2xl:gap-[94px] ">
+              <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
                   src={s8}
-                  alt="Step 2 default"
+                  alt="Step 1 default"
                 />
                 <Image
                   className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
                   src={s18}
-                  alt="Step 2 hover"
+                  alt="Step 1 hover"
                 />
-                <p
-                  className="text-base xl:text-[36px] text-[#2C2C2C] whitespace-nowrap text-center somatic font-bold capitalize mt-2"
-                  dangerouslySetInnerHTML={{ __html: "Plan your </br> travel" }}
-                />
-              </div>
-              <Image src={arrowRight} alt="Arrow to Step 3" />
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="group">
-            <div className="flex items-center gap-10  2xl:gap-[94px]">
-              <div className="w-[183px] h-[192px] flex items-center flex-col">
-                <Image
-                  className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
-                  src={s9}
-                  alt="Step 3 default"
-                />
-                <Image
-                  className="w-[183px] h-[192px] object-contain hidden group-hover:block transition-all duration-300"
-                  src={s19}
-                  alt="Step 3 hover"
-                />
-                <p
+                 <p
                   className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
                   dangerouslySetInnerHTML={{
                     __html: "Achieve your </br> dreams",
                   }}
                 />
               </div>
+              <Image
+                className="size-[50px]"
+                src={arrowRight}
+                alt="Arrow to Step 2"
+              />
             </div>
           </div>
+
+          {/* Step 3 */}
+            <div className="group">
+                <div className="flex items-center gap-10 2xl:gap-[94px]">
+                <div className="flex items-center justify-end flex-col w-[183px] h-[192px]">
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain group-hover:hidden transition-all duration-300"
+                    src={s9}
+                    alt="Step 3 default"
+                    />
+                    <Image
+                    className="size-20 xl:w-[183px] xl:h-[192px] object-contain hidden group-hover:block transition-all duration-300"
+                    src={s19}
+                    alt="Step 3 hover"
+                    />
+                   <p
+                  className="text-base xl:text-[36px] whitespace-nowrap text-[#2C2C2C] font-bold capitalize text-center mt-2"
+                  dangerouslySetInnerHTML={{
+                    __html: "Receive your  </br> admission offer",
+                  }}
+                />
+                </div>
+                </div>
+            </div>
         </div>
+        
 
-        {/* sm device */}
-        <MediumAbroad></MediumAbroad>
-        <SmallStudyabroad />
-        {/* sm device */}
-      </div>
     </div>
-  );
-};
+  )
+}
 
-export default StudyAbroad;
+export default MediumAbroad

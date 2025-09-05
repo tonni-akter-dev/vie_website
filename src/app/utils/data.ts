@@ -173,6 +173,7 @@ export const coreValues = [
       description: "We are proactive, solution-focused, and committed to achieving the best results for you."
     }
 ];
+
 export const universityData:University[] = [
   {
     "id": 1,
@@ -589,9 +590,9 @@ export  const offers = [
             title: "Pre-Departure Support",
             desc: "Guidance on travel, cultural adaptation, and settling into student life in Australia."
         },
-    ]
+]
 
-   export  const faqData = [
+export  const faqData = [
       {
         question: "What service does VIE offer ?",
         answer:
@@ -678,6 +679,6 @@ export  const offers = [
         answer:
           "A. VIE Services offers personalized guidance, expert knowledge of Australian universities, and support at every step of your study journey. We focus on making the process smooth, transparent, and stress-free, ensuring you get the best opportunities for your academic and personal growth.",
       },
-    ];
+];
     
     

@@ -315,7 +315,12 @@ footer h3 {
   text-underline-position: from-font;
   text-transform: uppercase;
 }
-
+.rs-calendar-table-cell-selected .rs-calendar-table-cell-content {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+  color: inherit !important;
+}
 /* searchpage */
 
 .circle {
@@ -358,9 +363,7 @@ footer h3 {
     clip-path: none;
     border-radius: 50%;
   }
-.react-tel-input .form-control {
-  width: 100% !important;
-
-}
-
+  .react-tel-input .form-control {
+    width: 100% !important;
+  }
 }
