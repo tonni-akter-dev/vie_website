@@ -67,7 +67,7 @@ const VoyageInternational = () => {
         custom={0.6}
         variants={itemVariants}
       >
-        Whether you're exploring course options, applying to universities, or
+        Whether {`you're`} exploring course options, applying to universities, or
         preparing for life abroad, our team provides the clarity, structure, and
         confidence you need to make informed decisions.
       </motion.p>
