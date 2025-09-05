@@ -2,7 +2,7 @@ import React from 'react'
 
 const HowcanweHelp = () => {
   return (
-    <div className='howtohelp_bg  lg:mx-[130px] mb-[130px]'>
+    <div className='howtohelp_bg  lg:mx-[130px] mb-[130px] lg:mt-[300px]'>
       <div className='p-10 text-center'>
         <h3 className='text-xl md:text-3xl lg:text-[48px] uppercase font-bold text-[#2C2C2C]'>HOW CAN WE HELP?</h3>
         <div className='mt-7 relative lg:max-w-[1190px]  mx-auto   rounded-[18px]

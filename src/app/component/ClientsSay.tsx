@@ -3,14 +3,34 @@ import DotIndicator from "./DotIndicator";
 
 const ClientsSay = () => {
   return (
-    <div className='mt-[120px] mb-10 md:mb-[100px] lg:mx-[130px] '>
-      <div className='px-5 lg:px-[72px] rounded-4xl lg:rounded-[112px] xl:h-[548px] pt-12 pb-12 xl:pb-0 bg-[#FEFEFE] ' style={{ boxShadow: '0 0 4.6px 0 rgba(0, 0, 0, 0.25)' }}>
-        <h2 className='uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-3 '>What our clients say!</h2>
-        <div className='flex justify-center'>  <svg xmlns="http://www.w3.org/2000/svg" width="421" height="3" viewBox="0 0 421 3" fill="none">
-          <path d="M0 1.5H421" stroke="#353E2B" strokeWidth="2" />
-        </svg></div>
+    <div className="mt-[120px] mb-10 md:mb-[100px] lg:mx-[130px] ">
+      <div
+        className="px-5 lg:px-[72px] rounded-4xl lg:rounded-[112px] xl:h-[548px] pt-12 pb-12 xl:pb-0 bg-[#FEFEFE] "
+        style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}
+      >
+        <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-3 ">
+          What our clients say!
+        </h2>
+        <div className="flex justify-center">
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="421"
+            height="3"
+            viewBox="0 0 421 3"
+            fill="none"
+          >
+            <path d="M0 1.5H421" stroke="#353E2B" strokeWidth="2" />
+          </svg>
+        </div>
         <div className="client_say grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6.5 pt-[103px]">
-          <div className='bg-white rounded-[55px] border border-[#084F3D] py-[42px] px-[47px]' style={{ boxShadow: " 0 -1px 4px 0 rgba(0, 0, 0, 0.25) inset, 0 3px 4px 0 rgba(0, 0, 0, 0.25)" }}>
+          <div
+            className="bg-white rounded-[55px] border border-[#084F3D] py-[42px] px-[47px]"
+            style={{
+              boxShadow:
+                " 0 -1px 4px 0 rgba(0, 0, 0, 0.25) inset, 0 3px 4px 0 rgba(0, 0, 0, 0.25)",
+            }}
+          >
             <div className="flex justify-center mb-2 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

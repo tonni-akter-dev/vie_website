@@ -13,7 +13,7 @@ export default function OurTeamOurPromise() {
 
   return (
     <section className="flex flex-col items-center justify-center w-full p-6 sm:p-8 md:p-12 bg-white border-b-2 border-gray-300 rounded-b-[28px] md:rounded-b-[76px] max-w-[1706px] mx-auto mb-12 md:mb-[120px]">
-      <div className='w-full lg:px-4 sm:px-6 md:px-12 lg:px-[108px] pb-8 sm:pb-[40px] md:pb-[60px]'>
+      <div className='w-full sm:px-6 md:px-12  pb-8 sm:pb-[40px] md:pb-[60px]'>
         <motion.h2
           className="text-2xl sm:text-3xl md:text-4xl lg:text-[64px] font-extrabold text-[#533115] mb-6 sm:mb-8 text-center leading-tight"
           initial="hidden"
@@ -25,7 +25,7 @@ export default function OurTeamOurPromise() {
           OUR TEAM, OUR PROMISE
         </motion.h2>
         <motion.p
-          className="text-base sm:text-lg md:text-xl lg:text-[32px] text-[#533115] text-center mb-4 sm:mb-6 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl lg:text-[32px] text-[#533115] text-center mb-4 sm:mb-6 "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -35,7 +35,7 @@ export default function OurTeamOurPromise() {
           At the core of VIE is a dedicated team of experienced professionals who are passionate about empowering students. We are not just consultants—we are trusted advisors and long-term partners in your journey.
         </motion.p>
         <motion.p
-          className="text-base sm:text-lg md:text-xl lg:text-[32px] text-[#533115] text-center leading-relaxed"
+          className="text-base sm:text-lg md:text-xl lg:text-[32px] text-[#533115] text-center "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}

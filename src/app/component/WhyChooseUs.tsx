@@ -40,14 +40,16 @@ const WhyChooseUs = () => {
         <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
       </div>
       <Image className="w-full object-cover" src={choosebg} alt="" />
-      <p className="text-2xl lg:text-[32px] text-[#2C2C2C] font-bold lg:max-w-[1462px] w-full text-center mx-auto mt-6 lg:px-0 px-4">
+      <p className="text-2xl lg:text-[32px] text-[#2C2C2C] font-normal lg:max-w-[1462px] w-full text-center mx-auto mt-6 lg:px-0 px-4">
         If you’re exploring the exceptional academic and personal growth
-        opportunities Australia <br className="lg:block hidden" />
+        opportunities <strong>Australia</strong>
+        <br className="lg:block hidden" />
         offers, VIE services is here to support you every step of the way.
         Whether you’re finalizing <br className="lg:block hidden" />
         your choice or still weighing options, we provide expert guidance on
-        course selection, <br className="lg:block hidden" /> application procedure visa requirements and
-        preparing for your journey to Australia.
+        course selection, <br className="lg:block hidden" /> application
+        procedure visa requirements and preparing for your journey to{" "}
+        <strong>Australia</strong>.
       </p>
 
       <div className="mb-16 md:mb-[185px] max-w-[1200px] 2xl:max-w-[1440px] mx-auto">

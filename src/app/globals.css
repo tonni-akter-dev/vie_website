@@ -1,19 +1,17 @@
 @import "tailwindcss";
+@import url("https://fonts.cdnfonts.com/css/merge-one");
 
 :root {
   --font-creato-display: "Creato Display", sans-serif;
   --font-meta-pro: "Meta Pro", sans-serif;
+  --font-merge-one:'Merge One', sans-serif;
 }
+
 
 body {
   background-color: #fbfbfb !important;
   font-family: var(--font-clash-display) !important;
 }
-
-.rs-calendar-body {
-  font-family: var(--font-meta-pro) !important;
-}
-
 .why_choose {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
@@ -134,7 +132,7 @@ footer h3 {
   font-size: 32px !important;
   color: #084f3d;
   text-align: center;
-  font-family: "Merge One";
+  font-family: var(--font-merge-one) !important;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -153,12 +151,19 @@ footer h3 {
   justify-content: center;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-forward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
+  .rs-calendar-header-forward {
   display: none;
 }
 
-.rs-calendar-header-has-month:not(.rs-calendar-header-has-time) .rs-calendar-header-backward {
+.rs-calendar-header-has-month:not(.rs-calendar-header-has-time)
+  .rs-calendar-header-backward {
   display: none;
+}
+.rs-calendar-panel.rs-calendar-compact
+  .rs-calendar-table-row:not(.rs-calendar-table-header-row)
+  .rs-calendar-table-cell-content {
+  font-family: var(--font-merge-one) !important;
 }
 
 .rs-calendar-header-title {
@@ -175,9 +180,7 @@ footer h3 {
   text-decoration-style: solid;
   text-decoration-skip-ink: auto;
   text-decoration-thickness: 5.5%;
-  /* 2.64px */
   text-underline-offset: 12.5%;
-  /* 6px */
   text-underline-position: from-font;
   margin-bottom: 34px !important;
 }
@@ -186,7 +189,9 @@ footer h3 {
   overflow: visible !important;
 }
 
-.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day {
+.rs-calendar-panel
+  .rs-calendar-table-cell-is-today
+  .rs-calendar-table-cell-day {
   background-color: #eaeaea !important;
   height: 45px !important;
   width: 45px !important;
@@ -312,13 +317,14 @@ footer h3 {
 
 /* searchpage */
 
-
 .circle {
   width: 100%;
   max-width: 500px;
   aspect-ratio: 500 / 477;
-  background: #EBD8BC;
-  clip-path: path("M500 251.5C500 375.764 388.071 476.5 250 476.5C111.929 476.5 0 375.764 0 251.5C0 127.236 111.929 0.5 250 0.5C388.071 0.5 500 127.236 500 251.5Z");
+  background: #ebd8bc;
+  clip-path: path(
+    "M500 251.5C500 375.764 388.071 476.5 250 476.5C111.929 476.5 0 375.764 0 251.5C0 127.236 111.929 0.5 250 0.5C388.071 0.5 500 127.236 500 251.5Z"
+  );
   height: auto;
 }
 
@@ -331,8 +337,6 @@ footer h3 {
   }
 }
 
-
-
 .circle:hover {
-  background: #FFF7ED;
+  background: #fff7ed;
 }

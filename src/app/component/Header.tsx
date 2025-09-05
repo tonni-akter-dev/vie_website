@@ -70,7 +70,7 @@ const Header = () => {
           <Link
             key={idx}
             href={item.href}
-            className="text-[#533115] text-[16px] md:text-[18px] 2xl:text-[26px] font-extrabold hover:text-[#084F3D] hover:underline decoration-[#084F3D] decoration-[12%] underline-offset-[4px] transition"
+            className="text-[#533115] text-[16px] md:text-[18px] 2xl:text-[26px] font-bold hover:text-[#084F3D] hover:underline decoration-[#084F3D] decoration-[12%] underline-offset-[4px] transition"
           >
             {item.label}
           </Link>

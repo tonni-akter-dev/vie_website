@@ -1,50 +1,15 @@
 'use client';
 import { useState } from 'react';
+import { coreValues } from '../utils/data';
 
 export default function OurCoreValues() {
   const [hoveredValue, setHoveredValue] = useState<number | null>(null);
-
-  // Define core values with their titles and descriptions
-  const coreValues = [
-    {
-      id: 1,
-      title: "Student-Centered",
-      description: "Your goals are our priority. We provide individualized, attentive support throughout your journey."
-    },
-    {
-      id: 2,
-      title: "Accountability",
-      description: "We take ownership of your success and treat your future with utmost seriousness."
-    },
-    {
-      id: 3,
-      title: "Trustworthy",
-      description: "Our advice and actions are grounded in honesty, transparency, and reliability."
-    },
-    {
-      id: 4,
-      title: "Integrity",
-      description: "We uphold the highest ethical standards in everything we do."
-    },
-    {
-      id: 5,
-      title: "Collaboration",
-      description: "We work closely with students, families, and institutions for shared success."
-    },
-    {
-      id: 6,
-      title: "Driven to Deliver",
-      description: "We are proactive, solution-focused, and committed to achieving the best results for you."
-    }
-  ];
-
   return (
     <section className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[96px] py-8 md:py-12 lg:py-16">
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold mb-4 md:mb-6 lg:mb-8 text-[#2C2C2C] uppercase text-center lg:text-left">
         Our Core Values
       </h2>
       <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] text-[#2C2C2C] mb-6 md:mb-8 text-center lg:text-left">We are guided by principles that define our approach and commitment to students:</p>
-      
       {/* Mobile and Tablet View */}
       <div className="block lg:hidden">
         <div className="space-y-4">
@@ -57,8 +22,7 @@ export default function OurCoreValues() {
               `}
               onMouseEnter={() => setHoveredValue(value.id)}
               onMouseLeave={() => setHoveredValue(null)}
-              onClick={() => setHoveredValue(hoveredValue === value.id ? null : value.id)}
-            >
+              onClick={() => setHoveredValue(hoveredValue === value.id ? null : value.id)}>
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-[#2C2C2C] text-white rounded-full flex items-center justify-center text-sm sm:text-base font-bold">
                   {value.id}
@@ -67,7 +31,7 @@ export default function OurCoreValues() {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#2C2C2C] mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] whitespace-nowrap">
                     {value.description}
                   </p>
                 </div>

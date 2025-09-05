@@ -15,6 +15,7 @@ import es9 from "../../../public/es9.png";
 import es10 from "../../../public/es10.png";
 import es11 from "../../../public/es11.png";
 import es12 from "../../../public/es12.png";
+import Link from "next/link";
 
 const images = [es1, es2, es3, es4, es5, es6, es7, es8, es9, es10, es11, es12];
 
@@ -37,7 +38,6 @@ const cardVariants: Variants = {
   },
 };
 
-
 const EstimatedUniversity = () => {
   return (
     <div className="lg:mx-[110px] mt-20">
@@ -55,18 +55,31 @@ const EstimatedUniversity = () => {
       >
         {images.map((src, idx) => (
           <motion.div key={idx} variants={cardVariants}>
-            <Image className="cursor-pointer w-full" src={src} alt={`university-${idx + 1}`} />
+            <Image
+              className="cursor-pointer w-full"
+              src={src}
+              alt={`university-${idx + 1}`}
+            />
           </motion.div>
         ))}
       </motion.div>
 
       {/* Button */}
       <button className="flex mx-auto cursor-pointer justify-center items-center mt-[-33px]">
-        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 75 75" fill="none">
-          <circle cx="37.5" cy="37.5" r="37.5" fill="#16AA83" />
-          <circle cx="37.5" cy="37.5" r="32.5" fill="#CBF0E7" />
-          <path d="M37 55L20 29H54L37 55Z" fill="#084F3D" />
-        </svg>
+        <Link href="/study-abroad">
+          {" "}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="75"
+            height="75"
+            viewBox="0 0 75 75"
+            fill="none"
+          >
+            <circle cx="37.5" cy="37.5" r="37.5" fill="#16AA83" />
+            <circle cx="37.5" cy="37.5" r="32.5" fill="#CBF0E7" />
+            <path d="M37 55L20 29H54L37 55Z" fill="#084F3D" />
+          </svg>
+        </Link>
       </button>
     </div>
   );

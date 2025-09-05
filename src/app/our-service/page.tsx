@@ -6,8 +6,11 @@ import playbtn from "../../../public/playbutton.svg";
 import service from "../../../public/service_img.png";
 import DotIndicator from "../component/DotIndicator";
 import AcademicCounselling from "./components/AcademicCounselling";
+import { useRouter } from "next/navigation";
 
 const OurService = () => {
+    const router = useRouter();
+
   return (
     <div className="lg:mx-[38px] mx-4 py-[60px] lg:py-[120px] relative">
       {/* Play Button */}
@@ -18,7 +21,7 @@ const OurService = () => {
         viewport={{ once: true }}
         className="mx-auto flex justify-center mb-[-20px]"
       >
-        <button>
+        <button  onClick={() => router.back()}>
           <Image src={playbtn} alt="Play Button" />
         </button>
       </motion.div>
@@ -156,7 +159,7 @@ const OurService = () => {
           viewport={{ once: true }}
           className="mx-auto flex justify-center absolute bottom-12 lg:bottom-16 left-1/2 -translate-x-1/2 "
         >
-          <button>
+          <button  onClick={() => router.back()}>
             <Image src={playbtn} alt="Play Button" />
           </button>
         </motion.div>
