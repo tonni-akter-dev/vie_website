@@ -135,7 +135,6 @@ const getSvgByIndex = (index: number) => {
         viewBox="0 0 66 66"
         fill="none"
         className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
-
       >
         <circle cx="33" cy="33" r="33" fill="#A5AC8A" />
         <path
@@ -151,8 +150,8 @@ const getSvgByIndex = (index: number) => {
         width="66"
         height="66"
         viewBox="0 0 66 66"
-        fill="none"  className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
-
+        fill="none"
+        className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
       >
         <circle cx="33" cy="33" r="33" fill="#FFF2DE" />
         <path
@@ -168,8 +167,8 @@ const getSvgByIndex = (index: number) => {
         width="66"
         height="66"
         viewBox="0 0 66 66"
-        fill="none"  className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
-
+        fill="none"
+        className="w-[44px] h-[44px] md:w-[66px] md:h-[66px]"
       >
         <circle cx="33" cy="33" r="33" fill="#F4FFE8" />
         <path
@@ -201,14 +200,16 @@ export default function AcademicCounselling() {
               const globalIndex = rowIndex * 3 + tabIndex + 1;
               const isActive = activeTab === tab;
               return (
-                <div key={tab} className="flex gap-[15px] items-center">
+                <div
+                  onClick={() => setActiveTab(isActive ? null : tab)}
+                  key={tab}
+                  className="flex gap-[15px] items-center"
+                >
                   <button
-                    onClick={
-                      () => setActiveTab(isActive ? null : tab)
-                    }
                     className={`px-7 lg:whitespace-nowrap  py-3 lg:py-6 rounded-full flex-1 text-[#533115] font-semibold shadow-[2px_2px_0_2px_rgba(0,0,0,0.13)] text-xl  md:text-3xl lg:text-[40px] ${
                       activeTab === tab ? "" : "bg-white"
-                    }`}>
+                    }`}
+                  >
                     {tab}
                   </button>
                   <div

@@ -121,6 +121,33 @@ export const flags = [
   { id: 31, name: "South Korea", image: flag31 },
   { id: 32, name: "Georgia", image: flag32 },
 ];
+export const testimonials = [
+  {
+    id: 1,
+    name: "Kamal Hossain",
+    review: `Bachelor of Information Technology 
+My journey to study in Sydney wouldn’t have been possible without the support of VIE Services. From shortlisting the right course in IT to securing my offer letter, compiling visa documents, managing fund transfers, and even finding accommodation — they handled everything with care and professionalism.
+What impressed me most was their transparency and deep knowledge of the process. Their counselling felt genuine, and every step was clearly explained. Today, I’m working as a website developer in Sydney, and it all started with the right guidance from VIE Services. Highly recommended for anyone looking for a stress-free study abroad experience.
+`,
+  },
+  {
+    id: 2,
+    name: "Faheem hussain",
+    review: `Studying in Australia was always my dream, but I didn’t know where to start. VIE Services guided me step-by-step — from choosing the right university to preparing my visa documents. They even helped me with my health insurance and explained every detail clearly.
+The team was always available to answer my questions, no matter how small. Their support made the whole process simple and stress-free. I’m now studying in Melbourne and very thankful to VIE Services for making my dream a reality.`,
+  },
+  {
+    id: 3,
+    name: "Rainer Alam",
+    review: `VIE Services gave me the best experience I could ask for. They understood my goals and suggested courses that matched my career plans. The application process was quick because they were very organised and knew exactly what to do.
+What I liked most was how friendly and patient they were. They kept me updated at every stage, so I never felt lost. Thanks to their help, I got my visa approved and am now enjoying my studies abroad. I will definitely recommend them to others.`,
+  },
+  {
+    id: 4,
+    name: "sadek kawsar",
+    review: `I am very pleased with the services provided by Vie throughout the entire transaction. Communication with them was easy and efficient. The assistance I received was smooth and informative, which helped me successfully complete my visa application. I appreciated the availability of long-distance communication and the 24/7 support they offered. I can confidently refer their services to anyone.`,
+  },
+];
 
 export interface University {
   id: number;

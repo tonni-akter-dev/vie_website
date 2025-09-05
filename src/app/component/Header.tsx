@@ -64,8 +64,8 @@ const Header = () => {
           { label: "About Us", href: "/about-us" },
           { label: "Study Abroad", href: "/study-abroad" },
           { label: "Our Services", href: "/our-service" },
-          { label: "Book Consultation", href: "/consultation" },
-          { label: "Apply Now", href: "/apply" },
+          { label: "Book Consultation", href: "#consultation" },
+          { label: "Apply Now", href: "#apply" },
         ].map((item, idx) => (
           <Link
             key={idx}

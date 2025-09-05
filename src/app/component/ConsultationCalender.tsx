@@ -1,3 +1,4 @@
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useState, useEffect } from "react";
@@ -26,7 +27,7 @@ const ConsultationCalender = () => {
 
   const formatTime = (date: Date) => {
     if (!date) return "";
-    return date.toLocaleTimeString("en-US", {
+    return date.toLocaleTimeString("en-GB", {
       hour: "2-digit",
       minute: "2-digit",
       hour12: false,
@@ -34,14 +35,11 @@ const ConsultationCalender = () => {
   };
 
   useEffect(() => {
-    const updateTime = () => setCurrentTime(formatTime(new Date()));
-    updateTime();
-    const interval = setInterval(updateTime, 60000);
-    return () => clearInterval(interval);
+    setCurrentTime(formatTime(new Date()));
   }, []);
 
   return (
-    <div className="px-5 lg:mx-[80px] 2xl:mx-[128px] mb-[152px]">
+    <div className="px-5 lg:mx-[80px] 2xl:mx-[128px] mb-[152px]" id="consultation">
       <div
         className="bg-[#FEFEFE] mb-[30px] flex flex-wrap lg:flex-row flex-col justify-between lg:rounded-[112px] pt-12 pb-[56px] lg:ps-[43px] lg:pe-[86px]"
         style={{ boxShadow: "0 0 4.6px 0 rgba(0, 0, 0, 0.25)" }}
@@ -57,35 +55,7 @@ const ConsultationCalender = () => {
             <Calendar
               compact
               onSelect={handleSelect}
-              renderTitle={(date: {
-                getFullYear: () =>
-                  | string
-                  | number
-                  | bigint
-                  | boolean
-                  | React.ReactElement<
-                      unknown,
-                      string | React.JSXElementConstructor<any>
-                    >
-                  | Iterable<React.ReactNode>
-                  | React.ReactPortal
-                  | Promise<
-                      | string
-                      | number
-                      | bigint
-                      | boolean
-                      | React.ReactPortal
-                      | React.ReactElement<
-                          unknown,
-                          string | React.JSXElementConstructor<any>
-                        >
-                      | Iterable<React.ReactNode>
-                      | null
-                      | undefined
-                    >
-                  | null
-                  | undefined;
-              }) => (
+              renderTitle={(date: any) => (
                 <div className="text-center w-full font-bold text-sm lg:text-lg">
                   {date.getFullYear()}
                 </div>
@@ -97,16 +67,19 @@ const ConsultationCalender = () => {
           {/* Date & Time Section */}
           <div className="mb-[56px]">
             <div className="mb-[30px]">
-              <h2 className="font-bold text-[#2C2C2C] text-[48px]">Date:</h2>
-              <p className="text-[#084F3D] text-[35px] border-b border-[#084F3D]">
+              <h2 className="font-bold leading-normal text-[#2C2C2C] text-[48px] meta">Date:</h2>
+              <p className="text-[#084F3D] text-[35px]  time border-b border-[#084F3D]">
                 {formatDate(selectedDate)}
               </p>
             </div>
-            <div>
-              <h2 className="font-bold text-[#2C2C2C] text-[48px]">Time:</h2>
-              <p className="text-[#084F3D] text-[35px] border-b border-[#084F3D] w-fit">
-                {currentTime}
-              </p>
+            <div className="">
+              <h2 className="font-bold leading-normal text-[#2C2C2C] text-[48px] meta">Time:</h2>
+              <input
+                type="time"
+                value={currentTime}
+                onChange={(e) => setCurrentTime(e.target.value)}
+                className="text-[#084F3D]  time text-[35px] border-b border-[#084F3D] w-fit bg-transparent focus:outline-none"
+              />
             </div>
           </div>
         </div>
@@ -116,9 +89,8 @@ const ConsultationCalender = () => {
           <Image src={calenderScan} alt="" />
           <div>
             <button
-              className="items-center text-[32px] mb-1 py-3 px-3 w-fit text-[#084F3D] font-bold flex  h-full flex-col gap-[10.5px] uppercase bg-white"
-              style={{ boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.25)" }}
-            >
+              className="items-center text-[32px] justify-center mb-1 py-2 px-3 w-fit text-[#084F3D] font-bold flex  h-[53px] flex-col gap-[10.5px] uppercase bg-white"
+              style={{ boxShadow: "0 1px 4px 0 rgba(0, 0, 0, 0.25)" }}>
               Proceed
             </button>
             <svg

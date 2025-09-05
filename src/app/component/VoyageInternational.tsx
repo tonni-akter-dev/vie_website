@@ -67,13 +67,12 @@ const VoyageInternational = () => {
         custom={0.6}
         variants={itemVariants}
       >
-        Whether {`you're`} exploring course options, applying to universities, or
-        preparing for life abroad, our team provides the clarity, structure, and
-        confidence you need to make informed decisions.
+        Whether {`you're`} exploring course options, applying to universities,
+        or preparing for life abroad, our team provides the clarity, structure,
+        and confidence you need to make informed decisions.
       </motion.p>
 
       <div className="mainDiv  lg:max-w-[1432px] mx-auto flex flex-col md:flex-row gap-y-8 md:gap-y-0 md:gap-x-0 justify-center items-start md:items-stretch p-0 lg:p-12">
-        {/* Mission */}
         <motion.div
           className="parent relative w-full md:w-1/2 border-2 border-[#48553B] rounded-[20px] p-4 lg:p-[35px] shadow-sm overflow-visible"
           initial="hidden"
@@ -82,9 +81,10 @@ const VoyageInternational = () => {
           custom={0.8}
           variants={itemVariants}
         >
-          <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-[90%] sm:w-[70%] md:w-[60%] lg:w-[356px] max-w-[356px] h-[29px] 
-          bg-[#48553B] rounded-t-[40px] indicator z-10"></div>
-          {/* Circles for Mission: desktop-only right-middle */}
+          <div
+            className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-[90%] sm:w-[70%] md:w-[60%] lg:w-[356px] max-w-[356px] h-[29px] 
+          bg-[#48553B] rounded-t-[40px] indicator z-10"
+          ></div>
           <div className="hidden md:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 w-[14px] h-[14px] bg-white rounded-full border-3 border-[#48553B]"></div>
           <div className="flex flex-col items-center text-center">
             <motion.div

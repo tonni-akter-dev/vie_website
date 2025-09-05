@@ -74,10 +74,10 @@ export default function AcademicJourney() {
               Our Counselling Sessions Immensely benefit in making best academic
               decisions suited to career choices.
             </p>
-            <ul className="list-disc list-inside text-sm xl:text-base mt-5 text-[#1A1A1A] font-bold">
+            <ul className="list-disc list-outside pl-6 text-2xl mt-5 text-[#1A1A1A] font-bold">
               <li>Career oriented counseling</li>
-              <li>Emphasis on futuristic Courses</li>
-              <li>Interactive Sessions with uni delegates</li>
+              <li className="mt-1">Emphasis on futuristic Courses</li>
+              <li className="mt-1">Interactive Sessions with uni delegates</li>
             </ul>
           </motion.div>
         </motion.div>
@@ -104,7 +104,7 @@ export default function AcademicJourney() {
               certified, adept and dedicated future efficiently ensuring
               preparation for your desired tests.{" "}
             </p>
-            <ul className="list-disc text-sm xl:text-base list-inside mt-5 text-[#1A1A1A] font-bold">
+            <ul className="list-disc text-2xl list-outside pl-6 mt-5 text-[#1A1A1A] font-bold">
               <li>Interactive classrooms & free demo sessions </li>
               <li>Highly effective study materials</li>
               <li>Score oriented tuitions and work tests </li>
@@ -132,7 +132,7 @@ export default function AcademicJourney() {
               Ensure your form, ways and docs are expertly prepared and
               submitted on time by simplifying the process.{" "}
             </p>
-            <ul className="list-disc text-sm xl:text-base list-inside mt-5 text-[#1A1A1A] font-bold">
+            <ul className="list-disc text-2xl  list-outside pl-6 mt-5 text-[#1A1A1A] font-bold">
               <li>Document preparation and review</li>
               <li>Application filings and submission</li>
               <li>Follow up and Communication</li>
@@ -161,7 +161,7 @@ export default function AcademicJourney() {
               We simplify complex process wth expert guidance, ensuring
               accuracy, compliance{" "}
             </p>
-            <ul className="list-disc list-inside mt-5 text-sm xl:text-base text-[#1A1A1A] font-bold">
+            <ul className="list-disc text-2xl list-outside pl-6 mt-5 text-[#1A1A1A] font-bold">
               <li>Document preparation and Verification</li>
               <li>Visa application & Submission</li>
               <li>Interview guidance & mock sessions.</li>
@@ -198,7 +198,7 @@ export default function AcademicJourney() {
               We simplify complex process wth expert guidance, ensuring
               accuracy, compliance{" "}
             </p>
-            <ul className="list-disc list-inside mt-5 text-sm xl:text-base text-[#1A1A1A] font-bold">
+            <ul className="list-disc list-outside pl-6 mt-5 text-2xl  text-[#1A1A1A] font-bold">
               <li>Document preparation and Verification</li>
               <li>Visa application & Submission</li>
               <li>Interview guidance & mock sessions.</li>
@@ -227,7 +227,7 @@ export default function AcademicJourney() {
               Beyond admissions, we ensure a smooth transition, travel,
               accommodation and cultural readiness{" "}
             </p>
-            <ul className="list-disc list-inside mt-5 text-base xl:text-2xl text-[#1A1A1A] font-bold">
+            <ul className="list-disc list-outside pl-6 mt-5 text-base xl:text-2xl text-[#1A1A1A] font-bold">
               <li>Travel and Accommodation support </li>
               <li>Emphasis on futuristic Courses </li>
               <li>Cultural Orientation and setting In</li>

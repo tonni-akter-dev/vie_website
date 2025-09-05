@@ -10,10 +10,9 @@ const ContactForm = () => {
   const [phone, setPhone] = useState("");
 
   return (
-    <div className="contact_bg lg:mx-[90px] px-4 sm:px-6 md:px-8 relative overflow-hidden pt-[60px] sm:pt-[80px] md:pt-[100px] pb-20 my-20 lg:my-0">
+    <div id="apply" className="contact_bg lg:mx-[90px] px-4 sm:px-6 md:px-8 relative overflow-hidden pt-[60px] sm:pt-[80px] md:pt-[100px] pb-20 my-20 lg:my-0">
       <div className="inner_contact w-[1170px]  flex-shrink-0 max-w-full mx-auto relative z-10  p-4 rounded-[20px] mb-4 ">
         <div className="flex justify-end mb-2">
-          {" "}
           <DotIndicator
             width={11}
             height={11}

@@ -16,7 +16,7 @@ const About = () => {
   const router = useRouter();
 
   return (
-    <div className="relative lg:max-w-[1846px] mx-auto my-[121px] lg:px-[38px]">
+    <div className="relative  my-[121px] lg:px-[38px]">
       {/* Top PlayButton */}
       <button
         onClick={() => router.back()}

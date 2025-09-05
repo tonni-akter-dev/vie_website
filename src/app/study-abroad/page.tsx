@@ -8,6 +8,7 @@ import DotIndicator from "../component/DotIndicator";
 import CountrySelect from "./component/CountrySelect";
 import Search from "./component/Search";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const StudyAbroad = () => {
   const itemsPerPage = 12;
@@ -41,12 +42,13 @@ const StudyAbroad = () => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const router = useRouter();
 
   return (
     <div className="lg:mx-[38px] mx-4 py-[60px] lg:py-[120px]">
       {/* Play Button */}
       <div className="mx-auto flex justify-center mb-[-20px]">
-        <button>
+        <button onClick={() => router.back()}>
           <Image src={playbtn} alt="Play Button" />
         </button>
       </div>

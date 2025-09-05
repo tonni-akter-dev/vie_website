@@ -9,7 +9,7 @@ import AcademicCounselling from "./components/AcademicCounselling";
 import { useRouter } from "next/navigation";
 
 const OurService = () => {
-    const router = useRouter();
+  const router = useRouter();
 
   return (
     <div className="lg:mx-[38px] mx-4 py-[60px] lg:py-[120px] relative">
@@ -21,7 +21,7 @@ const OurService = () => {
         viewport={{ once: true }}
         className="mx-auto flex justify-center mb-[-20px]"
       >
-        <button  onClick={() => router.back()}>
+        <button onClick={() => router.back()}>
           <Image src={playbtn} alt="Play Button" />
         </button>
       </motion.div>
@@ -50,7 +50,7 @@ const OurService = () => {
           whileInView={{ width: "100%" }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="flex gap-3 mb-[71px] overflow-hidden"
+          className="flex gap-3 mb-8 lg:mb-[71px]  overflow-hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -159,7 +159,7 @@ const OurService = () => {
           viewport={{ once: true }}
           className="mx-auto flex justify-center absolute bottom-12 lg:bottom-16 left-1/2 -translate-x-1/2 "
         >
-          <button  onClick={() => router.back()}>
+          <button onClick={() => router.back()}>
             <Image src={playbtn} alt="Play Button" />
           </button>
         </motion.div>

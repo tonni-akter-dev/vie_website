@@ -263,7 +263,7 @@ export default function OurCoreValues() {
             <rect
               x="340"   
               y="55"
-              width={hoveredValue === 1 ? "1150" : "608"}
+              width={hoveredValue === 1 ? "1155" : "608"}
               height="74"
               rx="17"
               fill="#FFF2DE"
@@ -274,7 +274,7 @@ export default function OurCoreValues() {
             <foreignObject
               x="350"
               y="65"
-              width={hoveredValue === 1 ? "1106" : "608"}
+              width={hoveredValue === 1 ? "1155" : "608"}
               height="54"
               className="pointer-events-none"
             >

@@ -110,7 +110,7 @@ const WhyChooseCard = () => {
                                 <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Access …. research, modern facilities and industry relevant courses.</h1>
+                               Access cutting-edge research, modern facilities and industry relevant courses.</h1>
 
                         </motion.div>
                     </motion.div>
@@ -147,7 +147,7 @@ const WhyChooseCard = () => {
                                  <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Access …. research, modern facilities and industry relevant courses.</h1>
+                               Experience a vibrant, multicultural society that welcomes international students.</h1>
 
                         </motion.div>
                     </motion.div>
@@ -184,7 +184,7 @@ const WhyChooseCard = () => {
                                  <DotIndicator width={5} spacing={5} height={5} bounceDistance={6} direction='vertical'/>
                             </div>
                             <h1 className='text-[#533115]  text-[22px] font-bold'>
-                                Experience a vibrant,  <br />multicultural society <br /> that welcomes <br /> international <br /> students.</h1>
+                               Benefit from flexible student work rights and post study work visa options.</h1>
 
                         </motion.div>
                     </motion.div>

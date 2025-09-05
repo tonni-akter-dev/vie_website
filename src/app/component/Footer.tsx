@@ -16,7 +16,7 @@ export default function Footer() {
             <h3 className="font-bold mb-3">COMMUNITY</h3>
             <ul className="space-y-3 text-xl text-[#1B1B1B]">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/about-us" className="hover:underline">
                   About us
                 </a>
               </li>
@@ -43,12 +43,12 @@ export default function Footer() {
             <h3 className="font-bold mb-3">ASSISTANCE</h3>
             <ul className="space-y-3 text-xl text-[#1B1B1B]">
               <li>
-                <a href="#" className="hover:underline whitespace-nowrap">
+                <a href="/terms-condition" className="hover:underline whitespace-nowrap">
                   Terms & Conditions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="/privacy" className="hover:underline">
                   Privacy Policy
                 </a>
               </li>
