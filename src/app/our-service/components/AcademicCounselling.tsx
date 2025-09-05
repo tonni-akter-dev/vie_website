@@ -195,7 +195,7 @@ export default function AcademicCounselling() {
       {rows.map((row, rowIndex) => (
         <div key={rowIndex} className="mb-4">
           {/* Tab Buttons */}
-          <div className="flex justify-between lg:flex-nowrap flex-wrap gap-2 mb-2">
+          <div className="flex lg:flex-nowrap flex-wrap gap-2 mb-2">
             {row.map((tab, tabIndex) => {
               const globalIndex = rowIndex * 3 + tabIndex + 1;
               const isActive = activeTab === tab;
