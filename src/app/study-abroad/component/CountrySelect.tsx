@@ -70,6 +70,8 @@ export default function CountrySelect() {
         {selected ? (
           <span className="flex items-center gap-2">
             <Image
+                 width={36}
+                height={36}
               src={selected.flag}
               alt={selected.name}
               className="size-[36px] rounded-full"
@@ -103,11 +105,12 @@ export default function CountrySelect() {
                 setSelected({ name: country.name, flag: country.flag.small });
                 setOpen(false);
               }}
-              className="px-3 py-2 cursor-pointer text-xl flex items-center gap-4 mb-2 hover:bg-gray-100"
-            >
+              className="px-3 py-2 cursor-pointer text-xl flex items-center gap-4 mb-2 hover:bg-gray-100">
               <Image
                 src={country.flag.small}
                 alt={country.name}
+                width={36}
+                height={36}
                 className="size-[36px] rounded-full object-contain"
               />
               {country.name}

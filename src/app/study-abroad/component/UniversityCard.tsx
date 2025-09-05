@@ -86,20 +86,19 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ datas }) => {
       <div className="flex justify-center items-center w-full">
         <Link
           href={`/study-abroad/${datas.id}`}
-          className="bg-[#084F3D] group  text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] 
-          rounded-bl-3xl lg:rounded-bl-[60px] py-5 lg:py-[42px] w-full"
+          className="bg-[#084F3D] group  text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-bl-3xl lg:rounded-bl-[60px] py-5 lg:py-[42px] w-full border-r-[4px] border-r-[#F4F4F4]"
         >
-          <button className="text-base group-hover:text-[#084F3D] lg:text-[26px] font-medium text-[#FFF2DE]">
+          <button className="text-base group-hover:text-[#084F3D] lg:text-[26px] font-medium text-[#FFF2DE] whitespace-nowrap">
             Know More
           </button>
         </Link>
 
-        <div className="w-1 h-full bg-[#F4F4F4]"></div>
+        {/* <div className="w-2 h-full bg-[#F4F4F4]"></div> */}
         <Link
           href={`/study-abroad/${datas.id}`}
           className="bg-[#084F3D] group  text-[26px] font-medium text-[#FFF2DE] px-[30px] hover:bg-white hover:text-[#084f3d] rounded-br-3xl lg:rounded-br-[60px] py-5 lg:py-[42px] w-full"
         >
-          <button className="text-base group-hover:text-[#084F3D] lg:text-[26px] font-medium text-[#FFF2DE]">
+          <button className="text-base group-hover:text-[#084F3D] lg:text-[26px] font-medium text-[#FFF2DE]  whitespace-nowrap">
             Apply Now
           </button>
         </Link>

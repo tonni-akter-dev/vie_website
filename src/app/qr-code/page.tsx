@@ -16,7 +16,7 @@ const QrCode = () => {
           fill="#084F3D"
         />
       </svg>
-      <p className="text-4xl font-[900] mt-6 mb-2 ">Register here as a student</p>
+      <p className="text-4xl font-[800] mt-6 mb-2  text-[#084F3D] uppercase ">Register here as a student</p>
       <Link href="#" className="open_form_link">Open as a form</Link>
     </div>
   );
