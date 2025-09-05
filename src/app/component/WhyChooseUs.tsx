@@ -33,18 +33,28 @@ const WhyChooseUs = () => {
 
   return (
     <div>
-      <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-6 mt-[130px]">
+      <h2 className="uppercase text-[#2C2C2C] text-center text-[36px] lg:text-[64px] font-[900] leading-normal mb-6  mt-10 lg:mt-[130px]">
         Considering Studying in Australia
       </h2>
       <div className=" mb-6">
         <DotIndicator width={11} height={11} spacing={10} bounceDistance={10} />
       </div>
-      <Image className='w-full object-cover' src={choosebg} alt="" />
-      <p className='text-[32px] text-[#2C2C2C] font-bold lg:max-w-[1462px] w-full text-center mx-auto mt-6'>If you’re exploring the exceptional academic and personal growth opportunities Australia  <br />offers, VIE services is here to support you every step of the way. Whether you’re finalizing  <br />your choice or still weighing options, we provide expert guidance on course selection, <br /> application procedure visa requirements and preparing for your journey to Australia.</p>
+      <Image className="w-full object-cover" src={choosebg} alt="" />
+      <p className="text-2xl lg:text-[32px] text-[#2C2C2C] font-normal lg:max-w-[1462px] w-full text-center mx-auto mt-6 lg:px-0 px-4">
+        If you’re exploring the exceptional academic and personal growth
+        opportunities <strong>Australia</strong>
+        <br className="lg:block hidden" />
+        offers, VIE services is here to support you every step of the way.
+        Whether you’re finalizing <br className="lg:block hidden" />
+        your choice or still weighing options, we provide expert guidance on
+        course selection, <br className="lg:block hidden" /> application
+        procedure visa requirements and preparing for your journey to{" "}
+        <strong>Australia</strong>.
+      </p>
 
       <div className="mb-16 md:mb-[185px] max-w-[1200px] 2xl:max-w-[1440px] mx-auto">
         <div className="bg-[#FFF2DE] rounded-[62px] why_choose mt-8 md:mt-[136px] p-4 md:pt-9 md:ps-12 md:pb-[30px] md:pe-[70px]">
-          <h1 className="text-[#533115] text-4xl md:text-[64px] font-extrabold text-center leading-normal uppercase">
+          <h1 className="text-[#533115]  text-2xl md:text-4xl lg:text-[64px] font-extrabold text-center leading-normal uppercase">
             Why Choose Us ?
           </h1>
           <motion.div

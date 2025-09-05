@@ -1,66 +1,28 @@
-"use client";
-import { useState } from "react";
-import { coreValues } from "../utils/data";
-import { motion } from "framer-motion";
+'use client';
+import { useState } from 'react';
+import { coreValues } from '../utils/data';
 
 export default function OurCoreValues() {
   const [hoveredValue, setHoveredValue] = useState<number | null>(null);
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.2, duration: 0.6 },
-    }),
-  };
-
   return (
     <section className="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[96px] py-8 md:py-12 lg:py-16">
-      <motion.h2
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold mb-4 md:mb-6 lg:mb-8 text-[#2C2C2C] uppercase text-center lg:text-left"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        custom={0}
-        variants={itemVariants}
-      >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold mb-4 md:mb-6 lg:mb-8 text-[#2C2C2C] uppercase text-center lg:text-left">
         Our Core Values
-      </motion.h2>
-      <motion.p
-        className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] text-[#2C2C2C] mb-6 md:mb-8 text-center lg:text-left"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        custom={0.2}
-        variants={itemVariants}
-      >
-        We are guided by principles that define our approach and commitment to
-        students:
-      </motion.p>
+      </h2>
+      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-[32px] text-[#2C2C2C] mb-6 md:mb-8 text-center lg:text-left">We are guided by principles that define our approach and commitment to students:</p>
+      {/* Mobile and Tablet View */}
       <div className="block lg:hidden">
         <div className="space-y-4">
           {coreValues.map((value) => (
-            <motion.div
+            <div
               key={value.id}
               className={`
                 bg-[#FFF2DE] rounded-2xl p-4 sm:p-6 cursor-pointer transition-all duration-300 ease-in-out
-                ${hoveredValue === value.id
-                  ? "bg-opacity-90 shadow-lg"
-                  : "hover:bg-opacity-80"
-                }
+                ${hoveredValue === value.id ? 'bg-opacity-90 shadow-lg' : 'hover:bg-opacity-80'}
               `}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={value.id * 0.2}
-              variants={itemVariants}
               onMouseEnter={() => setHoveredValue(value.id)}
               onMouseLeave={() => setHoveredValue(null)}
-              onClick={() =>
-                setHoveredValue(hoveredValue === value.id ? null : value.id)
-              }
-            >
+              onClick={() => setHoveredValue(hoveredValue === value.id ? null : value.id)}>
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 bg-[#2C2C2C] text-white rounded-full flex items-center justify-center text-sm sm:text-base font-bold">
                   {value.id}
@@ -69,12 +31,12 @@ export default function OurCoreValues() {
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#2C2C2C] mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg text-[#2C2C2C] whitespace-nowrap">
                     {value.description}
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -82,15 +44,11 @@ export default function OurCoreValues() {
       {/* Desktop View */}
       <div className="hidden lg:block">
         <div className="relative">
-          <motion.svg
+          <svg
             viewBox="0 0 1500 836"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="w-full h-auto transition-all duration-500 ease-in-out"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
             preserveAspectRatio="xMidYMid meet"
           >
             <circle cx="45" cy="94" r="45" fill="#FFF2DE" />
@@ -182,7 +140,7 @@ export default function OurCoreValues() {
               d="M66.76 758.4C58.64 758.4 55.08 752.84 55.08 743.76C55.08 734.68 58.64 729.12 66.76 729.12C74.88 729.12 78.48 734.68 78.48 743.76C78.48 752.84 74.88 758.4 66.76 758.4ZM66.76 754.2C71 754.2 73.32 751.08 73.32 743.76C73.32 736.48 71 733.32 66.76 733.32C62.52 733.32 60.24 736.48 60.24 743.76C60.24 751.08 62.52 754.2 66.76 754.2ZM91.9069 758.4C84.7469 758.4 80.6269 754.32 80.6269 745.68C80.6269 734.8 84.6669 729.12 91.9469 729.12C97.5069 729.12 101.107 731.52 101.827 736.8H97.0669C96.7469 734.68 95.2269 733.04 92.1869 733.04C88.3069 733.04 86.2269 736.24 85.7869 742.88C87.2669 740.52 89.5869 739.44 92.6669 739.44C98.8269 739.44 102.667 742.76 102.667 748.64C102.667 754.44 98.7869 758.4 91.9069 758.4ZM91.7469 754.48C95.1469 754.48 97.5069 752.36 97.5069 748.8C97.5069 745.2 95.1469 743.08 91.7469 743.08C88.3069 743.08 85.9869 745.2 85.9869 748.8C85.9869 752.36 88.3069 754.48 91.7469 754.48Z"
               fill="#2C2C2C"
             />
-            <motion.rect
+            <rect
               x="384"
               y="717"
               width={hoveredValue === 6 ? "1027" : "608"}
@@ -190,8 +148,6 @@ export default function OurCoreValues() {
               rx="17"
               fill="#D4C2A8"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "1027" }}
               onMouseEnter={() => setHoveredValue(6)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -203,16 +159,12 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 6 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 6
-                    ? coreValues[5].description
-                    : coreValues[5].title}
+                <p className={`${hoveredValue === 6 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 6 ? coreValues[5].description : coreValues[5].title}
                 </p>
               </div>
             </foreignObject>
-            <motion.rect
+            <rect
               x="413"
               y="585"
               width={hoveredValue === 5 ? "893" : "608"}
@@ -220,8 +172,6 @@ export default function OurCoreValues() {
               rx="17"
               fill="#FFF2DE"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "893" }}
               onMouseEnter={() => setHoveredValue(5)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -233,16 +183,12 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 5 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 5
-                    ? coreValues[4].description
-                    : coreValues[4].title}
+                <p className={`${hoveredValue === 5 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 5 ? coreValues[4].description : coreValues[4].title}
                 </p>
               </div>
             </foreignObject>
-            <motion.rect
+            <rect
               x="443"
               y="453"
               width={hoveredValue === 4 ? "732" : "608"}
@@ -250,8 +196,6 @@ export default function OurCoreValues() {
               rx="17"
               fill="#C2C4AC"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "732" }}
               onMouseEnter={() => setHoveredValue(4)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -263,16 +207,12 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 4 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 4
-                    ? coreValues[3].description
-                    : coreValues[3].title}
+                <p className={`${hoveredValue === 4 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 4 ? coreValues[3].description : coreValues[3].title}
                 </p>
               </div>
             </foreignObject>
-            <motion.rect
+            <rect
               x="413"
               y="321"
               width={hoveredValue === 3 ? "899" : "608"}
@@ -280,8 +220,6 @@ export default function OurCoreValues() {
               rx="17"
               fill="#A5AC8A"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "899" }}
               onMouseEnter={() => setHoveredValue(3)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -293,16 +231,12 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 3 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 3
-                    ? coreValues[2].description
-                    : coreValues[2].title}
+                <p className={`${hoveredValue === 3 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 3 ? coreValues[2].description : coreValues[2].title}
                 </p>
               </div>
             </foreignObject>
-            <motion.rect
+            <rect
               x="384"
               y="187"
               width={hoveredValue === 2 ? "961" : "608"}
@@ -310,8 +244,6 @@ export default function OurCoreValues() {
               rx="17"
               fill="#EEDEC7"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "961" }}
               onMouseEnter={() => setHoveredValue(2)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -323,25 +255,19 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 2 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 2
-                    ? coreValues[1].description
-                    : coreValues[1].title}
+                <p className={`${hoveredValue === 2 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 2 ? coreValues[1].description : coreValues[1].title}
                 </p>
               </div>
             </foreignObject>
-            <motion.rect
-              x="340"
+            <rect
+              x="340"   
               y="55"
               width={hoveredValue === 1 ? "1106" : "608"}
               height="74"
               rx="17"
               fill="#FFF2DE"
               className="cursor-pointer transition-all duration-100 ease-in-out hover:fill-opacity-80"
-              initial={{ width: "608" }}
-              whileHover={{ width: "1106" }}
               onMouseEnter={() => setHoveredValue(1)}
               onMouseLeave={() => setHoveredValue(null)}
             />
@@ -353,16 +279,12 @@ export default function OurCoreValues() {
               className="pointer-events-none"
             >
               <div className="h-full flex items-center">
-                <p
-                  className={`${hoveredValue === 1 ? "text-sm lg:text-base xl:text-lg 2xl:text-xl" : "text-base lg:text-lg xl:text-xl 2xl:text-2xl"} px-2 lg:px-3 xl:px-4 2xl:px-5 font-medium`}
-                >
-                  {hoveredValue === 1
-                    ? coreValues[0].description
-                    : coreValues[0].title}
+                <p className={`${hoveredValue === 1 ? "text-lg xl:text-xl 2xl:text-[25px]" : "text-xl xl:text-2xl 2xl:text-[35px]"} px-5 font-medium`}>
+                  {hoveredValue === 1 ? coreValues[0].description : coreValues[0].title}
                 </p>
               </div>
             </foreignObject>
-          </motion.svg>
+          </svg>
         </div>
       </div>
     </section>

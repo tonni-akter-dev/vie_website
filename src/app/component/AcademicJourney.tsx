@@ -1,5 +1,5 @@
-'use client';
-import { motion, easeOut, Easing } from 'framer-motion';
+"use client";
+import { motion, easeOut, Easing } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -29,7 +29,7 @@ const overlayVariants = {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut' as Easing,
+      ease: "easeInOut" as Easing,
     },
   },
 };
@@ -38,7 +38,7 @@ export default function AcademicJourney() {
   return (
     <div className="px-5 lg:px-[87px]">
       <motion.h1
-        className="text-[#533115] text-[30px] lg:text-[64px] mb-[50px] font-[900] leading-normal text-center"
+        className="text-[#533115] text-[30px] lg:text-[64px] mb-8 lg:mb-[50px] font-[900] leading-normal text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: easeOut }}
@@ -48,7 +48,7 @@ export default function AcademicJourney() {
       </motion.h1>
 
       <motion.div
-        className="grid grid-cols-1 lg:grid-cols-3 gap-10 xl:gap-[110px] w-full"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-[110px] w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -58,7 +58,7 @@ export default function AcademicJourney() {
           className="bg-[#C2C4AC] p-6 h-[250px] lg:h-[365px] cursor-pointer w-full rounded-lg shadow-md flex justify-center items-center relative"
           variants={cardVariants}
           whileHover={{ opacity: 0.9 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
             Expert Counselling
@@ -71,7 +71,8 @@ export default function AcademicJourney() {
             whileHover="visible"
           >
             <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
-              Our Counselling Sessions Immensely benefit in making best academic decisions suited to career choices.
+              Our Counselling Sessions Immensely benefit in making best academic
+              decisions suited to career choices.
             </p>
             <ul className="list-disc list-inside text-sm xl:text-base mt-5 text-[#1A1A1A] font-bold">
               <li>Career oriented counseling</li>
@@ -85,12 +86,11 @@ export default function AcademicJourney() {
           className="bg-[#A5AC8A] p-6 h-[250px] lg:h-[365px] cursor-pointer w-full rounded-lg shadow-md flex justify-center items-center relative"
           variants={cardVariants}
           whileHover={{ opacity: 0.9 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
             Choose your <br />
-            desired country <br />
-            & university
+            desired country <br />& university
           </p>
           <motion.div
             className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
@@ -100,7 +100,10 @@ export default function AcademicJourney() {
             whileHover="visible"
           >
             <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
-              Effortlessly reach your highest potential test scores with certified, adept and dedicated future efficiently ensuring preparation for your desired tests.            </p>
+              Effortlessly reach your highest potential test scores with
+              certified, adept and dedicated future efficiently ensuring
+              preparation for your desired tests.{" "}
+            </p>
             <ul className="list-disc text-sm xl:text-base list-inside mt-5 text-[#1A1A1A] font-bold">
               <li>Interactive classrooms & free demo sessions </li>
               <li>Highly effective study materials</li>
@@ -113,7 +116,7 @@ export default function AcademicJourney() {
           className="bg-[#C2C4AC] p-6 h-[250px] lg:h-[365px] cursor-pointer w-full rounded-lg shadow-md flex justify-center items-center relative"
           variants={cardVariants}
           whileHover={{ opacity: 0.9 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
             Application Enrollment
@@ -126,7 +129,9 @@ export default function AcademicJourney() {
             whileHover="visible"
           >
             <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
-              Ensure your form, ways and docs are expertly prepared and submitted on time by simplifying the process.         </p>
+              Ensure your form, ways and docs are expertly prepared and
+              submitted on time by simplifying the process.{" "}
+            </p>
             <ul className="list-disc text-sm xl:text-base list-inside mt-5 text-[#1A1A1A] font-bold">
               <li>Document preparation and review</li>
               <li>Application filings and submission</li>
@@ -134,20 +139,12 @@ export default function AcademicJourney() {
             </ul>
           </motion.div>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        className="flex lg:flex-row flex-col gap-10 xl:gap-[110px] justify-center items-center mt-[60px] w-full"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-      >
+        {/*  */}
         <motion.div
-          className="bg-[#A5AC8A] p-6 h-[250px] lg:h-[365px] w-full lg:w-[508px] cursor-pointer rounded-lg shadow-md flex justify-center items-center relative"
+          className="lg:hidden bg-[#A5AC8A] p-6 h-[250px] lg:h-[365px] w-full lg:w-[508px] cursor-pointer rounded-lg shadow-md flex justify-center items-center relative"
           variants={cardVariants}
           whileHover={{ opacity: 0.9 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
             Allied <br />
@@ -161,7 +158,46 @@ export default function AcademicJourney() {
             whileHover="visible"
           >
             <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
-              We simplify complex process wth expert guidance, ensuring accuracy, compliance  </p>
+              We simplify complex process wth expert guidance, ensuring
+              accuracy, compliance{" "}
+            </p>
+            <ul className="list-disc list-inside mt-5 text-sm xl:text-base text-[#1A1A1A] font-bold">
+              <li>Document preparation and Verification</li>
+              <li>Visa application & Submission</li>
+              <li>Interview guidance & mock sessions.</li>
+            </ul>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="flex md:flex-row flex-col gap-6 xl:gap-[110px] justify-center items-center mt-6 lg:mt-[60px] w-full"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.div
+          className="bg-[#A5AC8A] p-6 h-[250px] lg:h-[365px] w-full lg:w-[508px] cursor-pointer rounded-lg shadow-md  hidden lg:flex justify-center items-center relative"
+          variants={cardVariants}
+          whileHover={{ opacity: 0.9 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+        >
+          <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
+            Allied <br />
+            Services
+          </p>
+          <motion.div
+            className="absolute top-0 left-0 w-full h-full bg-[#A5AC8A] pt-[52px] px-6 rounded-[10px] z-10"
+            variants={overlayVariants}
+            initial="hidden"
+            animate="hidden"
+            whileHover="visible"
+          >
+            <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
+              We simplify complex process wth expert guidance, ensuring
+              accuracy, compliance{" "}
+            </p>
             <ul className="list-disc list-inside mt-5 text-sm xl:text-base text-[#1A1A1A] font-bold">
               <li>Document preparation and Verification</li>
               <li>Visa application & Submission</li>
@@ -174,7 +210,7 @@ export default function AcademicJourney() {
           className="bg-[#A5AC8A] p-6 h-[250px] lg:h-[365px] w-full lg:w-[508px] cursor-pointer rounded-lg shadow-md flex justify-center items-center relative"
           variants={cardVariants}
           whileHover={{ opacity: 0.9 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <p className="text-3xl xl:text-[40px] text-[#533115] leading-normal uppercase font-bold text-center">
             Visa <br />
@@ -188,15 +224,16 @@ export default function AcademicJourney() {
             whileHover="visible"
           >
             <p className="text-[#1A1A1A] text-base xl:text-2xl font-medium ">
-              Beyond admissions, we ensure a smooth transition, travel, accommodation and cultural readiness            </p>
+              Beyond admissions, we ensure a smooth transition, travel,
+              accommodation and cultural readiness{" "}
+            </p>
             <ul className="list-disc list-inside mt-5 text-base xl:text-2xl text-[#1A1A1A] font-bold">
-              <li>Travel and Accommodation  support </li>
+              <li>Travel and Accommodation support </li>
               <li>Emphasis on futuristic Courses </li>
               <li>Cultural Orientation and setting In</li>
             </ul>
           </motion.div>
         </motion.div>
-
       </motion.div>
     </div>
   );

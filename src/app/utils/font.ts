@@ -63,3 +63,15 @@ export const metapro = localFont({
     variable: "--font-meta-pro",
     display: "swap",
 });
+export const mergeone = localFont({
+    src: [
+  
+        {
+            path: '../../../public/fonts/merge-one/MergeOne-Regular.ttf',
+            weight: "400",
+            style: "normal",
+        }
+    ],
+    variable: "--font-merge-one",
+    display: "swap",
+});

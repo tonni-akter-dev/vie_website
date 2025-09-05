@@ -174,21 +174,21 @@ export default function Footer() {
                   stroke="black"
                   strokeWidth="0.5"
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M6.1875 9C7.22303 9 8.0625 8.16053 8.0625 7.125C8.0625 6.08947 7.22303 5.25 6.1875 5.25C5.15197 5.25 4.3125 6.08947 4.3125 7.125C4.3125 8.16053 5.15197 9 6.1875 9Z"
                   stroke="black"
                   strokeWidth="0.5"
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M11.8125 9C12.848 9 13.6875 8.16053 13.6875 7.125C13.6875 6.08947 12.848 5.25 11.8125 5.25C10.777 5.25 9.9375 6.08947 9.9375 7.125C9.9375 8.16053 10.777 9 11.8125 9Z"
                   stroke="black"
                   strokeWidth="0.5"
                   strokeLinecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </a>

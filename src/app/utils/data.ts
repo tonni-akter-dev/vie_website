@@ -590,3 +590,94 @@ export  const offers = [
             desc: "Guidance on travel, cultural adaptation, and settling into student life in Australia."
         },
     ]
+
+   export  const faqData = [
+      {
+        question: "What service does VIE offer ?",
+        answer:
+          "A. For students who wish to study in Australia or other nations, VIE offers comprehensive guidance.  We offer pre-departure planning, application assistance, visa processing, and course and university selection.  We also provide continuing assistance and help with housing recommendations to ensure a successful and seamless transfer to Australia.",
+      },
+      {
+        question: "Who can apply through VIE Service ?",
+        answer:
+          "A. Any student who wishes to pursue higher education in Australia can apply through VIE Services. We support applicants from different academic backgrounds, whether you are completing high school, pursuing undergraduate or postgraduate studies, or looking for specialized courses.",
+      },
+      {
+        question:
+          "Do you need to know which course or university I want before contacting you?",
+        answer:
+          "A. No, you are not required to make a decision in advance.  Depending on your hobbies, educational background, and professional objectives, our knowledgeable counsellors will assist you in investigating various programs and colleges.  We walk you through each stage to help you choose the best course of action.",
+      },
+    
+      {
+        question: "How long does the application process take?",
+        answer:
+          "A. The application process timeline can vary depending on the university and course, but it usually takes between 4 to 8 weeks. VIE ensures all documents are prepared correctly and submitted on time to make the process as smooth and fast as possible.",
+      },
+    
+      {
+        question: "Is VIE Services affiliated with Australian universities?",
+        answer:
+          "A. Yes, VIE Services works in collaboration with a range of recognized Australian universities and institutions. This allows us to provide students with accurate information, trusted guidance, and a smooth application process to their preferred study destinations.",
+      },
+    
+      {
+        question: "Do you charge for your services?",
+        answer:
+          "A. VIE offers most of its counseling and application support services free of charge. In some cases, minimal service fees may apply for specific processes such as visa applications or document handling, but we always inform students in advance to ensure full transparency.",
+      },
+    
+      {
+        question: "Can VIE Services help with scholarship?",
+        answer:
+          "A. Yes, VIE Services provides guidance on available scholarships offered by Australian universities and institutions. We help you identify suitable opportunities, understand the eligibility requirements, and prepare your application to improve your chances of receiving financial support.",
+      },
+    
+      {
+        question: "What support do you provide after the visa granted?",
+        answer:
+          "A. After your visa is approved, VIE Services continues to support you with pre-departure guidance, travel planning, and accommodation advice. We also provide tips on adjusting to life in Australia so you can settle in comfortably and focus on your studies.",
+      },
+    
+      {
+        question: "What if my visa is refused?",
+        answer:
+          "A. If your visa application is refused, VIE Services will guide you through the reasons for the refusal and help you prepare for a re-application or appeal. Our team provides expert advice to improve your chances of success and ensures you understand all available options.",
+      },
+    
+      {
+        question: "Can I work while studying?",
+        answer:
+          "A. Yes, international students in Australia are allowed to work part-time while studying, subject to visa conditions. VIE Services can guide you on work rights, restrictions, and how to balance work with your academic commitments.",
+      },
+    
+      {
+        question: "How much does it cost to study in Australia?",
+        answer:
+          "A. The cost of studying in Australia varies depending on the course, university, and city. On average, tuition fees range from AUD 20,000 to 45,000 per year, with living expenses around AUD 15,000 to 20,000 annually. VIE Services can help you plan your budget and explore scholarship opportunities to manage costs effectively.",
+      },
+    
+      {
+        question: "How early should I start my application process?",
+        answer:
+          "A. It’s best to start your application at least 4 to 6 months before your intended course start date. Early planning gives you enough time for course selection, document preparation, university applications, and visa processing, ensuring a smooth journey to Australia.",
+      },
+    
+      {
+        question: "What is a confirmation of enrolment (COE)?",
+        answer:
+          "A. A Confirmation of Enrollment (CoE) is an official document issued by an Australian university to confirm that you have been accepted into a course. It is a required document for your student visa application and proves that you are enrolled and ready to begin your studies.",
+      },
+      {
+        question: "What are the English language requirements?",
+        answer:
+          "A. Most Australian universities require proof of English proficiency through tests like IELTS, TOEFL, or PTE. VIE Services can guide you on the required scores for your chosen course.",
+      },
+      {
+        question: "Why should I choose VIE Services over other Consultants?",
+        answer:
+          "A. VIE Services offers personalized guidance, expert knowledge of Australian universities, and support at every step of your study journey. We focus on making the process smooth, transparent, and stress-free, ensuring you get the best opportunities for your academic and personal growth.",
+      },
+    ];
+    
+    

@@ -1,25 +1,24 @@
 "use client";
-import { universityData } from "@/app/utils/data";
+import { University, universityData } from "@/app/utils/data";
 import React, { useState } from "react";
 
 const SearchForm = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedUni, setSelectedUni] = useState<any>(null);
+  const [selectedUni, setSelectedUni] = useState<University | null>(null);
 
-  // just updates text field
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
   };
 
-  // runs when user clicks the search button
   const handleSearchClick = () => {
-    const uni = universityData.find((u) =>
+    const uni = universityData.find((u: University) =>
       u.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setSelectedUni(uni || null);
   };
+
   return (
-    <div className="flex justify-center items-center h-full flex-col gap-1 lg:mx-0 mx-5" >
+    <div className="flex justify-center items-center h-full flex-col gap-1 lg:mx-0 mx-5">
       <div className="flex lg:flex-row flex-col items-start gap-3 lg:w-fit w-full ">
         <button onClick={handleSearchClick}>
           <svg
@@ -104,14 +103,14 @@ const SearchForm = () => {
                   d="M12 4.5C12 2.567 10.433 1 8.5 1C6.567 1 5 2.567 5 4.5V11C5 12.933 6.567 14.5 8.5 14.5C10.433 14.5 12 12.933 12 11V4.5Z"
                   stroke="#084F3D"
                   stroke-width="2"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M1 10.5C1 14.642 4.358 18 8.5 18M8.5 18C12.642 18 16 14.642 16 10.5M8.5 18V21"
                   stroke="#084F3D"
                   stroke-width="2"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </span>
